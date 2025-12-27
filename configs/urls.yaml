@@ -1,4 +1,5 @@
-# Cấu hình link web cần cào dữ liệu
-bonbanh: https://bonbanh.com
 chotot: https://xe.chotot.com
-otocomvn: https://oto.com.vn/mua-ban-xe
+regions_v2_url: "https://gateway.chotot.com/v1/public/web-proxy-api/loadRegionsV2"
+ad_listing_video_url: "https://gateway.chotot.com/v1/public/ad-listing-video"
+cg_car: 2010
+

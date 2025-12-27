@@ -1,0 +1,17 @@
+2025-12-23 13:15:11,815 | INFO | REPO_ROOT=E:\Khai_thac_du_lieu\car_price_pipeline
+2025-12-23 13:15:11,815 | INFO | CLEAN_DIR=E:\Khai_thac_du_lieu\car_price_pipeline\data\cleaned
+2025-12-23 13:15:11,815 | INFO | PROCESSED_DIR=E:\Khai_thac_du_lieu\car_price_pipeline\data\processed
+2025-12-23 13:15:11,815 | INFO | MASTER_DIR=E:\Khai_thac_du_lieu\car_price_pipeline\data\master
+2025-12-23 13:15:11,817 | INFO | No cleaned files found in E:\Khai_thac_du_lieu\car_price_pipeline\data\cleaned
+2025-12-23 13:17:35,860 | INFO | REPO_ROOT=E:\Khai_thac_du_lieu\car_price_pipeline
+2025-12-23 13:17:35,862 | INFO | CLEAN_DIR=E:\Khai_thac_du_lieu\car_price_pipeline\data\cleaned
+2025-12-23 13:17:35,862 | INFO | PROCESSED_DIR=E:\Khai_thac_du_lieu\car_price_pipeline\data\processed
+2025-12-23 13:17:35,862 | INFO | MASTER_DIR=E:\Khai_thac_du_lieu\car_price_pipeline\data\master
+2025-12-23 13:17:35,967 | INFO | Filtered invalid rows: before=431 after=431
+2025-12-23 13:20:17,711 | INFO | REPO_ROOT=E:\Khai_thac_du_lieu\car_price_pipeline
+2025-12-23 13:20:17,711 | INFO | CLEAN_DIR=E:\Khai_thac_du_lieu\car_price_pipeline\data\cleaned
+2025-12-23 13:20:17,711 | INFO | PROCESSED_DIR=E:\Khai_thac_du_lieu\car_price_pipeline\data\processed
+2025-12-23 13:20:17,711 | INFO | MASTER_DIR=E:\Khai_thac_du_lieu\car_price_pipeline\data\master
+2025-12-23 13:20:17,767 | INFO | Filtered invalid rows: before=431 after=431
+2025-12-23 13:20:17,813 | INFO | Wrote processed snapshot: E:\Khai_thac_du_lieu\car_price_pipeline\data\processed\chotot_processed_20251223.csv rows=431
+2025-12-23 13:20:17,860 | INFO | Updated master: E:\Khai_thac_du_lieu\car_price_pipeline\data\master\car_price_master.csv rows=431

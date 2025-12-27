@@ -1,0 +1,470 @@
+2025-12-23 10:40:32,753 | INFO | Loaded regions_v2 map size=0 from https://gateway.chotot.com/v1/public/web-proxy-api/loadRegionsV2
+2025-12-23 10:40:32,754 | INFO | Mode=ALL_REGIONS total_regions=0 crawling_now=0
+2025-12-23 10:40:32,762 | INFO | DONE raw_path=E:\Khai_thac_du_lieu\car_price_pipeline\data\raw\chotot_raw_20251223.csv total_new=0 total_seen=0
+2025-12-23 10:41:43,104 | INFO | Loaded regions_v2 map size=0 from https://gateway.chotot.com/v1/public/web-proxy-api/loadRegionsV2
+2025-12-23 10:41:43,104 | INFO | Mode=NATIONWIDE_FEED (no region_v2 param)
+2025-12-23 10:41:43,106 | INFO | Crawling region=NATIONWIDE pages=3 limit=50 delay=1.20s
+2025-12-23 10:41:43,956 | INFO | Fetched region=NATIONWIDE page=1 offset=0 ads=50
+2025-12-23 10:41:43,974 | INFO | Wrote new_rows=50 -> E:\Khai_thac_du_lieu\car_price_pipeline\data\raw\chotot_raw_20251223.csv
+2025-12-23 10:41:46,290 | INFO | Fetched region=NATIONWIDE page=2 offset=50 ads=50
+2025-12-23 10:41:46,306 | INFO | Wrote new_rows=50 -> E:\Khai_thac_du_lieu\car_price_pipeline\data\raw\chotot_raw_20251223.csv
+2025-12-23 10:41:48,806 | INFO | Fetched region=NATIONWIDE page=3 offset=100 ads=50
+2025-12-23 10:41:48,824 | INFO | Wrote new_rows=50 -> E:\Khai_thac_du_lieu\car_price_pipeline\data\raw\chotot_raw_20251223.csv
+2025-12-23 10:41:50,363 | INFO | DONE raw_path=E:\Khai_thac_du_lieu\car_price_pipeline\data\raw\chotot_raw_20251223.csv total_new=150 total_seen=150
+2025-12-23 10:44:35,782 | INFO | Loaded regions_v2 map size=768 from https://gateway.chotot.com/v1/public/web-proxy-api/loadRegionsV2
+2025-12-23 10:44:35,783 | INFO | Mode=ALL_REGIONS total_regions=768 crawling_now=10
+2025-12-23 10:44:35,785 | INFO | Crawling region=1005907 pages=2 limit=50 delay=1.20s
+2025-12-23 10:44:35,990 | INFO | Fetched region=1005907 page=1 offset=0 ads=0
+2025-12-23 10:44:35,990 | INFO | No new rows in this page.
+2025-12-23 10:44:37,416 | INFO | Fetched region=1005907 page=2 offset=50 ads=0
+2025-12-23 10:44:37,417 | INFO | No new rows in this page.
+2025-12-23 10:44:38,643 | INFO | Crawling region=1106907 pages=2 limit=50 delay=1.20s
+2025-12-23 10:44:38,904 | INFO | Fetched region=1106907 page=1 offset=0 ads=0
+2025-12-23 10:44:38,904 | INFO | No new rows in this page.
+2025-12-23 10:44:40,469 | INFO | Fetched region=1106907 page=2 offset=50 ads=0
+2025-12-23 10:44:40,469 | INFO | No new rows in this page.
+2025-12-23 10:44:41,810 | INFO | Crawling region=604003 pages=2 limit=50 delay=1.20s
+2025-12-23 10:44:42,189 | INFO | Fetched region=604003 page=1 offset=0 ads=0
+2025-12-23 10:44:42,190 | INFO | No new rows in this page.
+2025-12-23 10:44:43,862 | INFO | Fetched region=604003 page=2 offset=50 ads=0
+2025-12-23 10:44:43,863 | INFO | No new rows in this page.
+2025-12-23 10:44:45,186 | INFO | Crawling region=704703 pages=2 limit=50 delay=1.20s
+2025-12-23 10:44:45,496 | INFO | Fetched region=704703 page=1 offset=0 ads=0
+2025-12-23 10:44:45,496 | INFO | No new rows in this page.
+2025-12-23 10:44:47,221 | INFO | Fetched region=704703 page=2 offset=50 ads=0
+2025-12-23 10:44:47,221 | INFO | No new rows in this page.
+2025-12-23 10:44:48,670 | INFO | Crawling region=805110 pages=2 limit=50 delay=1.20s
+2025-12-23 10:44:48,967 | INFO | Fetched region=805110 page=1 offset=0 ads=0
+2025-12-23 10:44:48,968 | INFO | No new rows in this page.
+2025-12-23 10:44:50,835 | INFO | Fetched region=805110 page=2 offset=50 ads=0
+2025-12-23 10:44:50,835 | INFO | No new rows in this page.
+2025-12-23 10:44:52,316 | INFO | Crawling region=100707 pages=2 limit=50 delay=1.20s
+2025-12-23 10:44:52,867 | INFO | Fetched region=100707 page=1 offset=0 ads=0
+2025-12-23 10:44:52,867 | INFO | No new rows in this page.
+2025-12-23 10:44:54,400 | INFO | Fetched region=100707 page=2 offset=50 ads=0
+2025-12-23 10:44:54,400 | INFO | No new rows in this page.
+2025-12-23 10:44:55,636 | INFO | Crawling region=402010 pages=2 limit=50 delay=1.20s
+2025-12-23 10:44:55,902 | INFO | Fetched region=402010 page=1 offset=0 ads=0
+2025-12-23 10:44:55,903 | INFO | No new rows in this page.
+2025-12-23 10:44:57,694 | INFO | Fetched region=402010 page=2 offset=50 ads=0
+2025-12-23 10:44:57,694 | INFO | No new rows in this page.
+2025-12-23 10:44:59,012 | INFO | Crawling region=1006201 pages=2 limit=50 delay=1.20s
+2025-12-23 10:44:59,437 | INFO | Fetched region=1006201 page=1 offset=0 ads=0
+2025-12-23 10:44:59,437 | INFO | No new rows in this page.
+2025-12-23 10:45:02,355 | INFO | Fetched region=1006201 page=2 offset=50 ads=0
+2025-12-23 10:45:02,355 | INFO | No new rows in this page.
+2025-12-23 10:45:03,761 | INFO | Crawling region=1006207 pages=2 limit=50 delay=1.20s
+2025-12-23 10:45:04,110 | INFO | Fetched region=1006207 page=1 offset=0 ads=0
+2025-12-23 10:45:04,111 | INFO | No new rows in this page.
+2025-12-23 10:45:05,867 | INFO | Fetched region=1006207 page=2 offset=50 ads=0
+2025-12-23 10:45:05,867 | INFO | No new rows in this page.
+2025-12-23 10:45:07,374 | INFO | Crawling region=5025 pages=2 limit=50 delay=1.20s
+2025-12-23 10:45:07,933 | INFO | Fetched region=5025 page=1 offset=0 ads=1
+2025-12-23 10:45:07,939 | INFO | Wrote new_rows=1 -> E:\Khai_thac_du_lieu\car_price_pipeline\data\raw\chotot_raw_20251223.csv
+2025-12-23 10:49:16,327 | INFO | RUN cwd=E:\Khai_thac_du_lieu\car_price_pipeline
+2025-12-23 10:49:16,328 | INFO | RUN ROOT=E:\Khai_thac_du_lieu\car_price_pipeline
+2025-12-23 10:49:16,328 | INFO | RUN CONFIG urls=E:\Khai_thac_du_lieu\car_price_pipeline\configs\urls.yaml
+2025-12-23 10:49:17,482 | INFO | Loaded regions_v2 map size=768 from https://gateway.chotot.com/v1/public/web-proxy-api/loadRegionsV2
+2025-12-23 10:49:17,483 | INFO | Mode=ALL_REGIONS total_regions=768 crawling_now=10
+2025-12-23 10:49:17,485 | INFO | Crawling region=905705 pages=2 limit=50 delay=2.00s
+2025-12-23 10:49:17,821 | INFO | Fetched region=905705 page=1 offset=0 ads=0
+2025-12-23 10:49:17,821 | INFO | No new rows in this page.
+2025-12-23 10:49:20,078 | INFO | Fetched region=905705 page=2 offset=50 ads=0
+2025-12-23 10:49:20,078 | INFO | No new rows in this page.
+2025-12-23 10:49:22,394 | INFO | Crawling region=100401 pages=2 limit=50 delay=2.00s
+2025-12-23 10:49:22,663 | INFO | Fetched region=100401 page=1 offset=0 ads=0
+2025-12-23 10:49:22,663 | INFO | No new rows in this page.
+2025-12-23 10:49:25,187 | INFO | Fetched region=100401 page=2 offset=50 ads=0
+2025-12-23 10:49:25,188 | INFO | No new rows in this page.
+2025-12-23 10:49:27,357 | INFO | Crawling region=502904 pages=2 limit=50 delay=2.00s
+2025-12-23 10:49:28,013 | INFO | Fetched region=502904 page=1 offset=0 ads=0
+2025-12-23 10:49:28,013 | INFO | No new rows in this page.
+2025-12-23 10:49:30,474 | INFO | Fetched region=502904 page=2 offset=50 ads=0
+2025-12-23 10:49:30,474 | INFO | No new rows in this page.
+2025-12-23 10:49:32,587 | INFO | Crawling region=905501 pages=2 limit=50 delay=2.00s
+2025-12-23 10:49:33,050 | INFO | Fetched region=905501 page=1 offset=0 ads=0
+2025-12-23 10:49:33,050 | INFO | No new rows in this page.
+2025-12-23 10:49:35,388 | INFO | Fetched region=905501 page=2 offset=50 ads=0
+2025-12-23 10:49:35,388 | INFO | No new rows in this page.
+2025-12-23 10:49:37,551 | INFO | Crawling region=1006307 pages=2 limit=50 delay=2.00s
+2025-12-23 10:49:37,825 | INFO | Fetched region=1006307 page=1 offset=0 ads=0
+2025-12-23 10:49:37,825 | INFO | No new rows in this page.
+2025-12-23 10:49:40,271 | INFO | Fetched region=1006307 page=2 offset=50 ads=0
+2025-12-23 10:49:40,271 | INFO | No new rows in this page.
+2025-12-23 10:49:42,298 | INFO | Crawling region=503407 pages=2 limit=50 delay=2.00s
+2025-12-23 10:49:42,774 | INFO | Fetched region=503407 page=1 offset=0 ads=0
+2025-12-23 10:49:42,775 | INFO | No new rows in this page.
+2025-12-23 10:49:45,110 | INFO | Fetched region=503407 page=2 offset=50 ads=0
+2025-12-23 10:49:45,110 | INFO | No new rows in this page.
+2025-12-23 10:49:47,267 | INFO | Crawling region=1107012 pages=2 limit=50 delay=2.00s
+2025-12-23 10:49:47,580 | INFO | Fetched region=1107012 page=1 offset=0 ads=0
+2025-12-23 10:49:47,580 | INFO | No new rows in this page.
+2025-12-23 10:49:50,434 | INFO | Fetched region=1107012 page=2 offset=50 ads=0
+2025-12-23 10:49:50,435 | INFO | No new rows in this page.
+2025-12-23 10:49:52,538 | INFO | Crawling region=100602 pages=2 limit=50 delay=2.00s
+2025-12-23 10:49:52,919 | INFO | Fetched region=100602 page=1 offset=0 ads=0
+2025-12-23 10:49:52,919 | INFO | No new rows in this page.
+2025-12-23 10:49:55,461 | INFO | Fetched region=100602 page=2 offset=50 ads=0
+2025-12-23 10:49:55,461 | INFO | No new rows in this page.
+2025-12-23 10:49:57,672 | INFO | Crawling region=503205 pages=2 limit=50 delay=2.00s
+2025-12-23 10:49:58,040 | INFO | Fetched region=503205 page=1 offset=0 ads=0
+2025-12-23 10:49:58,040 | INFO | No new rows in this page.
+2025-12-23 10:50:00,783 | INFO | Fetched region=503205 page=2 offset=50 ads=0
+2025-12-23 10:50:00,784 | INFO | No new rows in this page.
+2025-12-23 10:50:02,809 | INFO | Crawling region=704304 pages=2 limit=50 delay=2.00s
+2025-12-23 10:50:03,239 | INFO | Fetched region=704304 page=1 offset=0 ads=0
+2025-12-23 10:50:03,239 | INFO | No new rows in this page.
+2025-12-23 10:50:06,027 | INFO | Fetched region=704304 page=2 offset=50 ads=0
+2025-12-23 10:50:06,027 | INFO | No new rows in this page.
+2025-12-23 10:50:08,212 | INFO | DONE raw_path=E:\Khai_thac_du_lieu\car_price_pipeline\data\raw\chotot_raw_20251223.csv total_new=0 total_seen=0
+2025-12-23 10:50:22,503 | INFO | RUN cwd=E:\Khai_thac_du_lieu\car_price_pipeline
+2025-12-23 10:50:22,504 | INFO | RUN ROOT=E:\Khai_thac_du_lieu\car_price_pipeline
+2025-12-23 10:50:22,504 | INFO | RUN CONFIG urls=E:\Khai_thac_du_lieu\car_price_pipeline\configs\urls.yaml
+2025-12-23 10:50:22,920 | INFO | Loaded regions_v2 map size=768 from https://gateway.chotot.com/v1/public/web-proxy-api/loadRegionsV2
+2025-12-23 10:50:22,921 | INFO | Mode=ALL_REGIONS total_regions=768 crawling_now=10
+2025-12-23 10:50:22,922 | INFO | Crawling region=1106808 pages=2 limit=50 delay=2.00s
+2025-12-23 10:50:23,313 | INFO | Fetched region=1106808 page=1 offset=0 ads=0
+2025-12-23 10:50:23,314 | INFO | No new rows in this page.
+2025-12-23 10:50:25,986 | INFO | Fetched region=1106808 page=2 offset=50 ads=0
+2025-12-23 10:50:25,987 | INFO | No new rows in this page.
+2025-12-23 10:50:28,325 | INFO | Crawling region=905404 pages=2 limit=50 delay=2.00s
+2025-12-23 10:50:28,850 | INFO | Fetched region=905404 page=1 offset=0 ads=0
+2025-12-23 10:50:28,850 | INFO | No new rows in this page.
+2025-12-23 10:50:31,456 | INFO | Fetched region=905404 page=2 offset=50 ads=0
+2025-12-23 10:50:31,456 | INFO | No new rows in this page.
+2025-12-23 10:50:33,687 | INFO | Crawling region=905611 pages=2 limit=50 delay=2.00s
+2025-12-23 10:50:34,162 | INFO | Fetched region=905611 page=1 offset=0 ads=0
+2025-12-23 10:50:34,162 | INFO | No new rows in this page.
+2025-12-23 10:50:36,737 | INFO | Fetched region=905611 page=2 offset=50 ads=0
+2025-12-23 10:50:36,738 | INFO | No new rows in this page.
+2025-12-23 10:50:38,854 | INFO | Crawling region=1106708 pages=2 limit=50 delay=2.00s
+2025-12-23 10:50:39,301 | INFO | Fetched region=1106708 page=1 offset=0 ads=0
+2025-12-23 10:50:39,302 | INFO | No new rows in this page.
+2025-12-23 10:50:41,765 | INFO | Fetched region=1106708 page=2 offset=50 ads=0
+2025-12-23 10:50:41,765 | INFO | No new rows in this page.
+2025-12-23 10:50:44,037 | INFO | Crawling region=1107104 pages=2 limit=50 delay=2.00s
+2025-12-23 10:50:44,520 | INFO | Fetched region=1107104 page=1 offset=0 ads=0
+2025-12-23 10:50:44,521 | INFO | No new rows in this page.
+2025-12-23 10:50:47,069 | INFO | Fetched region=1107104 page=2 offset=50 ads=0
+2025-12-23 10:50:47,070 | INFO | No new rows in this page.
+2025-12-23 10:50:49,405 | INFO | Crawling region=401901 pages=2 limit=50 delay=2.00s
+2025-12-23 10:50:49,674 | INFO | Fetched region=401901 page=1 offset=0 ads=0
+2025-12-23 10:50:49,674 | INFO | No new rows in this page.
+2025-12-23 10:50:52,048 | INFO | Fetched region=401901 page=2 offset=50 ads=0
+2025-12-23 10:50:52,049 | INFO | No new rows in this page.
+2025-12-23 10:50:54,283 | INFO | Crawling region=503401 pages=2 limit=50 delay=2.00s
+2025-12-23 10:50:54,665 | INFO | Fetched region=503401 page=1 offset=0 ads=0
+2025-12-23 10:50:54,666 | INFO | No new rows in this page.
+2025-12-23 10:50:57,516 | INFO | Fetched region=503401 page=2 offset=50 ads=0
+2025-12-23 10:50:57,517 | INFO | No new rows in this page.
+2025-12-23 10:50:59,798 | INFO | Crawling region=201209 pages=2 limit=50 delay=2.00s
+2025-12-23 10:51:00,081 | INFO | Fetched region=201209 page=1 offset=0 ads=0
+2025-12-23 10:51:00,081 | INFO | No new rows in this page.
+2025-12-23 10:51:02,937 | INFO | Fetched region=201209 page=2 offset=50 ads=0
+2025-12-23 10:51:02,938 | INFO | No new rows in this page.
+2025-12-23 10:51:19,531 | INFO | RUN cwd=E:\Khai_thac_du_lieu\car_price_pipeline
+2025-12-23 10:51:19,532 | INFO | RUN ROOT=E:\Khai_thac_du_lieu\car_price_pipeline
+2025-12-23 10:51:19,532 | INFO | RUN CONFIG urls=E:\Khai_thac_du_lieu\car_price_pipeline\configs\urls.yaml
+2025-12-23 10:51:19,837 | INFO | Loaded regions_v2 map size=768 from https://gateway.chotot.com/v1/public/web-proxy-api/loadRegionsV2
+2025-12-23 10:51:19,838 | INFO | Mode=NATIONWIDE_FEED (no region_v2 param)
+2025-12-23 10:51:19,839 | INFO | Crawling region=NATIONWIDE pages=3 limit=50 delay=1.20s
+2025-12-23 10:51:20,792 | INFO | Fetched region=NATIONWIDE page=1 offset=0 ads=50
+2025-12-23 10:51:20,802 | INFO | Wrote new_rows=1 -> E:\Khai_thac_du_lieu\car_price_pipeline\data\raw\chotot_raw_20251223.csv
+2025-12-23 10:51:22,923 | INFO | Fetched region=NATIONWIDE page=2 offset=50 ads=50
+2025-12-23 10:51:22,931 | INFO | No new rows in this page.
+2025-12-23 10:51:25,043 | INFO | Fetched region=NATIONWIDE page=3 offset=100 ads=50
+2025-12-23 10:51:25,049 | INFO | No new rows in this page.
+2025-12-23 10:51:26,539 | INFO | DONE raw_path=E:\Khai_thac_du_lieu\car_price_pipeline\data\raw\chotot_raw_20251223.csv total_new=1 total_seen=150
+2025-12-23 10:51:32,909 | INFO | RUN cwd=E:\Khai_thac_du_lieu\car_price_pipeline
+2025-12-23 10:51:32,909 | INFO | RUN ROOT=E:\Khai_thac_du_lieu\car_price_pipeline
+2025-12-23 10:51:32,909 | INFO | RUN CONFIG urls=E:\Khai_thac_du_lieu\car_price_pipeline\configs\urls.yaml
+2025-12-23 10:51:33,669 | INFO | Loaded regions_v2 map size=768 from https://gateway.chotot.com/v1/public/web-proxy-api/loadRegionsV2
+2025-12-23 10:51:33,670 | INFO | Mode=NATIONWIDE_FEED (no region_v2 param)
+2025-12-23 10:51:33,672 | INFO | Crawling region=NATIONWIDE pages=3 limit=50 delay=1.20s
+2025-12-23 10:51:34,134 | INFO | Fetched region=NATIONWIDE page=1 offset=0 ads=50
+2025-12-23 10:51:34,140 | INFO | No new rows in this page.
+2025-12-23 10:51:35,915 | INFO | Fetched region=NATIONWIDE page=2 offset=50 ads=50
+2025-12-23 10:51:35,921 | INFO | No new rows in this page.
+2025-12-23 10:51:37,879 | INFO | Fetched region=NATIONWIDE page=3 offset=100 ads=50
+2025-12-23 10:51:37,885 | INFO | No new rows in this page.
+2025-12-23 10:51:39,128 | INFO | DONE raw_path=E:\Khai_thac_du_lieu\car_price_pipeline\data\raw\chotot_raw_20251223.csv total_new=0 total_seen=150
+2025-12-23 10:55:45,498 | INFO | RUN cwd=E:\Khai_thac_du_lieu\car_price_pipeline
+2025-12-23 10:55:45,498 | INFO | RUN ROOT=E:\Khai_thac_du_lieu\car_price_pipeline
+2025-12-23 10:55:45,498 | INFO | RUN CONFIG urls=E:\Khai_thac_du_lieu\car_price_pipeline\configs\urls.yaml
+2025-12-23 10:55:45,985 | INFO | Loaded regions_v2 map size=768 from https://gateway.chotot.com/v1/public/web-proxy-api/loadRegionsV2
+2025-12-23 10:55:45,987 | INFO | Mode=ALL_REGIONS(PROVINCES) provinces=46 crawling_now=10
+2025-12-23 10:55:45,988 | INFO | Crawling region=100501 pages=2 limit=50 delay=2.00s
+2025-12-23 10:55:46,286 | INFO | Fetched region=100501 page=1 offset=0 ads=0
+2025-12-23 10:55:46,287 | INFO | No new rows in this page.
+2025-12-23 10:55:48,945 | INFO | Fetched region=100501 page=2 offset=50 ads=0
+2025-12-23 10:55:48,946 | INFO | No new rows in this page.
+2025-12-23 10:55:51,261 | INFO | Crawling region=2013 pages=2 limit=50 delay=2.00s
+2025-12-23 10:55:52,637 | INFO | Fetched region=2013 page=1 offset=0 ads=50
+2025-12-23 10:55:52,652 | INFO | Wrote new_rows=49 -> E:\Khai_thac_du_lieu\car_price_pipeline\data\raw\chotot_raw_20251223.csv
+2025-12-23 10:55:55,096 | INFO | Fetched region=2013 page=2 offset=50 ads=4
+2025-12-23 10:55:55,105 | INFO | Wrote new_rows=4 -> E:\Khai_thac_du_lieu\car_price_pipeline\data\raw\chotot_raw_20251223.csv
+2025-12-23 10:55:57,335 | INFO | Crawling region=1107101 pages=2 limit=50 delay=2.00s
+2025-12-23 10:55:57,729 | INFO | Fetched region=1107101 page=1 offset=0 ads=0
+2025-12-23 10:55:57,730 | INFO | No new rows in this page.
+2025-12-23 10:56:00,221 | INFO | Fetched region=1107101 page=2 offset=50 ads=0
+2025-12-23 10:56:00,222 | INFO | No new rows in this page.
+2025-12-23 10:56:02,468 | INFO | Crawling region=10064 pages=2 limit=50 delay=2.00s
+2025-12-23 10:56:03,086 | INFO | Fetched region=10064 page=1 offset=0 ads=8
+2025-12-23 10:56:03,094 | INFO | Wrote new_rows=8 -> E:\Khai_thac_du_lieu\car_price_pipeline\data\raw\chotot_raw_20251223.csv
+2025-12-23 10:56:05,488 | INFO | Fetched region=10064 page=2 offset=50 ads=0
+2025-12-23 10:56:05,488 | INFO | No new rows in this page.
+2025-12-23 10:56:07,649 | INFO | Crawling region=1006 pages=2 limit=50 delay=2.00s
+2025-12-23 10:56:08,093 | INFO | Fetched region=1006 page=1 offset=0 ads=0
+2025-12-23 10:56:08,094 | INFO | No new rows in this page.
+2025-12-23 10:56:10,596 | INFO | Fetched region=1006 page=2 offset=50 ads=0
+2025-12-23 10:56:10,596 | INFO | No new rows in this page.
+2025-12-23 10:56:12,912 | INFO | Crawling region=7044 pages=2 limit=50 delay=2.00s
+2025-12-23 10:56:13,338 | INFO | Fetched region=7044 page=1 offset=0 ads=4
+2025-12-23 10:56:13,346 | INFO | Wrote new_rows=4 -> E:\Khai_thac_du_lieu\car_price_pipeline\data\raw\chotot_raw_20251223.csv
+2025-12-23 10:56:15,942 | INFO | Fetched region=7044 page=2 offset=50 ads=0
+2025-12-23 10:56:15,942 | INFO | No new rows in this page.
+2025-12-23 10:56:18,169 | INFO | Crawling region=6039 pages=2 limit=50 delay=2.00s
+2025-12-23 10:56:18,852 | INFO | Fetched region=6039 page=1 offset=0 ads=4
+2025-12-23 10:56:18,859 | INFO | Wrote new_rows=4 -> E:\Khai_thac_du_lieu\car_price_pipeline\data\raw\chotot_raw_20251223.csv
+2025-12-23 10:56:21,137 | INFO | Fetched region=6039 page=2 offset=50 ads=0
+2025-12-23 10:56:21,137 | INFO | No new rows in this page.
+2025-12-23 10:56:23,346 | INFO | Crawling region=503301 pages=2 limit=50 delay=2.00s
+2025-12-23 10:56:23,874 | INFO | Fetched region=503301 page=1 offset=0 ads=0
+2025-12-23 10:56:23,874 | INFO | No new rows in this page.
+2025-12-23 10:56:26,242 | INFO | Fetched region=503301 page=2 offset=50 ads=0
+2025-12-23 10:56:26,243 | INFO | No new rows in this page.
+2025-12-23 10:56:28,420 | INFO | Crawling region=502501 pages=2 limit=50 delay=2.00s
+2025-12-23 10:56:28,997 | INFO | Fetched region=502501 page=1 offset=0 ads=0
+2025-12-23 10:56:28,997 | INFO | No new rows in this page.
+2025-12-23 10:56:31,654 | INFO | Fetched region=502501 page=2 offset=50 ads=0
+2025-12-23 10:56:31,654 | INFO | No new rows in this page.
+2025-12-23 10:56:33,699 | INFO | Crawling region=9057 pages=2 limit=50 delay=2.00s
+2025-12-23 10:56:34,312 | INFO | Fetched region=9057 page=1 offset=0 ads=16
+2025-12-23 10:56:34,324 | INFO | Wrote new_rows=15 -> E:\Khai_thac_du_lieu\car_price_pipeline\data\raw\chotot_raw_20251223.csv
+2025-12-23 10:56:36,941 | INFO | Fetched region=9057 page=2 offset=50 ads=0
+2025-12-23 10:56:36,942 | INFO | No new rows in this page.
+2025-12-23 10:56:39,261 | INFO | DONE raw_path=E:\Khai_thac_du_lieu\car_price_pipeline\data\raw\chotot_raw_20251223.csv total_new=84 total_seen=86
+2025-12-23 11:02:27,274 | INFO | RUN cwd=E:\Khai_thac_du_lieu\car_price_pipeline
+2025-12-23 11:02:27,275 | INFO | RUN ROOT=E:\Khai_thac_du_lieu\car_price_pipeline
+2025-12-23 11:02:27,275 | INFO | RUN CONFIG urls=E:\Khai_thac_du_lieu\car_price_pipeline\configs\urls.yaml
+2025-12-23 11:02:27,629 | INFO | Loaded regions_v2 map size=768 from https://gateway.chotot.com/v1/public/web-proxy-api/loadRegionsV2
+2025-12-23 11:02:27,631 | INFO | Mode=ALL_REGIONS(PROVINCES) provinces=46 crawling_now=10
+2025-12-23 11:02:27,633 | INFO | Crawling region=502601 pages=2 limit=50 delay=2.00s
+2025-12-23 11:02:27,920 | INFO | Fetched region=502601 page=1 offset=0 ads=0
+2025-12-23 11:02:27,920 | INFO | No new rows in this page.
+2025-12-23 11:02:30,283 | INFO | Fetched region=502601 page=2 offset=50 ads=0
+2025-12-23 11:02:30,283 | INFO | No new rows in this page.
+2025-12-23 11:02:32,463 | INFO | Crawling region=8050 pages=2 limit=50 delay=2.00s
+2025-12-23 11:02:32,940 | INFO | Fetched region=8050 page=1 offset=0 ads=16
+2025-12-23 11:02:32,951 | INFO | Wrote new_rows=16 -> E:\Khai_thac_du_lieu\car_price_pipeline\data\raw\chotot_raw_20251223.csv
+2025-12-23 11:02:35,486 | INFO | Fetched region=8050 page=2 offset=50 ads=0
+2025-12-23 11:02:35,486 | INFO | No new rows in this page.
+2025-12-23 11:02:37,672 | INFO | Crawling region=5024 pages=2 limit=50 delay=2.00s
+2025-12-23 11:02:38,461 | INFO | Fetched region=5024 page=1 offset=0 ads=5
+2025-12-23 11:02:38,470 | INFO | Wrote new_rows=5 -> E:\Khai_thac_du_lieu\car_price_pipeline\data\raw\chotot_raw_20251223.csv
+2025-12-23 11:02:40,783 | INFO | Fetched region=5024 page=2 offset=50 ads=0
+2025-12-23 11:02:40,783 | INFO | No new rows in this page.
+2025-12-23 11:02:43,034 | INFO | Crawling region=11067 pages=2 limit=50 delay=2.00s
+2025-12-23 11:02:43,381 | INFO | Fetched region=11067 page=1 offset=0 ads=0
+2025-12-23 11:02:43,381 | INFO | No new rows in this page.
+2025-12-23 11:02:45,919 | INFO | Fetched region=11067 page=2 offset=50 ads=0
+2025-12-23 11:02:45,920 | INFO | No new rows in this page.
+2025-12-23 11:02:48,009 | INFO | Crawling region=11068 pages=2 limit=50 delay=2.00s
+2025-12-23 11:02:48,603 | INFO | Fetched region=11068 page=1 offset=0 ads=0
+2025-12-23 11:02:48,604 | INFO | No new rows in this page.
+2025-12-23 11:02:51,111 | INFO | Fetched region=11068 page=2 offset=50 ads=0
+2025-12-23 11:02:51,111 | INFO | No new rows in this page.
+2025-12-23 11:02:53,236 | INFO | Crawling region=3017 pages=2 limit=50 delay=2.00s
+2025-12-23 11:02:54,433 | INFO | Fetched region=3017 page=1 offset=0 ads=45
+2025-12-23 11:02:54,458 | INFO | Wrote new_rows=43 -> E:\Khai_thac_du_lieu\car_price_pipeline\data\raw\chotot_raw_20251223.csv
+2025-12-23 11:02:56,679 | INFO | Fetched region=3017 page=2 offset=50 ads=0
+2025-12-23 11:02:56,680 | INFO | No new rows in this page.
+2025-12-23 11:02:58,976 | INFO | Crawling region=9053 pages=2 limit=50 delay=2.00s
+2025-12-23 11:02:59,549 | INFO | Fetched region=9053 page=1 offset=0 ads=23
+2025-12-23 11:02:59,566 | INFO | Wrote new_rows=18 -> E:\Khai_thac_du_lieu\car_price_pipeline\data\raw\chotot_raw_20251223.csv
+2025-12-23 11:03:01,872 | INFO | Fetched region=9053 page=2 offset=50 ads=0
+2025-12-23 11:03:01,872 | INFO | No new rows in this page.
+2025-12-23 11:03:04,118 | INFO | Crawling region=5028 pages=2 limit=50 delay=2.00s
+2025-12-23 11:03:04,549 | INFO | Fetched region=5028 page=1 offset=0 ads=3
+2025-12-23 11:03:04,557 | INFO | Wrote new_rows=3 -> E:\Khai_thac_du_lieu\car_price_pipeline\data\raw\chotot_raw_20251223.csv
+2025-12-23 11:03:06,853 | INFO | Fetched region=5028 page=2 offset=50 ads=0
+2025-12-23 11:03:06,854 | INFO | No new rows in this page.
+2025-12-23 11:03:08,912 | INFO | Crawling region=1006201 pages=2 limit=50 delay=2.00s
+2025-12-23 11:03:09,413 | INFO | Fetched region=1006201 page=1 offset=0 ads=0
+2025-12-23 11:03:09,413 | INFO | No new rows in this page.
+2025-12-23 11:03:11,729 | INFO | Fetched region=1006201 page=2 offset=50 ads=0
+2025-12-23 11:03:11,729 | INFO | No new rows in this page.
+2025-12-23 11:03:14,023 | INFO | Crawling region=1002 pages=2 limit=50 delay=2.00s
+2025-12-23 11:03:14,407 | INFO | Fetched region=1002 page=1 offset=0 ads=2
+2025-12-23 11:03:14,414 | INFO | Wrote new_rows=2 -> E:\Khai_thac_du_lieu\car_price_pipeline\data\raw\chotot_raw_20251223.csv
+2025-12-23 11:03:16,951 | INFO | Fetched region=1002 page=2 offset=50 ads=0
+2025-12-23 11:03:16,952 | INFO | No new rows in this page.
+2025-12-23 11:03:18,967 | INFO | DONE raw_path=E:\Khai_thac_du_lieu\car_price_pipeline\data\raw\chotot_raw_20251223.csv total_new=87 total_seen=94
+2025-12-23 11:08:49,598 | INFO | RUN cwd=E:\Khai_thac_du_lieu\car_price_pipeline
+2025-12-23 11:08:49,598 | INFO | RUN ROOT=E:\Khai_thac_du_lieu\car_price_pipeline
+2025-12-23 11:08:49,598 | INFO | RUN CONFIG urls=E:\Khai_thac_du_lieu\car_price_pipeline\configs\urls.yaml
+2025-12-23 11:08:50,291 | INFO | Loaded regions_v2 map size=768 from https://gateway.chotot.com/v1/public/web-proxy-api/loadRegionsV2
+2025-12-23 11:08:50,293 | INFO | Mode=ALL_REGIONS(PROVINCES) provinces=46 crawling_now=10
+2025-12-23 11:08:50,295 | INFO | Crawling region=7044 pages=2 limit=50 delay=2.00s
+2025-12-23 11:08:50,699 | INFO | Fetched region=7044 page=1 offset=0 ads=4
+2025-12-23 11:08:50,699 | INFO | No new rows in this page.
+2025-12-23 11:08:53,154 | INFO | Fetched region=7044 page=2 offset=50 ads=0
+2025-12-23 11:08:53,154 | INFO | No new rows in this page.
+2025-12-23 11:08:55,206 | INFO | Crawling region=13000 pages=2 limit=50 delay=2.00s
+2025-12-23 11:08:56,437 | INFO | Fetched region=13000 page=1 offset=0 ads=50
+2025-12-23 11:08:56,449 | INFO | Wrote new_rows=8 -> E:\Khai_thac_du_lieu\car_price_pipeline\data\raw\chotot_raw_20251223.csv
+2025-12-23 11:09:00,316 | INFO | Fetched region=13000 page=2 offset=50 ads=50
+2025-12-23 11:09:00,328 | INFO | Wrote new_rows=1 -> E:\Khai_thac_du_lieu\car_price_pipeline\data\raw\chotot_raw_20251223.csv
+2025-12-23 11:09:02,556 | INFO | Crawling region=10064 pages=2 limit=50 delay=2.00s
+2025-12-23 11:09:03,197 | INFO | Fetched region=10064 page=1 offset=0 ads=8
+2025-12-23 11:09:03,198 | INFO | No new rows in this page.
+2025-12-23 11:09:05,806 | INFO | Fetched region=10064 page=2 offset=50 ads=0
+2025-12-23 11:09:05,806 | INFO | No new rows in this page.
+2025-12-23 11:09:08,015 | INFO | Crawling region=7047 pages=2 limit=50 delay=2.00s
+2025-12-23 11:09:08,708 | INFO | Fetched region=7047 page=1 offset=0 ads=6
+2025-12-23 11:09:08,720 | INFO | Wrote new_rows=6 -> E:\Khai_thac_du_lieu\car_price_pipeline\data\raw\chotot_raw_20251223.csv
+2025-12-23 11:09:11,185 | INFO | Fetched region=7047 page=2 offset=50 ads=0
+2025-12-23 11:09:11,186 | INFO | No new rows in this page.
+2025-12-23 11:09:13,219 | INFO | Crawling region=5028 pages=2 limit=50 delay=2.00s
+2025-12-23 11:09:13,551 | INFO | Fetched region=5028 page=1 offset=0 ads=3
+2025-12-23 11:09:13,552 | INFO | No new rows in this page.
+2025-12-23 11:09:16,052 | INFO | Fetched region=5028 page=2 offset=50 ads=0
+2025-12-23 11:09:16,052 | INFO | No new rows in this page.
+2025-12-23 11:09:18,400 | INFO | Crawling region=4019 pages=2 limit=50 delay=2.00s
+2025-12-23 11:09:19,263 | INFO | Fetched region=4019 page=1 offset=0 ads=8
+2025-12-23 11:09:19,274 | INFO | Wrote new_rows=8 -> E:\Khai_thac_du_lieu\car_price_pipeline\data\raw\chotot_raw_20251223.csv
+2025-12-23 11:09:21,678 | INFO | Fetched region=4019 page=2 offset=50 ads=0
+2025-12-23 11:09:21,679 | INFO | No new rows in this page.
+2025-12-23 11:09:23,789 | INFO | Crawling region=402001 pages=2 limit=50 delay=2.00s
+2025-12-23 11:09:24,194 | INFO | Fetched region=402001 page=1 offset=0 ads=0
+2025-12-23 11:09:24,195 | INFO | No new rows in this page.
+2025-12-23 11:09:26,438 | INFO | Fetched region=402001 page=2 offset=50 ads=0
+2025-12-23 11:09:26,439 | INFO | No new rows in this page.
+2025-12-23 11:09:28,542 | INFO | Crawling region=402101 pages=2 limit=50 delay=2.00s
+2025-12-23 11:09:28,913 | INFO | Fetched region=402101 page=1 offset=0 ads=0
+2025-12-23 11:09:28,913 | INFO | No new rows in this page.
+2025-12-23 11:09:31,417 | INFO | Fetched region=402101 page=2 offset=50 ads=0
+2025-12-23 11:09:31,417 | INFO | No new rows in this page.
+2025-12-23 11:09:33,644 | INFO | Crawling region=12000 pages=2 limit=50 delay=2.00s
+2025-12-23 11:09:35,024 | INFO | Fetched region=12000 page=1 offset=0 ads=50
+2025-12-23 11:09:35,045 | INFO | Wrote new_rows=29 -> E:\Khai_thac_du_lieu\car_price_pipeline\data\raw\chotot_raw_20251223.csv
+2025-12-23 11:09:38,080 | INFO | Fetched region=12000 page=2 offset=50 ads=50
+2025-12-23 11:09:38,106 | INFO | Wrote new_rows=50 -> E:\Khai_thac_du_lieu\car_price_pipeline\data\raw\chotot_raw_20251223.csv
+2025-12-23 11:09:40,300 | INFO | Crawling region=10130 pages=2 limit=50 delay=2.00s
+2025-12-23 11:09:40,624 | INFO | Fetched region=10130 page=1 offset=0 ads=3
+2025-12-23 11:09:40,634 | INFO | Wrote new_rows=2 -> E:\Khai_thac_du_lieu\car_price_pipeline\data\raw\chotot_raw_20251223.csv
+2025-12-23 11:09:43,019 | INFO | Fetched region=10130 page=2 offset=50 ads=0
+2025-12-23 11:09:43,019 | INFO | No new rows in this page.
+2025-12-23 11:09:45,188 | INFO | DONE raw_path=E:\Khai_thac_du_lieu\car_price_pipeline\data\raw\chotot_raw_20251223.csv total_new=104 total_seen=232
+2025-12-23 11:13:08,794 | INFO | RUN cwd=E:\Khai_thac_du_lieu\car_price_pipeline
+2025-12-23 11:13:08,795 | INFO | RUN ROOT=E:\Khai_thac_du_lieu\car_price_pipeline
+2025-12-23 11:13:08,795 | INFO | RUN CONFIG urls=E:\Khai_thac_du_lieu\car_price_pipeline\configs\urls.yaml
+2025-12-23 11:13:09,576 | INFO | Loaded regions_v2 map size=768 from https://gateway.chotot.com/v1/public/web-proxy-api/loadRegionsV2
+2025-12-23 11:13:09,579 | INFO | Mode=ALL_REGIONS(PROVINCES) provinces=46 crawling_now=10
+2025-12-23 11:13:09,581 | INFO | Crawling region=10061 pages=2 limit=50 delay=2.00s
+2025-12-23 11:13:09,857 | INFO | Fetched region=10061 page=1 offset=0 ads=0
+2025-12-23 11:13:09,857 | INFO | No new rows in this page.
+2025-12-23 11:13:12,187 | INFO | Fetched region=10061 page=2 offset=50 ads=0
+2025-12-23 11:13:12,188 | INFO | No new rows in this page.
+2025-12-23 11:13:14,427 | INFO | Crawling region=1006 pages=2 limit=50 delay=2.00s
+2025-12-23 11:13:14,977 | INFO | Fetched region=1006 page=1 offset=0 ads=0
+2025-12-23 11:13:14,977 | INFO | No new rows in this page.
+2025-12-23 11:13:17,333 | INFO | Fetched region=1006 page=2 offset=50 ads=0
+2025-12-23 11:13:17,333 | INFO | No new rows in this page.
+2025-12-23 11:13:19,496 | INFO | Crawling region=1006201 pages=2 limit=50 delay=2.00s
+2025-12-23 11:13:20,097 | INFO | Fetched region=1006201 page=1 offset=0 ads=0
+2025-12-23 11:13:20,097 | INFO | No new rows in this page.
+2025-12-23 11:13:22,677 | INFO | Fetched region=1006201 page=2 offset=50 ads=0
+2025-12-23 11:13:22,678 | INFO | No new rows in this page.
+2025-12-23 11:13:24,916 | INFO | Crawling region=1107101 pages=2 limit=50 delay=2.00s
+2025-12-23 11:13:25,538 | INFO | Fetched region=1107101 page=1 offset=0 ads=0
+2025-12-23 11:13:25,538 | INFO | No new rows in this page.
+2025-12-23 11:13:27,985 | INFO | Fetched region=1107101 page=2 offset=50 ads=0
+2025-12-23 11:13:27,985 | INFO | No new rows in this page.
+2025-12-23 11:13:30,306 | INFO | Crawling region=11069 pages=2 limit=50 delay=2.00s
+2025-12-23 11:13:30,876 | INFO | Fetched region=11069 page=1 offset=0 ads=0
+2025-12-23 11:13:30,876 | INFO | No new rows in this page.
+2025-12-23 11:13:33,518 | INFO | Fetched region=11069 page=2 offset=50 ads=0
+2025-12-23 11:13:33,518 | INFO | No new rows in this page.
+2025-12-23 11:13:35,668 | INFO | Crawling region=5028 pages=2 limit=50 delay=2.00s
+2025-12-23 11:13:36,078 | INFO | Fetched region=5028 page=1 offset=0 ads=3
+2025-12-23 11:13:36,078 | INFO | No new rows in this page.
+2025-12-23 11:13:38,753 | INFO | Fetched region=5028 page=2 offset=50 ads=0
+2025-12-23 11:13:38,753 | INFO | No new rows in this page.
+2025-12-23 11:13:41,102 | INFO | Crawling region=1005901 pages=2 limit=50 delay=2.00s
+2025-12-23 11:13:41,507 | INFO | Fetched region=1005901 page=1 offset=0 ads=0
+2025-12-23 11:13:41,507 | INFO | No new rows in this page.
+2025-12-23 11:13:44,264 | INFO | Fetched region=1005901 page=2 offset=50 ads=0
+2025-12-23 11:13:44,264 | INFO | No new rows in this page.
+2025-12-23 11:13:46,509 | INFO | Crawling region=9057 pages=2 limit=50 delay=2.00s
+2025-12-23 11:13:47,340 | INFO | Fetched region=9057 page=1 offset=0 ads=17
+2025-12-23 11:13:47,347 | INFO | Wrote new_rows=1 -> E:\Khai_thac_du_lieu\car_price_pipeline\data\raw\chotot_raw_20251223.csv
+2025-12-23 11:13:49,772 | INFO | Fetched region=9057 page=2 offset=50 ads=0
+2025-12-23 11:13:49,773 | INFO | No new rows in this page.
+2025-12-23 11:13:51,882 | INFO | Crawling region=502501 pages=2 limit=50 delay=2.00s
+2025-12-23 11:13:52,460 | INFO | Fetched region=502501 page=1 offset=0 ads=0
+2025-12-23 11:13:52,460 | INFO | No new rows in this page.
+2025-12-23 11:13:54,838 | INFO | Fetched region=502501 page=2 offset=50 ads=0
+2025-12-23 11:13:54,838 | INFO | No new rows in this page.
+2025-12-23 11:13:57,145 | INFO | Crawling region=5024 pages=2 limit=50 delay=2.00s
+2025-12-23 11:13:57,629 | INFO | Fetched region=5024 page=1 offset=0 ads=5
+2025-12-23 11:13:57,630 | INFO | No new rows in this page.
+2025-12-23 11:14:00,104 | INFO | Fetched region=5024 page=2 offset=50 ads=0
+2025-12-23 11:14:00,105 | INFO | No new rows in this page.
+2025-12-23 11:14:02,276 | INFO | DONE raw_path=E:\Khai_thac_du_lieu\car_price_pipeline\data\raw\chotot_raw_20251223.csv total_new=1 total_seen=25
+2025-12-23 11:19:48,895 | INFO | RUN cwd=E:\Khai_thac_du_lieu\car_price_pipeline
+2025-12-23 11:19:48,896 | INFO | RUN ROOT=E:\Khai_thac_du_lieu\car_price_pipeline
+2025-12-23 11:19:48,896 | INFO | RUN CONFIG urls=E:\Khai_thac_du_lieu\car_price_pipeline\configs\urls.yaml
+2025-12-23 11:19:49,190 | INFO | Loaded regions_v2 map size=768 from https://gateway.chotot.com/v1/public/web-proxy-api/loadRegionsV2
+2025-12-23 11:19:49,193 | INFO | Mode=ALL_REGIONS(PROVINCES) provinces=46 crawling_now=10
+2025-12-23 11:19:49,195 | INFO | Crawling region=100501 pages=2 limit=50 delay=1.20s
+2025-12-23 11:19:49,383 | INFO | Fetched region=100501 page=1 offset=0 ads=0
+2025-12-23 11:19:49,383 | INFO | No new rows in this page.
+2025-12-23 11:19:51,082 | INFO | Fetched region=100501 page=2 offset=50 ads=0
+2025-12-23 11:19:51,082 | INFO | No new rows in this page.
+2025-12-23 11:19:52,307 | INFO | Crawling region=1006001 pages=2 limit=50 delay=1.20s
+2025-12-23 11:19:52,611 | INFO | Fetched region=1006001 page=1 offset=0 ads=0
+2025-12-23 11:19:52,611 | INFO | No new rows in this page.
+2025-12-23 11:19:54,342 | INFO | Fetched region=1006001 page=2 offset=50 ads=0
+2025-12-23 11:19:54,342 | INFO | No new rows in this page.
+2025-12-23 11:19:55,599 | INFO | Crawling region=11068 pages=2 limit=50 delay=1.20s
+2025-12-23 11:19:55,982 | INFO | Fetched region=11068 page=1 offset=0 ads=0
+2025-12-23 11:19:55,982 | INFO | No new rows in this page.
+2025-12-23 11:19:57,831 | INFO | Fetched region=11068 page=2 offset=50 ads=0
+2025-12-23 11:19:57,832 | INFO | No new rows in this page.
+2025-12-23 11:19:59,088 | INFO | Crawling region=2013 pages=2 limit=50 delay=1.20s
+2025-12-23 11:20:00,184 | INFO | Fetched region=2013 page=1 offset=0 ads=50
+2025-12-23 11:20:00,190 | INFO | No new rows in this page.
+2025-12-23 11:20:02,435 | INFO | Fetched region=2013 page=2 offset=50 ads=4
+2025-12-23 11:20:02,435 | INFO | No new rows in this page.
+2025-12-23 11:20:03,669 | INFO | Crawling region=10063 pages=2 limit=50 delay=1.20s
+2025-12-23 11:20:04,056 | INFO | Fetched region=10063 page=1 offset=0 ads=1
+2025-12-23 11:20:04,064 | INFO | Wrote new_rows=1 -> E:\Khai_thac_du_lieu\car_price_pipeline\data\raw\chotot_raw_20251223.csv
+2025-12-23 11:20:05,915 | INFO | Fetched region=10063 page=2 offset=50 ads=0
+2025-12-23 11:20:05,915 | INFO | No new rows in this page.
+2025-12-23 11:20:07,163 | INFO | Crawling region=10065 pages=2 limit=50 delay=1.20s
+2025-12-23 11:20:07,553 | INFO | Fetched region=10065 page=1 offset=0 ads=2
+2025-12-23 11:20:07,561 | INFO | Wrote new_rows=2 -> E:\Khai_thac_du_lieu\car_price_pipeline\data\raw\chotot_raw_20251223.csv
+2025-12-23 11:20:09,500 | INFO | Fetched region=10065 page=2 offset=50 ads=0
+2025-12-23 11:20:09,500 | INFO | No new rows in this page.
+2025-12-23 11:20:10,929 | INFO | Crawling region=1006 pages=2 limit=50 delay=1.20s
+2025-12-23 11:20:11,238 | INFO | Fetched region=1006 page=1 offset=0 ads=0
+2025-12-23 11:20:11,239 | INFO | No new rows in this page.
+2025-12-23 11:20:13,186 | INFO | Fetched region=1006 page=2 offset=50 ads=0
+2025-12-23 11:20:13,187 | INFO | No new rows in this page.
+2025-12-23 11:20:14,446 | INFO | Crawling region=8050 pages=2 limit=50 delay=1.20s
+2025-12-23 11:20:15,132 | INFO | Fetched region=8050 page=1 offset=0 ads=16
+2025-12-23 11:20:15,134 | INFO | No new rows in this page.
+2025-12-23 11:20:16,769 | INFO | Fetched region=8050 page=2 offset=50 ads=0
+2025-12-23 11:20:16,769 | INFO | No new rows in this page.
+2025-12-23 11:20:18,267 | INFO | Crawling region=1002 pages=2 limit=50 delay=1.20s
+2025-12-23 11:20:18,650 | INFO | Fetched region=1002 page=1 offset=0 ads=2
+2025-12-23 11:20:18,651 | INFO | No new rows in this page.
+2025-12-23 11:20:20,766 | INFO | Fetched region=1002 page=2 offset=50 ads=0
+2025-12-23 11:20:20,767 | INFO | No new rows in this page.
+2025-12-23 11:20:22,288 | INFO | Crawling region=10061 pages=2 limit=50 delay=1.20s
+2025-12-23 11:20:22,619 | INFO | Fetched region=10061 page=1 offset=0 ads=0
+2025-12-23 11:20:22,620 | INFO | No new rows in this page.
+2025-12-23 11:20:24,356 | INFO | Fetched region=10061 page=2 offset=50 ads=0
+2025-12-23 11:20:24,356 | INFO | No new rows in this page.
+2025-12-23 11:20:25,644 | INFO | DONE raw_path=E:\Khai_thac_du_lieu\car_price_pipeline\data\raw\chotot_raw_20251223.csv total_new=3 total_seen=75
