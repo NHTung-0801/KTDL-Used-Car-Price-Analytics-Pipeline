@@ -17,9 +17,12 @@ def crawl_otocomvn_brute_force(target_rows=5000):
     base_url = "https://oto.com.vn/mua-ban-xe"
     all_cars = []
     
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M")
-    filename = f"data/raw/otocomvn_full_{timestamp}.csv"
+    output_dir = os.path.join(root_dir, 'data', 'raw')
     os.makedirs("data/raw", exist_ok=True)
+
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M")
+    filename = os.path.join(output_dir, f"otocomvn_full_{timestamp}.csv")
+
     
     print(f"🚀 Bắt đầu chế độ 'VƠ VÉT TẤT CẢ' (Lấy toàn bộ text hiển thị)...")
     print(f"💾 File sẽ lưu tại: {filename}")

@@ -24,10 +24,12 @@ def crawl_bonbanh_brute_force(target_rows=10000):
     # Bonbanh URL format: https://bonbanh.com/oto/page,2
     base_url = "https://bonbanh.com/oto"
     all_cars = []
-    
+
+    output_dir = os.path.join(root_dir, 'data', 'raw')
+    os.makedirs(output_dir, exist_ok=True)
+
     timestamp = datetime.now().strftime("%Y%m%d_%H%M")
-    filename = f"data/raw/bonbanh_full_{timestamp}.csv"
-    os.makedirs("data/raw", exist_ok=True)
+    filename = os.path.join(output_dir, f"bonbanh_full_{timestamp}.csv")
     
     print(f"🚀 [BONBANH] Bắt đầu cào dữ liệu thô (Target: {target_rows:,} xe)...")
     print(f"   (Lưu ý: Bonbanh chặn bot rất gắt, code sẽ chạy chậm để an toàn)")
@@ -250,4 +252,4 @@ def crawl_bonbanh_brute_force(target_rows=10000):
 
 if __name__ == "__main__":
     # Crawl 10,000 xe
-    crawl_bonbanh_brute_force(10000)
+    crawl_bonbanh_brute_force(50)
