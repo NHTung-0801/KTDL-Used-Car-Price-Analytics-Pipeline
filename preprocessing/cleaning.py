@@ -1,222 +1,133 @@
-# preprocessing/cleaning.py
-from __future__ import annotations
-
-import argparse
 import csv
-import logging
-import math
-import re
+import sys
 from pathlib import Path
-from typing import Optional, Tuple
 
-import pandas as pd
+# ==========================================
+# 1. CẤU HÌNH NGƯỜI DÙNG
+# ==========================================
+# 👇 Nếu muốn clean lại 1 file cụ thể bất chấp đã có hay chưa, điền tên vào đây.
+# 👇 Nếu để TRỐNG (""), code sẽ chạy chế độ BATCH (quét toàn bộ file chưa clean).
+SPECIFIC_FILENAME = "" 
 
+# ==========================================
+# 2. CẤU HÌNH CÁC CỘT CẦN LẤY
+# ==========================================
+TARGET_FIELDS = [
+    "listing_id",
+    "listing_url",
+    "brand",
+    "model",
+    "year",
+    "price",
+    "mileage_v2",
+    "fuel",
+    "carcolor_name", 
+    "region_name",
+    "crawled_at",
+    "source"
+]
 
 def get_repo_root() -> Path:
-    return Path(__file__).resolve().parents[1]
+    """Lùi ra 2 cấp để về thư mục gốc dự án"""
+    return Path(__file__).resolve().parent.parent
 
+def setup_paths():
+    repo_root = get_repo_root()
+    raw_dir = repo_root / "data" / "raw"
+    clean_dir = repo_root / "data" / "clean"
+    clean_dir.mkdir(parents=True, exist_ok=True)
+    return raw_dir, clean_dir
 
-REPO_ROOT = get_repo_root()
-DATA_DIR = REPO_ROOT / "data"
-RAW_DIR = DATA_DIR / "raw"
-CLEAN_DIR = DATA_DIR / "cleaned"
-LOG_DIR = REPO_ROOT / "logs"
-
-
-def setup_logger(log_file: Optional[Path] = None) -> logging.Logger:
-    LOG_DIR.mkdir(parents=True, exist_ok=True)
-    logger = logging.getLogger("preprocessing.cleaning")
-    logger.setLevel(logging.INFO)
-    logger.handlers.clear()
-
-    fmt = logging.Formatter("%(asctime)s | %(levelname)s | %(message)s")
-
-    sh = logging.StreamHandler()
-    sh.setFormatter(fmt)
-    logger.addHandler(sh)
-
-    if log_file:
-        fh = logging.FileHandler(str(log_file), encoding="utf-8")
-        fh.setFormatter(fmt)
-        logger.addHandler(fh)
-
-    return logger
-
-
-def safe_float(x) -> Optional[float]:
-    if x is None:
-        return None
-    if isinstance(x, float):
-        return float(x) if math.isfinite(x) else None
-    s = str(x).strip()
-    if s == "" or s.lower() in {"nan", "none", "null"}:
-        return None
-    s = s.replace(",", "").replace(" ", "")
+def clean_file(raw_file: Path, clean_file: Path):
+    """Hàm xử lý logic clean cho 1 file"""
     try:
-        v = float(s)
-        return float(v) if math.isfinite(v) else None
-    except Exception:
-        return None
+        with open(raw_file, mode='r', encoding='utf-8', newline='') as f_in, \
+             open(clean_file, mode='w', encoding='utf-8', newline='') as f_out:
+            
+            reader = csv.DictReader(f_in)
+            
+            # Check cột thiếu
+            missing = [f for f in TARGET_FIELDS if f not in reader.fieldnames]
+            if missing:
+                print(f"   ⚠️  Thiếu cột: {missing}")
 
+            writer = csv.DictWriter(f_out, fieldnames=TARGET_FIELDS)
+            writer.writeheader()
+            
+            count = 0
+            for row in reader:
+                clean_row = {k: row.get(k, "") for k in TARGET_FIELDS}
+                writer.writerow(clean_row)
+                count += 1
+                
+            print(f"   ✅ Đã tạo: {clean_file.name} ({count} dòng)")
+            
+    except Exception as e:
+        print(f"   ❌ Lỗi khi xử lý file {raw_file.name}: {e}")
 
-def safe_int(x) -> Optional[int]:
-    v = safe_float(x)
-    if v is None:
-        return None
-    try:
-        return int(round(v))
-    except Exception:
-        return None
+def run_batch_all():
+    """Chế độ quét và clean tất cả các file chưa được xử lý"""
+    raw_dir, clean_dir = setup_paths()
+    
+    if not raw_dir.exists():
+        print(f"❌ Thư mục {raw_dir} không tồn tại.")
+        return
 
+    # Lấy danh sách tất cả file csv và sắp xếp theo tên
+    all_raw_files = sorted(list(raw_dir.glob("*.csv")))
+    
+    if not all_raw_files:
+        print("❌ Không tìm thấy file CSV nào trong data/raw/")
+        return
 
-def parse_latlon_from_location(loc: str) -> Tuple[Optional[float], Optional[float]]:
-    if not loc:
-        return None, None
-    s = str(loc).strip().strip('"').strip("'")
-    m = re.search(r"(-?\d+(?:\.\d+)?)\s*,\s*(-?\d+(?:\.\d+)?)", s)
-    if not m:
-        return None, None
-    return safe_float(m.group(1)), safe_float(m.group(2))
+    print(f"🔍 Tìm thấy {len(all_raw_files)} file raw. Bắt đầu kiểm tra...")
+    
+    processed_count = 0
+    skipped_count = 0
 
+    for raw_path in all_raw_files:
+        # Tạo tên file clean tương ứng: thay 'raw' thành 'clean'
+        clean_name = raw_path.name.replace("raw", "clean")
+        
+        # Nếu tên file không có chữ "raw", thêm tiền tố clean_
+        if clean_name == raw_path.name:
+            clean_name = f"clean_{raw_path.name}"
+            
+        clean_path = clean_dir / clean_name
 
-def normalize_columns(df: pd.DataFrame) -> pd.DataFrame:
-    df = df.copy()
-    df.columns = [c.strip() for c in df.columns]
+        # LOGIC QUAN TRỌNG: Kiểm tra tồn tại
+        if clean_path.exists():
+            skipped_count += 1
+            # print(f"   ⏭️  Bỏ qua (đã có): {clean_name}") # Bỏ comment nếu muốn hiện chi tiết
+        else:
+            print(f"🚀 Đang xử lý: {raw_path.name} ...")
+            clean_file(raw_path, clean_path)
+            processed_count += 1
 
-    # If raw_json missing but last column looks like JSON -> rename it
-    if "raw_json" not in df.columns and len(df.columns) >= 1:
-        last = df.columns[-1]
-        if df[last].astype(str).str.contains(r"^\s*\{", regex=True, na=False).any():
-            df = df.rename(columns={last: "raw_json"})
+    print("-" * 30)
+    print(f"🎉 HOÀN TẤT BATCH JOB!")
+    print(f"   - Đã xử lý mới: {processed_count} file")
+    print(f"   - Đã bỏ qua (cũ): {skipped_count} file")
 
-    required = [
-        "listing_id",
-        "listing_url",
-        "brand",
-        "model",
-        "year",
-        "price",
-        "mileage_km",
-        "fuel",
-        "location",
-        "lat",
-        "lon",
-        "color",
-        "region_v2",
-        "region_name",
-        "crawl_time",
-        "source",
-        "raw_json",
-    ]
-    for c in required:
-        if c not in df.columns:
-            df[c] = None
-
-    return df[required].copy()
-
-
-def clean_dataframe(df: pd.DataFrame) -> pd.DataFrame:
-    df = normalize_columns(df)
-
-    # strip strings (avoid SettingWithCopyWarning by using .loc)
-    str_cols = ["listing_url", "brand", "model", "fuel", "color", "region_name", "source"]
-    for c in str_cols:
-        df.loc[:, c] = df[c].where(df[c].notna(), None)
-        df.loc[:, c] = df[c].map(lambda x: x.strip() if isinstance(x, str) else x)
-
-    # numeric conversions
-    df.loc[:, "listing_id"] = df["listing_id"].map(safe_int).astype("Int64")
-    df.loc[:, "year"] = df["year"].map(safe_int).astype("Int64")
-    df.loc[:, "price"] = df["price"].map(safe_int).astype("Int64")
-    df.loc[:, "mileage_km"] = df["mileage_km"].map(safe_int).astype("Int64")
-    df.loc[:, "region_v2"] = df["region_v2"].map(safe_int).astype("Int64")
-
-    df.loc[:, "lat"] = df["lat"].map(safe_float)
-    df.loc[:, "lon"] = df["lon"].map(safe_float)
-
-    # fill lat/lon from location if missing
-    need_parse = df["lat"].isna() | df["lon"].isna()
-    if need_parse.any():
-        parsed = df.loc[need_parse, "location"].map(parse_latlon_from_location)
-        df.loc[need_parse, "lat"] = [p[0] for p in parsed]
-        df.loc[need_parse, "lon"] = [p[1] for p in parsed]
-
-    # crawl_time normalize empty -> None
-    df.loc[:, "crawl_time"] = df["crawl_time"].map(
-        lambda x: str(x).strip() if pd.notna(x) and str(x).strip() != "" else None
-    )
-
-    # raw_json keep as string
-    df.loc[:, "raw_json"] = df["raw_json"].map(lambda x: str(x) if pd.notna(x) else None)
-
-    # drop invalid
-    df = df[df["listing_id"].notna() & df["listing_url"].notna()].copy()
-    return df
-
-
-def read_csv_robust(path: Path) -> pd.DataFrame:
-    try:
-        return pd.read_csv(path, dtype=str, encoding="utf-8", on_bad_lines="skip", low_memory=False)
-    except UnicodeDecodeError:
-        return pd.read_csv(path, dtype=str, encoding="utf-8-sig", on_bad_lines="skip", low_memory=False)
-
-
-def write_csv_safe(df: pd.DataFrame, out_path: Path) -> None:
-    out_path.parent.mkdir(parents=True, exist_ok=True)
-    df.to_csv(
-        out_path,
-        index=False,
-        encoding="utf-8-sig",
-        quoting=csv.QUOTE_ALL,
-        lineterminator="\n",   # ✅ FIX: pandas dùng lineterminator
-    )
-
-
-def run(raw_dir: Path, clean_dir: Path) -> int:
-    logger = setup_logger(LOG_DIR / f"cleaning_{pd.Timestamp.now():%Y%m%d}.log")
-
-    logger.info(f"REPO_ROOT={REPO_ROOT}")
-    logger.info(f"RAW_DIR={raw_dir}")
-    logger.info(f"CLEAN_DIR={clean_dir}")
-
-    raw_dir.mkdir(parents=True, exist_ok=True)
+# ==========================================
+# 3. KHU VỰC CHẠY CHƯƠNG TRÌNH
+# ==========================================
+if __name__ == "__main__":
+    repo_root = get_repo_root()
+    raw_dir = repo_root / "data" / "raw"
+    clean_dir = repo_root / "data" / "clean"
     clean_dir.mkdir(parents=True, exist_ok=True)
 
-    raw_files = sorted(raw_dir.glob("*.csv"))
-    if not raw_files:
-        logger.info(f"No raw files found in {raw_dir}")
-        return 0
+    # ƯU TIÊN 1: Chạy file cụ thể (nếu có điền tên)
+    if SPECIFIC_FILENAME and SPECIFIC_FILENAME.strip():
+        print(f"🎯 CHẾ ĐỘ HARD CODE: Chỉ xử lý {SPECIFIC_FILENAME}")
+        input_path = raw_dir / SPECIFIC_FILENAME
+        if input_path.exists():
+            output_name = input_path.name.replace("raw", "clean")
+            clean_file(input_path, clean_dir / output_name)
+        else:
+            print(f"❌ Không tìm thấy file {SPECIFIC_FILENAME}")
 
-    total_in = 0
-    total_out = 0
-
-    for f in raw_files:
-        logger.info(f"Reading raw: {f.name}")
-        df = read_csv_robust(f)
-        n_in = len(df)
-        total_in += n_in
-
-        df_clean = clean_dataframe(df)
-        n_out = len(df_clean)
-        total_out += n_out
-
-        out_name = f.name.replace("raw", "cleaned")
-        out_path = clean_dir / out_name
-        write_csv_safe(df_clean, out_path)
-
-        logger.info(f"Wrote cleaned: {out_path} rows_in={n_in} rows_out={n_out}")
-
-    logger.info(f"DONE total_in={total_in} total_out={total_out}")
-    return 0
-
-
-def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--raw-dir", default=str(RAW_DIR))
-    parser.add_argument("--clean-dir", default=str(CLEAN_DIR))
-    args = parser.parse_args()
-    raise SystemExit(run(Path(args.raw_dir), Path(args.clean_dir)))
-
-
-if __name__ == "__main__":
-    main()
+    # ƯU TIÊN 2: Chạy Batch (Mặc định)
+    else:
+        run_batch_all()

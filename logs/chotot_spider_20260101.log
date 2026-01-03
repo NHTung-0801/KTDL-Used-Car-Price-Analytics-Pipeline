@@ -1,0 +1,320 @@
+2026-01-01 11:41:53,474 | INFO  | REPO_ROOT=E:\Khai_thac_du_lieu\car_price_pipeline
+2026-01-01 11:41:53,475 | INFO  | CONFIG_DIR=E:\Khai_thac_du_lieu\car_price_pipeline\configs
+2026-01-01 11:41:53,475 | INFO  | RAW_DIR=E:\Khai_thac_du_lieu\car_price_pipeline\data\raw
+2026-01-01 11:41:53,475 | INFO  | META_DIR=E:\Khai_thac_du_lieu\car_price_pipeline\data\meta
+2026-01-01 11:41:53,476 | INFO  | LOG_FILE=E:\Khai_thac_du_lieu\car_price_pipeline\logs\chotot_spider_20260101.log
+2026-01-01 11:41:53,492 | INFO  | Loaded seen_ids=5030 from E:\Khai_thac_du_lieu\car_price_pipeline\data\meta\chotot_seen_ids.txt
+2026-01-01 11:41:53,749 | INFO  | Loaded regions_v2(provinces) size=48 from https://gateway.chotot.com/v1/public/web-proxy-api/loadRegionsV2
+2026-01-01 11:41:53,761 | INFO  | Mode=ALL_REGIONS total_regions=48 crawling_now=30 cursor_before=17 cursor_after=47
+2026-01-01 11:41:53,762 | INFO  | Selected regions: 4021:Thái Bình (Hưng Yên mới), 5024:An Giang, 5025:Bạc Liêu (Cà Mau mới), 5026:Bến Tre (Vĩnh Long mới), 5027:Cần Thơ, 5028:Cà Mau, 5029:Đồng Tháp, 5030:Hậu Giang (TP Cần Thơ mới), 5031:Kiên Giang (An Giang mới), 5032:Long An (Tây Ninh mới), 5033:Sóc Trăng (TP Cần Thơ mới), 5034:Tiền Giang (Đồng Tháp mới), 5035:Trà Vinh (Vĩnh Long mới), 5036:Vĩnh Long, 6038:Quảng Bình (Quảng Trị mới), 6039:Quảng Trị, 6040:Thừa Thiên Huế (TP Huế mới), 7042:Bình Thuận (Lâm Đồng mới), 7043:Bình Định (Gia Lai mới), 7044:Khánh Hòa, 7045:Ninh Thuận (Khánh Hòa mới), 7046:Phú Yên (Đắk Lắk mới), 7047:Quảng Ngãi, 8049:Hà Tĩnh, 8050:Nghệ An, 8051:Thanh Hóa, 9053:Đắk Lắk, 9054:Đắk Nông (Lâm Đồng mới), 9055:Kon Tum (Quảng Ngãi mới), 9056:Gia Lai
+2026-01-01 11:41:53,762 | INFO  | Crawling region=4021 pages=2 limit=50 delay=1.20s
+2026-01-01 11:41:54,533 | INFO  | Fetched region=4021 page=1 offset=0 ads=27
+2026-01-01 11:41:54,536 | INFO  | Rows written in this page: 2
+2026-01-01 11:41:55,827 | INFO  | Fetched region=4021 page=2 offset=50 ads=0
+2026-01-01 11:41:55,827 | INFO  | No rows written in this page.
+2026-01-01 11:41:57,029 | INFO  | Crawling region=5024 pages=2 limit=50 delay=1.20s
+2026-01-01 11:41:57,468 | INFO  | Fetched region=5024 page=1 offset=0 ads=50
+2026-01-01 11:41:57,471 | INFO  | Rows written in this page: 1
+2026-01-01 11:41:59,073 | INFO  | Fetched region=5024 page=2 offset=50 ads=50
+2026-01-01 11:41:59,076 | INFO  | No rows written in this page.
+2026-01-01 11:42:00,278 | INFO  | Crawling region=5025 pages=2 limit=50 delay=1.20s
+2026-01-01 11:42:00,394 | INFO  | Fetched region=5025 page=1 offset=0 ads=5
+2026-01-01 11:42:00,395 | INFO  | No rows written in this page.
+2026-01-01 11:42:01,690 | INFO  | Fetched region=5025 page=2 offset=50 ads=0
+2026-01-01 11:42:01,691 | INFO  | No rows written in this page.
+2026-01-01 11:42:02,893 | INFO  | Crawling region=5026 pages=2 limit=50 delay=1.20s
+2026-01-01 11:42:03,239 | INFO  | Fetched region=5026 page=1 offset=0 ads=35
+2026-01-01 11:42:03,242 | INFO  | No rows written in this page.
+2026-01-01 11:42:04,532 | INFO  | Fetched region=5026 page=2 offset=50 ads=0
+2026-01-01 11:42:04,532 | INFO  | No rows written in this page.
+2026-01-01 11:42:05,734 | INFO  | Crawling region=5027 pages=2 limit=50 delay=1.20s
+2026-01-01 11:42:06,023 | INFO  | Fetched region=5027 page=1 offset=0 ads=50
+2026-01-01 11:42:06,029 | INFO  | Rows written in this page: 24
+2026-01-01 11:42:07,534 | INFO  | Fetched region=5027 page=2 offset=50 ads=50
+2026-01-01 11:42:07,537 | INFO  | No rows written in this page.
+2026-01-01 11:42:08,739 | INFO  | Crawling region=5028 pages=2 limit=50 delay=1.20s
+2026-01-01 11:42:08,922 | INFO  | Fetched region=5028 page=1 offset=0 ads=13
+2026-01-01 11:42:08,923 | INFO  | No rows written in this page.
+2026-01-01 11:42:10,227 | INFO  | Fetched region=5028 page=2 offset=50 ads=0
+2026-01-01 11:42:10,228 | INFO  | No rows written in this page.
+2026-01-01 11:42:11,429 | INFO  | Crawling region=5029 pages=2 limit=50 delay=1.20s
+2026-01-01 11:42:11,816 | INFO  | Fetched region=5029 page=1 offset=0 ads=45
+2026-01-01 11:42:11,822 | INFO  | No rows written in this page.
+2026-01-01 11:42:13,104 | INFO  | Fetched region=5029 page=2 offset=50 ads=0
+2026-01-01 11:42:13,104 | INFO  | No rows written in this page.
+2026-01-01 11:42:14,307 | INFO  | Crawling region=5030 pages=2 limit=50 delay=1.20s
+2026-01-01 11:42:14,812 | INFO  | Fetched region=5030 page=1 offset=0 ads=16
+2026-01-01 11:42:14,814 | INFO  | No rows written in this page.
+2026-01-01 11:42:16,694 | INFO  | Fetched region=5030 page=2 offset=50 ads=0
+2026-01-01 11:42:16,694 | INFO  | No rows written in this page.
+2026-01-01 11:42:17,897 | INFO  | Crawling region=5031 pages=2 limit=50 delay=1.20s
+2026-01-01 11:42:18,147 | INFO  | Fetched region=5031 page=1 offset=0 ads=27
+2026-01-01 11:42:18,149 | INFO  | No rows written in this page.
+2026-01-01 11:42:19,434 | INFO  | Fetched region=5031 page=2 offset=50 ads=0
+2026-01-01 11:42:19,435 | INFO  | No rows written in this page.
+2026-01-01 11:42:20,637 | INFO  | Crawling region=5032 pages=2 limit=50 delay=1.20s
+2026-01-01 11:42:22,200 | INFO  | Fetched region=5032 page=1 offset=0 ads=50
+2026-01-01 11:42:22,205 | INFO  | Rows written in this page: 2
+2026-01-01 11:42:23,553 | INFO  | Fetched region=5032 page=2 offset=50 ads=5
+2026-01-01 11:42:23,554 | INFO  | No rows written in this page.
+2026-01-01 11:42:24,756 | INFO  | Crawling region=5033 pages=2 limit=50 delay=1.20s
+2026-01-01 11:42:25,540 | INFO  | Fetched region=5033 page=1 offset=0 ads=23
+2026-01-01 11:42:25,544 | INFO  | No rows written in this page.
+2026-01-01 11:42:26,824 | INFO  | Fetched region=5033 page=2 offset=50 ads=0
+2026-01-01 11:42:26,824 | INFO  | No rows written in this page.
+2026-01-01 11:42:28,027 | INFO  | Crawling region=5034 pages=2 limit=50 delay=1.20s
+2026-01-01 11:42:28,962 | INFO  | Fetched region=5034 page=1 offset=0 ads=50
+2026-01-01 11:42:28,967 | INFO  | Rows written in this page: 2
+2026-01-01 11:42:30,482 | INFO  | Fetched region=5034 page=2 offset=50 ads=41
+2026-01-01 11:42:30,486 | INFO  | Rows written in this page: 1
+2026-01-01 11:42:31,688 | INFO  | Crawling region=5035 pages=2 limit=50 delay=1.20s
+2026-01-01 11:42:31,901 | INFO  | Fetched region=5035 page=1 offset=0 ads=21
+2026-01-01 11:42:31,903 | INFO  | No rows written in this page.
+2026-01-01 11:42:33,193 | INFO  | Fetched region=5035 page=2 offset=50 ads=0
+2026-01-01 11:42:33,193 | INFO  | No rows written in this page.
+2026-01-01 11:42:34,399 | INFO  | Crawling region=5036 pages=2 limit=50 delay=1.20s
+2026-01-01 11:42:34,709 | INFO  | Fetched region=5036 page=1 offset=0 ads=35
+2026-01-01 11:42:34,713 | INFO  | Rows written in this page: 1
+2026-01-01 11:42:36,593 | INFO  | Fetched region=5036 page=2 offset=50 ads=0
+2026-01-01 11:42:36,594 | INFO  | No rows written in this page.
+2026-01-01 11:42:37,796 | INFO  | Crawling region=6038 pages=2 limit=50 delay=1.20s
+2026-01-01 11:42:37,988 | INFO  | Fetched region=6038 page=1 offset=0 ads=18
+2026-01-01 11:42:37,989 | INFO  | No rows written in this page.
+2026-01-01 11:42:39,272 | INFO  | Fetched region=6038 page=2 offset=50 ads=0
+2026-01-01 11:42:39,272 | INFO  | No rows written in this page.
+2026-01-01 11:42:40,474 | INFO  | Crawling region=6039 pages=2 limit=50 delay=1.20s
+2026-01-01 11:42:40,633 | INFO  | Fetched region=6039 page=1 offset=0 ads=11
+2026-01-01 11:42:40,635 | INFO  | No rows written in this page.
+2026-01-01 11:42:41,926 | INFO  | Fetched region=6039 page=2 offset=50 ads=0
+2026-01-01 11:42:41,927 | INFO  | No rows written in this page.
+2026-01-01 11:42:43,133 | INFO  | Crawling region=6040 pages=2 limit=50 delay=1.20s
+2026-01-01 11:42:43,438 | INFO  | Fetched region=6040 page=1 offset=0 ads=50
+2026-01-01 11:42:43,441 | INFO  | Rows written in this page: 1
+2026-01-01 11:42:44,857 | INFO  | Fetched region=6040 page=2 offset=50 ads=23
+2026-01-01 11:42:44,859 | INFO  | No rows written in this page.
+2026-01-01 11:42:46,061 | INFO  | Crawling region=7042 pages=2 limit=50 delay=1.20s
+2026-01-01 11:42:46,429 | INFO  | Fetched region=7042 page=1 offset=0 ads=50
+2026-01-01 11:42:46,433 | INFO  | Rows written in this page: 1
+2026-01-01 11:42:47,759 | INFO  | Fetched region=7042 page=2 offset=50 ads=4
+2026-01-01 11:42:47,760 | INFO  | No rows written in this page.
+2026-01-01 11:42:48,962 | INFO  | Crawling region=7043 pages=2 limit=50 delay=1.20s
+2026-01-01 11:42:49,957 | INFO  | Fetched region=7043 page=1 offset=0 ads=46
+2026-01-01 11:42:49,960 | INFO  | No rows written in this page.
+2026-01-01 11:42:51,537 | INFO  | Fetched region=7043 page=2 offset=50 ads=0
+2026-01-01 11:42:51,537 | INFO  | No rows written in this page.
+2026-01-01 11:42:52,740 | INFO  | Crawling region=7044 pages=2 limit=50 delay=1.20s
+2026-01-01 11:42:53,052 | INFO  | Fetched region=7044 page=1 offset=0 ads=50
+2026-01-01 11:42:53,058 | INFO  | Rows written in this page: 4
+2026-01-01 11:42:54,720 | INFO  | Fetched region=7044 page=2 offset=50 ads=11
+2026-01-01 11:42:54,721 | INFO  | No rows written in this page.
+2026-01-01 11:42:55,923 | INFO  | Crawling region=7045 pages=2 limit=50 delay=1.20s
+2026-01-01 11:42:56,066 | INFO  | Fetched region=7045 page=1 offset=0 ads=8
+2026-01-01 11:42:56,067 | INFO  | No rows written in this page.
+2026-01-01 11:42:57,350 | INFO  | Fetched region=7045 page=2 offset=50 ads=0
+2026-01-01 11:42:57,351 | INFO  | No rows written in this page.
+2026-01-01 11:42:58,553 | INFO  | Crawling region=7046 pages=2 limit=50 delay=1.20s
+2026-01-01 11:42:58,830 | INFO  | Fetched region=7046 page=1 offset=0 ads=29
+2026-01-01 11:42:58,833 | INFO  | No rows written in this page.
+2026-01-01 11:43:00,136 | INFO  | Fetched region=7046 page=2 offset=50 ads=0
+2026-01-01 11:43:00,137 | INFO  | No rows written in this page.
+2026-01-01 11:43:01,339 | INFO  | Crawling region=7047 pages=2 limit=50 delay=1.20s
+2026-01-01 11:43:01,736 | INFO  | Fetched region=7047 page=1 offset=0 ads=41
+2026-01-01 11:43:01,740 | INFO  | No rows written in this page.
+2026-01-01 11:43:03,024 | INFO  | Fetched region=7047 page=2 offset=50 ads=0
+2026-01-01 11:43:03,024 | INFO  | No rows written in this page.
+2026-01-01 11:43:04,226 | INFO  | Crawling region=8049 pages=2 limit=50 delay=1.20s
+2026-01-01 11:43:04,529 | INFO  | Fetched region=8049 page=1 offset=0 ads=50
+2026-01-01 11:43:04,534 | INFO  | Rows written in this page: 1
+2026-01-01 11:43:05,850 | INFO  | Fetched region=8049 page=2 offset=50 ads=4
+2026-01-01 11:43:05,851 | INFO  | No rows written in this page.
+2026-01-01 11:43:07,052 | INFO  | Crawling region=8050 pages=2 limit=50 delay=1.20s
+2026-01-01 11:43:07,358 | INFO  | Fetched region=8050 page=1 offset=0 ads=50
+2026-01-01 11:43:07,364 | INFO  | Rows written in this page: 7
+2026-01-01 11:43:08,913 | INFO  | Fetched region=8050 page=2 offset=50 ads=50
+2026-01-01 11:43:08,917 | INFO  | No rows written in this page.
+2026-01-01 11:43:10,119 | INFO  | Crawling region=8051 pages=2 limit=50 delay=1.20s
+2026-01-01 11:43:10,534 | INFO  | Fetched region=8051 page=1 offset=0 ads=50
+2026-01-01 11:43:10,541 | INFO  | Rows written in this page: 9
+2026-01-01 11:43:12,166 | INFO  | Fetched region=8051 page=2 offset=50 ads=50
+2026-01-01 11:43:12,172 | INFO  | No rows written in this page.
+2026-01-01 11:43:13,375 | INFO  | Crawling region=9053 pages=2 limit=50 delay=1.20s
+2026-01-01 11:43:13,799 | INFO  | Fetched region=9053 page=1 offset=0 ads=50
+2026-01-01 11:43:13,808 | INFO  | Rows written in this page: 20
+2026-01-01 11:43:15,848 | INFO  | Fetched region=9053 page=2 offset=50 ads=50
+2026-01-01 11:43:15,855 | INFO  | Rows written in this page: 9
+2026-01-01 11:43:17,058 | INFO  | Crawling region=9054 pages=2 limit=50 delay=1.20s
+2026-01-01 11:43:17,335 | INFO  | Fetched region=9054 page=1 offset=0 ads=38
+2026-01-01 11:43:17,338 | INFO  | No rows written in this page.
+2026-01-01 11:43:18,630 | INFO  | Fetched region=9054 page=2 offset=50 ads=0
+2026-01-01 11:43:18,631 | INFO  | No rows written in this page.
+2026-01-01 11:43:19,833 | INFO  | Crawling region=9055 pages=2 limit=50 delay=1.20s
+2026-01-01 11:43:19,949 | INFO  | Fetched region=9055 page=1 offset=0 ads=4
+2026-01-01 11:43:19,950 | INFO  | No rows written in this page.
+2026-01-01 11:43:21,238 | INFO  | Fetched region=9055 page=2 offset=50 ads=0
+2026-01-01 11:43:21,239 | INFO  | No rows written in this page.
+2026-01-01 11:43:22,441 | INFO  | Crawling region=9056 pages=2 limit=50 delay=1.20s
+2026-01-01 11:43:22,918 | INFO  | Fetched region=9056 page=1 offset=0 ads=50
+2026-01-01 11:43:22,924 | INFO  | Rows written in this page: 2
+2026-01-01 11:43:24,725 | INFO  | Fetched region=9056 page=2 offset=50 ads=50
+2026-01-01 11:43:24,729 | INFO  | No rows written in this page.
+2026-01-01 11:43:25,937 | INFO  | DONE raw_path=E:\Khai_thac_du_lieu\car_price_pipeline\data\raw\chotot_raw_20260101.csv total_new=87 total_seen=5117
+2026-01-01 11:44:29,669 | INFO  | REPO_ROOT=E:\Khai_thac_du_lieu\car_price_pipeline
+2026-01-01 11:44:29,670 | INFO  | CONFIG_DIR=E:\Khai_thac_du_lieu\car_price_pipeline\configs
+2026-01-01 11:44:29,670 | INFO  | RAW_DIR=E:\Khai_thac_du_lieu\car_price_pipeline\data\raw
+2026-01-01 11:44:29,670 | INFO  | META_DIR=E:\Khai_thac_du_lieu\car_price_pipeline\data\meta
+2026-01-01 11:44:29,670 | INFO  | LOG_FILE=E:\Khai_thac_du_lieu\car_price_pipeline\logs\chotot_spider_20260101.log
+2026-01-01 11:44:29,688 | INFO  | Loaded seen_ids=5117 from E:\Khai_thac_du_lieu\car_price_pipeline\data\meta\chotot_seen_ids.txt
+2026-01-01 11:44:31,118 | INFO  | Loaded regions_v2(provinces) size=48 from https://gateway.chotot.com/v1/public/web-proxy-api/loadRegionsV2
+2026-01-01 11:44:31,127 | INFO  | Mode=ALL_REGIONS total_regions=48 crawling_now=30 cursor_before=47 cursor_after=29
+2026-01-01 11:44:31,127 | INFO  | Selected regions: 9057:Lâm Đồng, 1001:Bắc Ninh, 1002:Phú Thọ, 1003:Hà Nam (Ninh Bình mới), 1004:Hải Dương (TP Hải Phòng mới), 1005:Hòa Bình (Phú Thọ mới), 1006:Hưng Yên, 1007:Ninh Bình, 1008:Vĩnh Phúc (Phú Thọ mới), 2010:Bà Rịa - Vũng Tàu (TP Hồ Chí Minh mới), 2011:Bình Dương (TP Hồ Chí Minh mới), 2012:Bình Phước (Đồng Nai mới), 2013:Đồng Nai, 2014:Tây Ninh, 3016:Quảng Nam (TP Đà Nẵng mới), 3017:Đà Nẵng, 4019:Hải Phòng, 4020:Nam Định (Ninh Bình mới), 4021:Thái Bình (Hưng Yên mới), 5024:An Giang, 5025:Bạc Liêu (Cà Mau mới), 5026:Bến Tre (Vĩnh Long mới), 5027:Cần Thơ, 5028:Cà Mau, 5029:Đồng Tháp, 5030:Hậu Giang (TP Cần Thơ mới), 5031:Kiên Giang (An Giang mới), 5032:Long An (Tây Ninh mới), 5033:Sóc Trăng (TP Cần Thơ mới), 5034:Tiền Giang (Đồng Tháp mới)
+2026-01-01 11:44:31,127 | INFO  | Crawling region=9057 pages=2 limit=50 delay=1.20s
+2026-01-01 11:44:31,727 | INFO  | Fetched region=9057 page=1 offset=0 ads=50
+2026-01-01 11:44:31,732 | INFO  | Rows written in this page: 8
+2026-01-01 11:44:33,412 | INFO  | Fetched region=9057 page=2 offset=50 ads=50
+2026-01-01 11:44:33,417 | INFO  | No rows written in this page.
+2026-01-01 11:44:34,619 | INFO  | Crawling region=1001 pages=2 limit=50 delay=1.20s
+2026-01-01 11:44:34,997 | INFO  | Fetched region=1001 page=1 offset=0 ads=49
+2026-01-01 11:44:35,001 | INFO  | Rows written in this page: 1
+2026-01-01 11:44:36,280 | INFO  | Fetched region=1001 page=2 offset=50 ads=0
+2026-01-01 11:44:36,280 | INFO  | No rows written in this page.
+2026-01-01 11:44:37,482 | INFO  | Crawling region=1002 pages=2 limit=50 delay=1.20s
+2026-01-01 11:44:37,769 | INFO  | Fetched region=1002 page=1 offset=0 ads=30
+2026-01-01 11:44:37,773 | INFO  | Rows written in this page: 4
+2026-01-01 11:44:39,094 | INFO  | Fetched region=1002 page=2 offset=50 ads=0
+2026-01-01 11:44:39,094 | INFO  | No rows written in this page.
+2026-01-01 11:44:40,296 | INFO  | Crawling region=1003 pages=2 limit=50 delay=1.20s
+2026-01-01 11:44:40,479 | INFO  | Fetched region=1003 page=1 offset=0 ads=16
+2026-01-01 11:44:40,480 | INFO  | No rows written in this page.
+2026-01-01 11:44:41,759 | INFO  | Fetched region=1003 page=2 offset=50 ads=0
+2026-01-01 11:44:41,760 | INFO  | No rows written in this page.
+2026-01-01 11:44:42,961 | INFO  | Crawling region=1004 pages=2 limit=50 delay=1.20s
+2026-01-01 11:44:43,402 | INFO  | Fetched region=1004 page=1 offset=0 ads=50
+2026-01-01 11:44:43,408 | INFO  | Rows written in this page: 6
+2026-01-01 11:44:44,753 | INFO  | Fetched region=1004 page=2 offset=50 ads=5
+2026-01-01 11:44:44,753 | INFO  | No rows written in this page.
+2026-01-01 11:44:45,954 | INFO  | Crawling region=1005 pages=2 limit=50 delay=1.20s
+2026-01-01 11:44:46,164 | INFO  | Fetched region=1005 page=1 offset=0 ads=13
+2026-01-01 11:44:46,165 | INFO  | No rows written in this page.
+2026-01-01 11:44:47,446 | INFO  | Fetched region=1005 page=2 offset=50 ads=0
+2026-01-01 11:44:47,446 | INFO  | No rows written in this page.
+2026-01-01 11:44:48,649 | INFO  | Crawling region=1006 pages=2 limit=50 delay=1.20s
+2026-01-01 11:44:48,926 | INFO  | Fetched region=1006 page=1 offset=0 ads=35
+2026-01-01 11:44:48,930 | INFO  | Rows written in this page: 1
+2026-01-01 11:44:50,251 | INFO  | Fetched region=1006 page=2 offset=50 ads=0
+2026-01-01 11:44:50,251 | INFO  | No rows written in this page.
+2026-01-01 11:44:51,453 | INFO  | Crawling region=1007 pages=2 limit=50 delay=1.20s
+2026-01-01 11:44:51,797 | INFO  | Fetched region=1007 page=1 offset=0 ads=39
+2026-01-01 11:44:51,800 | INFO  | Rows written in this page: 1
+2026-01-01 11:44:53,126 | INFO  | Fetched region=1007 page=2 offset=50 ads=0
+2026-01-01 11:44:53,126 | INFO  | No rows written in this page.
+2026-01-01 11:44:54,328 | INFO  | Crawling region=1008 pages=2 limit=50 delay=1.20s
+2026-01-01 11:44:54,660 | INFO  | Fetched region=1008 page=1 offset=0 ads=42
+2026-01-01 11:44:54,665 | INFO  | Rows written in this page: 1
+2026-01-01 11:44:55,940 | INFO  | Fetched region=1008 page=2 offset=50 ads=0
+2026-01-01 11:44:55,941 | INFO  | No rows written in this page.
+2026-01-01 11:44:57,143 | INFO  | Crawling region=2010 pages=2 limit=50 delay=1.20s
+2026-01-01 11:44:57,544 | INFO  | Fetched region=2010 page=1 offset=0 ads=50
+2026-01-01 11:44:57,550 | INFO  | Rows written in this page: 4
+2026-01-01 11:44:59,182 | INFO  | Fetched region=2010 page=2 offset=50 ads=50
+2026-01-01 11:44:59,186 | INFO  | No rows written in this page.
+2026-01-01 11:45:00,389 | INFO  | Crawling region=2011 pages=2 limit=50 delay=1.20s
+2026-01-01 11:45:01,117 | INFO  | Fetched region=2011 page=1 offset=0 ads=50
+2026-01-01 11:45:01,125 | INFO  | Rows written in this page: 22
+2026-01-01 11:45:02,789 | INFO  | Fetched region=2011 page=2 offset=50 ads=50
+2026-01-01 11:45:02,796 | INFO  | Rows written in this page: 17
+2026-01-01 11:45:03,998 | INFO  | Crawling region=2012 pages=2 limit=50 delay=1.20s
+2026-01-01 11:45:06,747 | INFO  | Fetched region=2012 page=1 offset=0 ads=50
+2026-01-01 11:45:06,750 | INFO  | No rows written in this page.
+2026-01-01 11:45:10,748 | INFO  | Fetched region=2012 page=2 offset=50 ads=46
+2026-01-01 11:45:10,751 | INFO  | No rows written in this page.
+2026-01-01 11:45:11,954 | INFO  | Crawling region=2013 pages=2 limit=50 delay=1.20s
+2026-01-01 11:45:12,932 | INFO  | Fetched region=2013 page=1 offset=0 ads=50
+2026-01-01 11:45:12,938 | INFO  | Rows written in this page: 22
+2026-01-01 11:45:14,894 | INFO  | Fetched region=2013 page=2 offset=50 ads=50
+2026-01-01 11:45:14,899 | INFO  | Rows written in this page: 8
+2026-01-01 11:45:16,102 | INFO  | Crawling region=2014 pages=2 limit=50 delay=1.20s
+2026-01-01 11:45:16,838 | INFO  | Fetched region=2014 page=1 offset=0 ads=50
+2026-01-01 11:45:16,841 | INFO  | Rows written in this page: 3
+2026-01-01 11:45:18,770 | INFO  | Fetched region=2014 page=2 offset=50 ads=50
+2026-01-01 11:45:18,774 | INFO  | No rows written in this page.
+2026-01-01 11:45:19,976 | INFO  | Crawling region=3016 pages=2 limit=50 delay=1.20s
+2026-01-01 11:45:20,992 | INFO  | Fetched region=3016 page=1 offset=0 ads=50
+2026-01-01 11:45:20,996 | INFO  | Rows written in this page: 2
+2026-01-01 11:45:22,797 | INFO  | Fetched region=3016 page=2 offset=50 ads=31
+2026-01-01 11:45:22,799 | INFO  | No rows written in this page.
+2026-01-01 11:45:24,002 | INFO  | Crawling region=3017 pages=2 limit=50 delay=1.20s
+2026-01-01 11:45:25,200 | INFO  | Fetched region=3017 page=1 offset=0 ads=50
+2026-01-01 11:45:25,205 | INFO  | Rows written in this page: 8
+2026-01-01 11:45:26,793 | INFO  | Fetched region=3017 page=2 offset=50 ads=50
+2026-01-01 11:45:26,798 | INFO  | Rows written in this page: 7
+2026-01-01 11:45:28,000 | INFO  | Crawling region=4019 pages=2 limit=50 delay=1.20s
+2026-01-01 11:45:28,367 | INFO  | Fetched region=4019 page=1 offset=0 ads=50
+2026-01-01 11:45:28,372 | INFO  | Rows written in this page: 11
+2026-01-01 11:45:51,865 | INFO  | Fetched region=4019 page=2 offset=50 ads=50
+2026-01-01 11:45:51,868 | INFO  | No rows written in this page.
+2026-01-01 11:45:53,070 | INFO  | Crawling region=4020 pages=2 limit=50 delay=1.20s
+2026-01-01 11:45:53,568 | INFO  | Fetched region=4020 page=1 offset=0 ads=22
+2026-01-01 11:45:53,570 | INFO  | No rows written in this page.
+2026-01-01 11:45:55,441 | INFO  | Fetched region=4020 page=2 offset=50 ads=0
+2026-01-01 11:45:55,441 | INFO  | No rows written in this page.
+2026-01-01 11:45:56,643 | INFO  | Crawling region=4021 pages=2 limit=50 delay=1.20s
+2026-01-01 11:45:56,900 | INFO  | Fetched region=4021 page=1 offset=0 ads=27
+2026-01-01 11:45:56,902 | INFO  | No rows written in this page.
+2026-01-01 11:45:58,465 | INFO  | Fetched region=4021 page=2 offset=50 ads=0
+2026-01-01 11:45:58,465 | INFO  | No rows written in this page.
+2026-01-01 11:45:59,667 | INFO  | Crawling region=5024 pages=2 limit=50 delay=1.20s
+2026-01-01 11:45:59,961 | INFO  | Fetched region=5024 page=1 offset=0 ads=50
+2026-01-01 11:45:59,964 | INFO  | No rows written in this page.
+2026-01-01 11:46:01,782 | INFO  | Fetched region=5024 page=2 offset=50 ads=50
+2026-01-01 11:46:01,785 | INFO  | No rows written in this page.
+2026-01-01 11:46:02,986 | INFO  | Crawling region=5025 pages=2 limit=50 delay=1.20s
+2026-01-01 11:46:05,519 | INFO  | Fetched region=5025 page=1 offset=0 ads=5
+2026-01-01 11:46:05,520 | INFO  | No rows written in this page.
+2026-01-01 11:46:11,635 | INFO  | Fetched region=5025 page=2 offset=50 ads=0
+2026-01-01 11:46:11,636 | INFO  | No rows written in this page.
+2026-01-01 11:46:12,838 | INFO  | Crawling region=5026 pages=2 limit=50 delay=1.20s
+2026-01-01 11:46:13,708 | INFO  | Fetched region=5026 page=1 offset=0 ads=35
+2026-01-01 11:46:13,710 | INFO  | No rows written in this page.
+2026-01-01 11:46:36,473 | INFO  | Fetched region=5026 page=2 offset=50 ads=0
+2026-01-01 11:46:36,473 | INFO  | No rows written in this page.
+2026-01-01 11:46:37,675 | INFO  | Crawling region=5027 pages=2 limit=50 delay=1.20s
+2026-01-01 11:46:40,566 | INFO  | Fetched region=5027 page=1 offset=0 ads=50
+2026-01-01 11:46:40,570 | INFO  | No rows written in this page.
+2026-01-01 11:46:42,786 | INFO  | Fetched region=5027 page=2 offset=50 ads=50
+2026-01-01 11:46:42,789 | INFO  | No rows written in this page.
+2026-01-01 11:46:43,991 | INFO  | Crawling region=5028 pages=2 limit=50 delay=1.20s
+2026-01-01 11:46:46,584 | INFO  | Fetched region=5028 page=1 offset=0 ads=13
+2026-01-01 11:46:46,586 | INFO  | No rows written in this page.
+2026-01-01 11:46:48,501 | INFO  | Fetched region=5028 page=2 offset=50 ads=0
+2026-01-01 11:46:48,501 | INFO  | No rows written in this page.
+2026-01-01 11:46:49,704 | INFO  | Crawling region=5029 pages=2 limit=50 delay=1.20s
+2026-01-01 11:46:50,093 | INFO  | Fetched region=5029 page=1 offset=0 ads=45
+2026-01-01 11:46:50,097 | INFO  | No rows written in this page.
+2026-01-01 11:46:51,399 | INFO  | Fetched region=5029 page=2 offset=50 ads=0
+2026-01-01 11:46:51,399 | INFO  | No rows written in this page.
+2026-01-01 11:46:52,601 | INFO  | Crawling region=5030 pages=2 limit=50 delay=1.20s
+2026-01-01 11:47:02,478 | INFO  | Fetched region=5030 page=1 offset=0 ads=16
+2026-01-01 11:47:02,480 | INFO  | No rows written in this page.
+2026-01-01 11:47:08,610 | INFO  | Fetched region=5030 page=2 offset=50 ads=0
+2026-01-01 11:47:08,611 | INFO  | No rows written in this page.
+2026-01-01 11:47:09,813 | INFO  | Crawling region=5031 pages=2 limit=50 delay=1.20s
+2026-01-01 11:47:10,671 | INFO  | Fetched region=5031 page=1 offset=0 ads=27
+2026-01-01 11:47:10,673 | INFO  | No rows written in this page.
+2026-01-01 11:47:16,822 | INFO  | Fetched region=5031 page=2 offset=50 ads=0
+2026-01-01 11:47:16,823 | INFO  | No rows written in this page.
+2026-01-01 11:47:18,024 | INFO  | Crawling region=5032 pages=2 limit=50 delay=1.20s
+2026-01-01 11:47:20,880 | INFO  | Fetched region=5032 page=1 offset=0 ads=50
+2026-01-01 11:47:20,883 | INFO  | No rows written in this page.
+2026-01-01 11:47:24,783 | INFO  | Fetched region=5032 page=2 offset=50 ads=5
+2026-01-01 11:47:24,784 | INFO  | No rows written in this page.
+2026-01-01 11:47:25,985 | INFO  | Crawling region=5033 pages=2 limit=50 delay=1.20s
+2026-01-01 11:47:28,652 | INFO  | Fetched region=5033 page=1 offset=0 ads=23
+2026-01-01 11:47:28,654 | INFO  | No rows written in this page.
+2026-01-01 11:47:30,571 | INFO  | Fetched region=5033 page=2 offset=50 ads=0
+2026-01-01 11:47:30,572 | INFO  | No rows written in this page.
+2026-01-01 11:47:31,774 | INFO  | Crawling region=5034 pages=2 limit=50 delay=1.20s
+2026-01-01 11:47:32,733 | INFO  | Fetched region=5034 page=1 offset=0 ads=50
+2026-01-01 11:47:32,736 | INFO  | No rows written in this page.
+2026-01-01 11:47:34,867 | INFO  | Fetched region=5034 page=2 offset=50 ads=41
+2026-01-01 11:47:34,870 | INFO  | No rows written in this page.
+2026-01-01 11:47:36,075 | INFO  | DONE raw_path=E:\Khai_thac_du_lieu\car_price_pipeline\data\raw\chotot_raw_20260101.csv total_new=126 total_seen=5243

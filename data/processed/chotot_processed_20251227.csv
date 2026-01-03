@@ -1,0 +1,246 @@
+listing_id,listing_url,brand,model,year,price,mileage_v2,fuel,carcolor_name,region_name,crawled_at,source,car_age,brand_model
+129933976,https://www.chotot.com/mua-ban-o-to/129933976.htm,Mazda,CX 5,2017,468000000,100000.0,Xăng,Unknown,Đồng Nai,2025-12-27 13:03:14,chotot,9,Mazda CX 5
+129516196,https://www.chotot.com/mua-ban-o-to/129516196.htm,Hyundai,i20,2014,205000000,104000.0,Xăng,Unknown,Đồng Nai,2025-12-27 13:03:14,chotot,12,Hyundai i20
+129492263,https://www.chotot.com/mua-ban-o-to/129492263.htm,Hyundai,Grand i10,2024,435000000,2000.0,Xăng,Unknown,Đồng Nai,2025-12-27 13:03:14,chotot,2,Hyundai Grand i10
+129933064,https://www.chotot.com/mua-ban-o-to/129933064.htm,Chevrolet,Spark,2018,128000000,52028.0,Xăng,xanh,Đồng Nai,2025-12-27 13:03:14,chotot,8,Chevrolet Spark
+129545910,https://www.chotot.com/mua-ban-o-to/129545910.htm,Kia,K3,2015,345000000,42000.0,Xăng,Unknown,Đồng Nai,2025-12-27 13:03:14,chotot,11,Kia K3
+129932908,https://www.chotot.com/mua-ban-o-to/129932908.htm,Ford,Everest,2008,205000000,230000.0,Dầu,Unknown,Đồng Nai,2025-12-27 13:03:14,chotot,18,Ford Everest
+129492322,https://www.chotot.com/mua-ban-o-to/129492322.htm,Mitsubishi,Xpander,2023,495000000,52000.0,Xăng,Unknown,Đồng Nai,2025-12-27 13:03:14,chotot,3,Mitsubishi Xpander
+129931553,https://www.chotot.com/mua-ban-o-to/129931553.htm,Ford,Everest,2009,219000000,380.0,Dầu,Unknown,Đồng Nai,2025-12-27 13:03:14,chotot,17,Ford Everest
+129931454,https://www.chotot.com/mua-ban-o-to/129931454.htm,Toyota,Corolla Altis,2012,315000000,16.0,Xăng,Unknown,Đồng Nai,2025-12-27 13:03:14,chotot,14,Toyota Corolla Altis
+129930326,https://www.chotot.com/mua-ban-o-to/129930326.htm,BMW,3 Series,2009,230000000,119000.0,Xăng,bạc,Đồng Nai,2025-12-27 13:03:14,chotot,17,BMW 3 Series
+129930107,https://www.chotot.com/mua-ban-o-to/129930107.htm,Toyota,Camry,2019,780000000,61000.0,Xăng,cam,Đồng Nai,2025-12-27 13:03:14,chotot,7,Toyota Camry
+129929391,https://www.chotot.com/mua-ban-o-to/129929391.htm,Toyota,Camry,2019,780000000,61000.0,Xăng,cam,Đồng Nai,2025-12-27 13:03:14,chotot,7,Toyota Camry
+129929279,https://www.chotot.com/mua-ban-o-to/129929279.htm,Honda,Brio,2020,345000000,69000.0,Xăng,cam,Đồng Nai,2025-12-27 13:03:14,chotot,6,Honda Brio
+129929187,https://www.chotot.com/mua-ban-o-to/129929187.htm,Honda,Brio,2020,345000000,69000.0,Xăng,cam,Đồng Nai,2025-12-27 13:03:14,chotot,6,Honda Brio
+129928677,https://www.chotot.com/mua-ban-o-to/129928677.htm,Hyundai,Accent,2018,340000000,79000.0,Xăng,Unknown,Đồng Nai,2025-12-27 13:03:14,chotot,8,Hyundai Accent
+129921240,https://www.chotot.com/mua-ban-o-to/129921240.htm,Kia,Morning,2016,252000000,10000.0,Xăng,Unknown,Đồng Nai,2025-12-27 13:03:14,chotot,10,Kia Morning
+128085169,https://www.chotot.com/mua-ban-o-to/128085169.htm,Kia,Sedona,2018,636000000,150000.0,Dầu,Unknown,Đồng Nai,2025-12-27 13:03:14,chotot,8,Kia Sedona
+129226858,https://www.chotot.com/mua-ban-o-to/129226858.htm,VinFast,Lux A2.0,2020,495000000,74000.0,Xăng,Unknown,Đồng Nai,2025-12-27 13:03:14,chotot,6,VinFast Lux A2.0
+129925523,https://www.chotot.com/mua-ban-o-to/129925523.htm,Kia,Carnival,2022,1160000000,60000.0,Dầu,Unknown,Đồng Nai,2025-12-27 13:03:14,chotot,4,Kia Carnival
+129925383,https://www.chotot.com/mua-ban-o-to/129925383.htm,Hyundai,Santa Fe,2022,1150000000,70000.0,Điện,Unknown,Đồng Nai,2025-12-27 13:03:14,chotot,4,Hyundai Santa Fe
+129925297,https://www.chotot.com/mua-ban-o-to/129925297.htm,Daewoo,Lacetti,2005,70000000,123456.0,Xăng,đen,Đồng Nai,2025-12-27 13:03:14,chotot,21,Daewoo Lacetti
+129924811,https://www.chotot.com/mua-ban-o-to/129924811.htm,Chevrolet,Captiva,2009,179000000,100000.0,Dầu,đen,Đồng Nai,2025-12-27 13:03:14,chotot,17,Chevrolet Captiva
+129924373,https://www.chotot.com/mua-ban-o-to/129924373.htm,Chevrolet,Spark,2014,120000000,95000.0,Xăng,bạc,Đồng Nai,2025-12-27 13:03:14,chotot,12,Chevrolet Spark
+129529051,https://www.chotot.com/mua-ban-o-to/129529051.htm,Dongfeng,Dòng khác,2009,65000000,10000.0,Xăng,Unknown,Đồng Nai,2025-12-27 13:03:14,chotot,17,Dongfeng Dòng khác
+129923786,https://www.chotot.com/mua-ban-o-to/129923786.htm,Daewoo,Matiz,2009,95000000,85000.0,Xăng,Unknown,Đồng Nai,2025-12-27 13:03:14,chotot,17,Daewoo Matiz
+129188681,https://www.chotot.com/mua-ban-o-to/129188681.htm,Hyundai,Accent,2018,335000000,80000.0,Xăng,bạc,Đồng Nai,2025-12-27 13:03:14,chotot,8,Hyundai Accent
+129921761,https://www.chotot.com/mua-ban-o-to/129921761.htm,Kia,K3,2016,270000000,110000.0,Xăng,Unknown,Đồng Nai,2025-12-27 13:03:14,chotot,10,Kia K3
+129321583,https://www.chotot.com/mua-ban-o-to/129321583.htm,LandRover,Range Rover Evoque,2015,720000000,100000.0,Xăng,Unknown,Đồng Nai,2025-12-27 13:03:14,chotot,11,LandRover Range Rover Evoque
+129925951,https://www.chotot.com/mua-ban-o-to/129925951.htm,Chevrolet,Spark,2011,129000000,52000.0,Xăng,Unknown,Tây Ninh,2025-12-27 13:03:18,chotot,15,Chevrolet Spark
+129920282,https://www.chotot.com/mua-ban-o-to/129920282.htm,Hyundai,Getz,2007,145000000,200000.0,Xăng,xanh,Tây Ninh,2025-12-27 13:03:18,chotot,19,Hyundai Getz
+129934864,https://www.chotot.com/mua-ban-o-to/129934864.htm,Toyota,Vios,2019,325000000,85000.0,Xăng,trắng,Đà Nẵng,2025-12-27 13:03:27,chotot,7,Toyota Vios
+129934790,https://www.chotot.com/mua-ban-o-to/129934790.htm,MG,Express,2021,360000000,80000.0,Xăng,Unknown,Đà Nẵng,2025-12-27 13:03:27,chotot,5,MG Express
+129562557,https://www.chotot.com/mua-ban-o-to/129562557.htm,VinFast,VF5 Plus,2024,414000000,40000.0,Hybrid,trắng,Đà Nẵng,2025-12-27 13:03:27,chotot,2,VinFast VF5 Plus
+129932649,https://www.chotot.com/mua-ban-o-to/129932649.htm,Mazda,3,2016,365000000,120000.0,Xăng,Unknown,Đà Nẵng,2025-12-27 13:03:27,chotot,10,Mazda 3
+129931715,https://www.chotot.com/mua-ban-o-to/129931715.htm,Hyundai,Creta,2022,545000000,60000.0,Xăng,Unknown,Đà Nẵng,2025-12-27 13:03:27,chotot,4,Hyundai Creta
+129833819,https://www.chotot.com/mua-ban-o-to/129833819.htm,Ford,EcoSport,2015,285000000,95000.0,Xăng,bạc,Đà Nẵng,2025-12-27 13:03:27,chotot,11,Ford EcoSport
+129795200,https://www.chotot.com/mua-ban-o-to/129795200.htm,Hyundai,Tucson,2023,695000000,28000.0,Xăng,Unknown,Đà Nẵng,2025-12-27 13:03:27,chotot,3,Hyundai Tucson
+129930317,https://www.chotot.com/mua-ban-o-to/129930317.htm,Toyota,Fortuner,2017,618000000,86000.0,Xăng,Unknown,Đà Nẵng,2025-12-27 13:03:27,chotot,9,Toyota Fortuner
+110607134,https://www.chotot.com/mua-ban-o-to/110607134.htm,Toyota,Vios,2025,479000000,,Xăng,Unknown,Đà Nẵng,2025-12-27 13:03:27,chotot,1,Toyota Vios
+129326388,https://www.chotot.com/mua-ban-o-to/129326388.htm,Mazda,5,2016,465000000,95000.0,Xăng,Unknown,Đà Nẵng,2025-12-27 13:03:27,chotot,10,Mazda 5
+128606320,https://www.chotot.com/mua-ban-o-to/128606320.htm,Toyota,Hiace,2008,161000000,190000.0,Dầu,Unknown,Đà Nẵng,2025-12-27 13:03:27,chotot,18,Toyota Hiace
+98246823,https://www.chotot.com/mua-ban-o-to/98246823.htm,Toyota,Raize,2024,498000000,,Xăng,Unknown,Đà Nẵng,2025-12-27 13:03:27,chotot,2,Toyota Raize
+129928958,https://www.chotot.com/mua-ban-o-to/129928958.htm,Hyundai,Elantra,2019,425000000,100000.0,Xăng,Unknown,Đà Nẵng,2025-12-27 13:03:27,chotot,7,Hyundai Elantra
+129637652,https://www.chotot.com/mua-ban-o-to/129637652.htm,Daewoo,Lacetti,2013,205000000,97000.0,Xăng,Unknown,Đà Nẵng,2025-12-27 13:03:27,chotot,13,Daewoo Lacetti
+129122532,https://www.chotot.com/mua-ban-o-to/129122532.htm,Chevrolet,Spark,2010,50000000,126000.0,Xăng,Unknown,Đà Nẵng,2025-12-27 13:03:27,chotot,16,Chevrolet Spark
+129928498,https://www.chotot.com/mua-ban-o-to/129928498.htm,Mitsubishi,Xpander,2025,525000000,50000.0,Xăng,trắng,Đà Nẵng,2025-12-27 13:03:27,chotot,1,Mitsubishi Xpander
+129463715,https://www.chotot.com/mua-ban-o-to/129463715.htm,Chevrolet,Aveo,2016,99000000,18000.0,Xăng,Unknown,Đà Nẵng,2025-12-27 13:03:27,chotot,10,Chevrolet Aveo
+128534742,https://www.chotot.com/mua-ban-o-to/128534742.htm,Mercedes Benz,C Class,2008,195000000,145.0,Xăng,Unknown,Đà Nẵng,2025-12-27 13:03:27,chotot,18,Mercedes Benz C Class
+129925801,https://www.chotot.com/mua-ban-o-to/129925801.htm,Mercedes Benz,C Class,2020,750000000,106000.0,Xăng,Unknown,Đà Nẵng,2025-12-27 13:03:27,chotot,6,Mercedes Benz C Class
+129924802,https://www.chotot.com/mua-ban-o-to/129924802.htm,Toyota,Wigo,2018,185000000,85000.0,Xăng,Unknown,Đà Nẵng,2025-12-27 13:03:27,chotot,8,Toyota Wigo
+128212868,https://www.chotot.com/mua-ban-o-to/128212868.htm,Ssangyong,Musso,2003,70000000,300000.0,Dầu,Unknown,Đà Nẵng,2025-12-27 13:03:27,chotot,23,Ssangyong Musso
+129467331,https://www.chotot.com/mua-ban-o-to/129467331.htm,Mitsubishi,Xpander,2023,535000000,80000.0,Xăng,Unknown,Đà Nẵng,2025-12-27 13:03:27,chotot,3,Mitsubishi Xpander
+129755306,https://www.chotot.com/mua-ban-o-to/129755306.htm,VinFast,VF9,2023,890000000,36000.0,Hybrid,Unknown,Đà Nẵng,2025-12-27 13:03:27,chotot,3,VinFast VF9
+128764895,https://www.chotot.com/mua-ban-o-to/128764895.htm,Hyundai,Sonata,2012,339000000,140000.0,Xăng,Unknown,Đà Nẵng,2025-12-27 13:03:27,chotot,14,Hyundai Sonata
+125375365,https://www.chotot.com/mua-ban-o-to/125375365.htm,Hãng khác,Dòng khác,2017,935535444,123456.0,Xăng,Unknown,Đà Nẵng,2025-12-27 13:03:27,chotot,9,Hãng khác Dòng khác
+129922405,https://www.chotot.com/mua-ban-o-to/129922405.htm,Kia,Morning,2013,219000000,90000.0,Xăng,Unknown,Đà Nẵng,2025-12-27 13:03:27,chotot,13,Kia Morning
+129123332,https://www.chotot.com/mua-ban-o-to/129123332.htm,Hyundai,Accent,2022,429000000,86000.0,Xăng,Unknown,Đà Nẵng,2025-12-27 13:03:27,chotot,4,Hyundai Accent
+129922266,https://www.chotot.com/mua-ban-o-to/129922266.htm,Kia,Morning,2017,179000000,136745.0,Xăng,Unknown,Đà Nẵng,2025-12-27 13:03:29,chotot,9,Kia Morning
+129146277,https://www.chotot.com/mua-ban-o-to/129146277.htm,MG,MG4,2022,399000000,40000.0,Xăng,vàng,Đà Nẵng,2025-12-27 13:03:29,chotot,4,MG MG4
+128178669,https://www.chotot.com/mua-ban-o-to/128178669.htm,Ford,EcoSport,2019,399000000,80000.0,Xăng,Unknown,Đà Nẵng,2025-12-27 13:03:29,chotot,7,Ford EcoSport
+129698977,https://www.chotot.com/mua-ban-o-to/129698977.htm,Hyundai,Tucson,2016,525000000,90000.0,Xăng,đỏ,Đà Nẵng,2025-12-27 13:03:29,chotot,10,Hyundai Tucson
+129487591,https://www.chotot.com/mua-ban-o-to/129487591.htm,Mitsubishi,Pajero Sport,2017,355000000,120000.0,Dầu,Unknown,Đà Nẵng,2025-12-27 13:03:29,chotot,9,Mitsubishi Pajero Sport
+129928505,https://www.chotot.com/mua-ban-o-to/129928505.htm,Toyota,Wigo,2021,269000000,3.0,Xăng,đỏ,Hải Phòng,2025-12-27 13:03:31,chotot,5,Toyota Wigo
+129925880,https://www.chotot.com/mua-ban-o-to/129925880.htm,Chevrolet,Spark,2011,43000000,8888.0,Xăng,trắng,Hải Phòng,2025-12-27 13:03:31,chotot,15,Chevrolet Spark
+129925778,https://www.chotot.com/mua-ban-o-to/129925778.htm,Toyota,Vios,2020,405000000,61234.0,Xăng,Unknown,Hải Phòng,2025-12-27 13:03:31,chotot,6,Toyota Vios
+129924606,https://www.chotot.com/mua-ban-o-to/129924606.htm,MG,HS,2024,500000000,5000.0,Xăng,Unknown,Hải Phòng,2025-12-27 13:03:31,chotot,2,MG HS
+129923085,https://www.chotot.com/mua-ban-o-to/129923085.htm,Kia,Cerato,2019,455000000,1.0,Xăng,Unknown,Hải Phòng,2025-12-27 13:03:31,chotot,7,Kia Cerato
+129923044,https://www.chotot.com/mua-ban-o-to/129923044.htm,Toyota,Innova,2015,315000000,1.0,Xăng,Unknown,Hải Phòng,2025-12-27 13:03:31,chotot,11,Toyota Innova
+129923023,https://www.chotot.com/mua-ban-o-to/129923023.htm,Toyota,Vios,2021,399000000,1.0,Xăng,Unknown,Hải Phòng,2025-12-27 13:03:31,chotot,5,Toyota Vios
+129922988,https://www.chotot.com/mua-ban-o-to/129922988.htm,Chevrolet,Spark,2015,178000000,1.0,Dầu,Unknown,Hải Phòng,2025-12-27 13:03:31,chotot,11,Chevrolet Spark
+129922961,https://www.chotot.com/mua-ban-o-to/129922961.htm,VinFast,Fadil,2019,299000000,1.0,Xăng,Unknown,Hải Phòng,2025-12-27 13:03:31,chotot,7,VinFast Fadil
+129928627,https://www.chotot.com/mua-ban-o-to/129928627.htm,Hyundai,Tucson,2021,610000000,70000.0,Xăng,đen,Thái Bình,2025-12-27 13:03:37,chotot,5,Hyundai Tucson
+129925577,https://www.chotot.com/mua-ban-o-to/129925577.htm,Kia,Cerato,2016,351000000,130000.0,Xăng,Unknown,Thái Bình,2025-12-27 13:03:37,chotot,10,Kia Cerato
+117095224,https://www.chotot.com/mua-ban-o-to/117095224.htm,Toyota,Camry,2011,450000000,105000.0,Xăng,xanh cam,An Giang,2025-12-27 13:03:40,chotot,15,Toyota Camry
+129928664,https://www.chotot.com/mua-ban-o-to/129928664.htm,Kia,Carnival,2024,639000000,21000.0,Dầu,đen,An Giang,2025-12-27 13:03:40,chotot,2,Kia Carnival
+129927783,https://www.chotot.com/mua-ban-o-to/129927783.htm,Lexus,RX,2012,979000000,97000.0,Xăng,trắng,An Giang,2025-12-27 13:03:40,chotot,14,Lexus RX
+129921612,https://www.chotot.com/mua-ban-o-to/129921612.htm,Hyundai,Grand i10,2023,383000000,15000.0,Xăng,Unknown,An Giang,2025-12-27 13:03:40,chotot,3,Hyundai Grand i10
+129934725,https://www.chotot.com/mua-ban-o-to/129934725.htm,Toyota,Vios,2015,300000000,85000.0,Xăng,Unknown,Bến Tre,2025-12-27 13:03:46,chotot,11,Toyota Vios
+129934076,https://www.chotot.com/mua-ban-o-to/129934076.htm,Suzuki,Celerio,2019,175000000,80000.0,Xăng,trắng,Cần Thơ,2025-12-27 13:03:50,chotot,7,Suzuki Celerio
+129933437,https://www.chotot.com/mua-ban-o-to/129933437.htm,Toyota,Vios,2019,388000000,126000.0,Xăng,trắng,Cần Thơ,2025-12-27 13:03:50,chotot,7,Toyota Vios
+129933258,https://www.chotot.com/mua-ban-o-to/129933258.htm,Honda,City,2017,315000000,170000.0,Xăng,trắng,Cần Thơ,2025-12-27 13:03:50,chotot,9,Honda City
+129931892,https://www.chotot.com/mua-ban-o-to/129931892.htm,Ford,Ranger,2017,360000000,195000.0,Dầu,xám,Cần Thơ,2025-12-27 13:03:50,chotot,9,Ford Ranger
+129507271,https://www.chotot.com/mua-ban-o-to/129507271.htm,Ford,Focus,2006,115000000,199999.0,Xăng,Unknown,Cần Thơ,2025-12-27 13:03:50,chotot,20,Ford Focus
+129438596,https://www.chotot.com/mua-ban-o-to/129438596.htm,Toyota,Vios,2023,468000000,26900.0,Xăng,Unknown,Cần Thơ,2025-12-27 13:03:50,chotot,3,Toyota Vios
+129930139,https://www.chotot.com/mua-ban-o-to/129930139.htm,Honda,Civic,2020,560000000,65000.0,Xăng,Unknown,Cần Thơ,2025-12-27 13:03:50,chotot,6,Honda Civic
+127873032,https://www.chotot.com/mua-ban-o-to/127873032.htm,Toyota,Innova,2019,160000000,100000.0,Xăng,Unknown,Cần Thơ,2025-12-27 13:03:50,chotot,7,Toyota Innova
+129928850,https://www.chotot.com/mua-ban-o-to/129928850.htm,Suzuki,Ciaz,2019,279000000,120000.0,Xăng,đen,Cần Thơ,2025-12-27 13:03:50,chotot,7,Suzuki Ciaz
+129928427,https://www.chotot.com/mua-ban-o-to/129928427.htm,Toyota,Vios,2024,160000000,60000.0,Xăng,Unknown,Cần Thơ,2025-12-27 13:03:50,chotot,2,Toyota Vios
+126571784,https://www.chotot.com/mua-ban-o-to/126571784.htm,Chevrolet,Spark,2016,165000000,1.0,Xăng,Unknown,Cần Thơ,2025-12-27 13:03:50,chotot,10,Chevrolet Spark
+129923875,https://www.chotot.com/mua-ban-o-to/129923875.htm,VinFast,VF8,2023,669000000,59431.0,Hybrid,xanh đen,Cần Thơ,2025-12-27 13:03:50,chotot,3,VinFast VF8
+129923317,https://www.chotot.com/mua-ban-o-to/129923317.htm,Toyota,Innova,2017,440000000,200000.0,Xăng,trắng,Cần Thơ,2025-12-27 13:03:50,chotot,9,Toyota Innova
+129922594,https://www.chotot.com/mua-ban-o-to/129922594.htm,Honda,City,2018,295000000,50000.0,Xăng,trắng,Cần Thơ,2025-12-27 13:03:50,chotot,8,Honda City
+129922370,https://www.chotot.com/mua-ban-o-to/129922370.htm,VinFast,VF5,2025,457000000,,Hybrid,Unknown,Cần Thơ,2025-12-27 13:03:50,chotot,1,VinFast VF5
+129922361,https://www.chotot.com/mua-ban-o-to/129922361.htm,VinFast,Limo Green,2025,704000000,,Hybrid,Unknown,Cần Thơ,2025-12-27 13:03:50,chotot,1,VinFast Limo Green
+129922192,https://www.chotot.com/mua-ban-o-to/129922192.htm,VinFast,Limo Green,2025,707000000,,Hybrid,Unknown,Cần Thơ,2025-12-27 13:03:50,chotot,1,VinFast Limo Green
+129922152,https://www.chotot.com/mua-ban-o-to/129922152.htm,VinFast,VF5,2025,495000000,,Hybrid,Unknown,Cần Thơ,2025-12-27 13:03:50,chotot,1,VinFast VF5
+129922046,https://www.chotot.com/mua-ban-o-to/129922046.htm,Toyota,Vios,2020,358000000,108000.0,Xăng,Unknown,Cần Thơ,2025-12-27 13:03:50,chotot,6,Toyota Vios
+129921914,https://www.chotot.com/mua-ban-o-to/129921914.htm,VinFast,VF3,2025,36000000,,Hybrid,Unknown,Cần Thơ,2025-12-27 13:03:50,chotot,1,VinFast VF3
+129921853,https://www.chotot.com/mua-ban-o-to/129921853.htm,Toyota,Corolla Altis,2022,679000000,24000.0,Xăng,Unknown,Cần Thơ,2025-12-27 13:03:50,chotot,4,Toyota Corolla Altis
+129921611,https://www.chotot.com/mua-ban-o-to/129921611.htm,Toyota,Camry,2011,340000000,139000.0,Xăng,cam,Cần Thơ,2025-12-27 13:03:50,chotot,15,Toyota Camry
+129927870,https://www.chotot.com/mua-ban-o-to/129927870.htm,Chevrolet,Spark,2014,179000000,75000.0,Xăng,Unknown,Kiên Giang,2025-12-27 13:04:11,chotot,12,Chevrolet Spark
+129926417,https://www.chotot.com/mua-ban-o-to/129926417.htm,Mazda,CX 8,2020,720000000,116000.0,Xăng,Unknown,Kiên Giang,2025-12-27 13:04:11,chotot,6,Mazda CX 8
+129921157,https://www.chotot.com/mua-ban-o-to/129921157.htm,Mitsubishi,Jolie,2004,98000000,200000.0,Xăng,Unknown,Tiền Giang,2025-12-27 13:04:22,chotot,22,Mitsubishi Jolie
+129922104,https://www.chotot.com/mua-ban-o-to/129922104.htm,Toyota,Fortuner,2010,299000000,147000.0,Dầu,Unknown,Vĩnh Long,2025-12-27 13:04:28,chotot,16,Toyota Fortuner
+129927762,https://www.chotot.com/mua-ban-o-to/129927762.htm,Daewoo,Dòng khác,2010,60000000,1.0,Xăng,Unknown,Quảng Bình,2025-12-27 13:04:31,chotot,16,Daewoo Dòng khác
+129928070,https://www.chotot.com/mua-ban-o-to/129928070.htm,Kia,Sonet,2023,560000000,18000.0,Xăng,Unknown,Thừa Thiên Huế,2025-12-27 13:04:38,chotot,3,Kia Sonet
+129935400,https://www.chotot.com/mua-ban-o-to/129935400.htm,Chevrolet,Cruze,2015,270000000,51000.0,Xăng,Unknown,Bình Thuận,2025-12-27 13:04:41,chotot,11,Chevrolet Cruze
+129929001,https://www.chotot.com/mua-ban-o-to/129929001.htm,Honda,HR-V,2023,620000000,12000.0,Xăng,Unknown,Bình Thuận,2025-12-27 13:04:41,chotot,3,Honda HR-V
+129924397,https://www.chotot.com/mua-ban-o-to/129924397.htm,Toyota,Vios,2020,358000000,86743.0,Xăng,Unknown,Bình Thuận,2025-12-27 13:04:41,chotot,6,Toyota Vios
+129924349,https://www.chotot.com/mua-ban-o-to/129924349.htm,Toyota,Vios,2020,358000000,86743.0,Xăng,Unknown,Bình Thuận,2025-12-27 13:04:41,chotot,6,Toyota Vios
+129932008,https://www.chotot.com/mua-ban-o-to/129932008.htm,Isuzu,Hi lander,2004,74000000,123.0,Dầu,xanh,Bình Định,2025-12-27 13:04:43,chotot,22,Isuzu Hi lander
+129929487,https://www.chotot.com/mua-ban-o-to/129929487.htm,Kia,Morning,2016,150000000,25000.0,Xăng,Unknown,Bình Định,2025-12-27 13:04:43,chotot,10,Kia Morning
+129923963,https://www.chotot.com/mua-ban-o-to/129923963.htm,Kia,Morning,2012,100000000,200000.0,Xăng,bạc,Khánh Hòa,2025-12-27 13:04:46,chotot,14,Kia Morning
+129920615,https://www.chotot.com/mua-ban-o-to/129920615.htm,Mazda,3,2023,600000000,59000.0,Xăng,đỏ,Khánh Hòa,2025-12-27 13:04:46,chotot,3,Mazda 3
+129935281,https://www.chotot.com/mua-ban-o-to/129935281.htm,Mazda,BT 50,2017,375000000,235000.0,Dầu,trắng,Phú Yên,2025-12-27 13:04:52,chotot,9,Mazda BT 50
+129928776,https://www.chotot.com/mua-ban-o-to/129928776.htm,Hyundai,Avante,2012,265000000,120000.0,Xăng,trắng,Quảng Ngãi,2025-12-27 13:04:54,chotot,14,Hyundai Avante
+129920817,https://www.chotot.com/mua-ban-o-to/129920817.htm,Toyota,Wigo,2019,195000000,60000.0,Xăng,Unknown,Hà Tĩnh,2025-12-27 13:04:57,chotot,7,Toyota Wigo
+129921689,https://www.chotot.com/mua-ban-o-to/129921689.htm,Ford,EcoSport,2015,258000000,125686.0,Xăng,Unknown,Nghệ An,2025-12-27 13:05:27,chotot,11,Ford EcoSport
+128413865,https://www.chotot.com/mua-ban-o-to/128413865.htm,Hyundai,Accent,2021,375000000,50000.0,Xăng,Unknown,Nghệ An,2025-12-27 13:05:29,chotot,5,Hyundai Accent
+128342484,https://www.chotot.com/mua-ban-o-to/128342484.htm,Ford,Escape,2006,120000000,250000.0,Xăng,Unknown,Nghệ An,2025-12-27 13:05:29,chotot,20,Ford Escape
+129927868,https://www.chotot.com/mua-ban-o-to/129927868.htm,Honda,Civic,2008,175000000,10000.0,Xăng,Unknown,Thanh Hóa,2025-12-27 13:05:30,chotot,18,Honda Civic
+128224459,https://www.chotot.com/mua-ban-o-to/128224459.htm,Ford,Escape,2003,90000000,198222.0,Xăng,Unknown,Thanh Hóa,2025-12-27 13:05:30,chotot,23,Ford Escape
+129924762,https://www.chotot.com/mua-ban-o-to/129924762.htm,Ford,Laser,2003,65000000,13000.0,Xăng,đen,Thanh Hóa,2025-12-27 13:05:30,chotot,23,Ford Laser
+129920839,https://www.chotot.com/mua-ban-o-to/129920839.htm,Mazda,6,2018,500000000,96000.0,Xăng,trắng,Thanh Hóa,2025-12-27 13:05:30,chotot,8,Mazda 6
+129935466,https://www.chotot.com/mua-ban-o-to/129935466.htm,VinFast,VF3,2024,205000000,22000.0,Hybrid,xanh,Đắk Lắk,2025-12-27 13:05:34,chotot,2,VinFast VF3
+129935039,https://www.chotot.com/mua-ban-o-to/129935039.htm,Ford,Escape,2002,54000000,100000.0,Xăng,Unknown,Đắk Lắk,2025-12-27 13:05:34,chotot,24,Ford Escape
+129226749,https://www.chotot.com/mua-ban-o-to/129226749.htm,Mitsubishi,Xpander,2021,355000000,70.0,Xăng,Unknown,Đắk Lắk,2025-12-27 13:05:34,chotot,5,Mitsubishi Xpander
+129299330,https://www.chotot.com/mua-ban-o-to/129299330.htm,Hyundai,Creta,2022,578000000,13000.0,Xăng,Unknown,Đắk Lắk,2025-12-27 13:05:34,chotot,4,Hyundai Creta
+129928620,https://www.chotot.com/mua-ban-o-to/129928620.htm,Kia,Soluto,2021,335000000,39000.0,Xăng,Unknown,Đắk Lắk,2025-12-27 13:05:34,chotot,5,Kia Soluto
+129928361,https://www.chotot.com/mua-ban-o-to/129928361.htm,Mitsubishi,Xpander,2022,515000000,33000.0,Xăng,Unknown,Đắk Lắk,2025-12-27 13:05:34,chotot,4,Mitsubishi Xpander
+128933086,https://www.chotot.com/mua-ban-o-to/128933086.htm,Nissan,Navara,2013,285000000,138271.0,Dầu,Unknown,Đắk Lắk,2025-12-27 13:05:34,chotot,13,Nissan Navara
+129925962,https://www.chotot.com/mua-ban-o-to/129925962.htm,Ford,Ranger,2022,575000000,5600.0,Dầu,Unknown,Đắk Nông,2025-12-27 13:05:37,chotot,4,Ford Ranger
+129926613,https://www.chotot.com/mua-ban-o-to/129926613.htm,Chevrolet,Captiva,2008,140000000,10000.0,Xăng,Unknown,Gia Lai,2025-12-27 13:05:42,chotot,18,Chevrolet Captiva
+129925489,https://www.chotot.com/mua-ban-o-to/129925489.htm,Toyota,Fortuner,2020,1150000000,180000.0,Dầu,đen,Gia Lai,2025-12-27 13:05:42,chotot,6,Toyota Fortuner
+129921876,https://www.chotot.com/mua-ban-o-to/129921876.htm,Ford,Ranger,2004,110000000,1.0,Dầu,Unknown,Gia Lai,2025-12-27 13:05:42,chotot,22,Ford Ranger
+129921453,https://www.chotot.com/mua-ban-o-to/129921453.htm,Ford,Ranger,2016,460000000,150000.0,Dầu,Unknown,Bắc Ninh,2025-12-27 13:05:49,chotot,10,Ford Ranger
+129921404,https://www.chotot.com/mua-ban-o-to/129921404.htm,Mazda,CX 5,2017,460000000,120000.0,Xăng,Unknown,Bắc Ninh,2025-12-27 13:05:49,chotot,9,Mazda CX 5
+129921323,https://www.chotot.com/mua-ban-o-to/129921323.htm,Toyota,Venza,2009,450000000,83000.0,Xăng,Unknown,Bắc Ninh,2025-12-27 13:05:49,chotot,17,Toyota Venza
+129932739,https://www.chotot.com/mua-ban-o-to/129932739.htm,Kia,Cerato,2010,190000000,15000.0,Xăng,trắng,Phú Thọ,2025-12-27 13:05:51,chotot,16,Kia Cerato
+129925198,https://www.chotot.com/mua-ban-o-to/129925198.htm,Hyundai,Grand i10,2014,125000000,18000.0,Xăng,bạc,Phú Thọ,2025-12-27 13:05:51,chotot,12,Hyundai Grand i10
+129929503,https://www.chotot.com/mua-ban-o-to/129929503.htm,Hyundai,Grand i10,2019,285000000,10000.0,Xăng,nâu,Hà Nam,2025-12-27 13:05:54,chotot,7,Hyundai Grand i10
+129933095,https://www.chotot.com/mua-ban-o-to/129933095.htm,Chevrolet,Cruze,2015,195000000,120000.0,Xăng,đen,Bà Rịa - Vũng Tàu,2025-12-27 13:06:11,chotot,11,Chevrolet Cruze
+129922121,https://www.chotot.com/mua-ban-o-to/129922121.htm,Ford,Ranger,2023,1090000000,30000.0,Dầu,Unknown,Bà Rịa - Vũng Tàu,2025-12-27 13:06:11,chotot,3,Ford Ranger
+129933700,https://www.chotot.com/mua-ban-o-to/129933700.htm,Ford,Everest,2020,860000000,100000.0,Dầu,đỏ,Bình Dương,2025-12-27 13:06:14,chotot,6,Ford Everest
+129407580,https://www.chotot.com/mua-ban-o-to/129407580.htm,Suzuki,Swift,2023,499000000,46000.0,Xăng,Unknown,Bình Dương,2025-12-27 13:06:14,chotot,3,Suzuki Swift
+129933367,https://www.chotot.com/mua-ban-o-to/129933367.htm,Toyota,Vios,2011,135000000,2000.0,Xăng,vàng,Bình Dương,2025-12-27 13:06:14,chotot,15,Toyota Vios
+129933213,https://www.chotot.com/mua-ban-o-to/129933213.htm,Daewoo,Matiz,2005,55000000,187000.0,Xăng,xanh,Bình Dương,2025-12-27 13:06:14,chotot,21,Daewoo Matiz
+129932916,https://www.chotot.com/mua-ban-o-to/129932916.htm,Toyota,Innova,2008,130000000,163979.0,Xăng,Unknown,Bình Dương,2025-12-27 13:06:14,chotot,18,Toyota Innova
+129932435,https://www.chotot.com/mua-ban-o-to/129932435.htm,Toyota,Fortuner,2010,298000000,142305.0,Xăng,Unknown,Bình Dương,2025-12-27 13:06:14,chotot,16,Toyota Fortuner
+129388589,https://www.chotot.com/mua-ban-o-to/129388589.htm,Toyota,Innova,2015,292000000,121000.0,Xăng,Unknown,Bình Dương,2025-12-27 13:06:14,chotot,11,Toyota Innova
+129388645,https://www.chotot.com/mua-ban-o-to/129388645.htm,Hyundai,Avante,2011,245000000,128000.0,Xăng,Unknown,Bình Dương,2025-12-27 13:06:14,chotot,15,Hyundai Avante
+129930590,https://www.chotot.com/mua-ban-o-to/129930590.htm,Toyota,Vios,2021,368000000,66238.0,Xăng,Unknown,Bình Dương,2025-12-27 13:06:14,chotot,5,Toyota Vios
+126695384,https://www.chotot.com/mua-ban-o-to/126695384.htm,Ford,EcoSport,2021,445000000,65000.0,Xăng,Unknown,Bình Dương,2025-12-27 13:06:14,chotot,5,Ford EcoSport
+129928541,https://www.chotot.com/mua-ban-o-to/129928541.htm,Toyota,Corolla Altis,2009,270000000,101000.0,Xăng,Unknown,Bình Dương,2025-12-27 13:06:14,chotot,17,Toyota Corolla Altis
+129183821,https://www.chotot.com/mua-ban-o-to/129183821.htm,Kia,Morning,2004,95000000,123456.0,Xăng,Unknown,Bình Dương,2025-12-27 13:06:14,chotot,22,Kia Morning
+129927040,https://www.chotot.com/mua-ban-o-to/129927040.htm,Mitsubishi,Xpander,2019,335000000,230000.0,Xăng,trắng,Bình Dương,2025-12-27 13:06:14,chotot,7,Mitsubishi Xpander
+129925830,https://www.chotot.com/mua-ban-o-to/129925830.htm,Toyota,Fortuner,2009,310000000,123.0,Dầu,bạc,Bình Dương,2025-12-27 13:06:16,chotot,17,Toyota Fortuner
+129925141,https://www.chotot.com/mua-ban-o-to/129925141.htm,Toyota,Innova,2013,259000000,197000.0,Xăng,bạc,Bình Dương,2025-12-27 13:06:16,chotot,13,Toyota Innova
+129925007,https://www.chotot.com/mua-ban-o-to/129925007.htm,Kia,Soluto,2022,290000000,70000.0,Xăng,trắng,Bình Dương,2025-12-27 13:06:16,chotot,4,Kia Soluto
+129731768,https://www.chotot.com/mua-ban-o-to/129731768.htm,Toyota,Innova,2014,285000000,180000.0,Xăng,bạc,Bình Dương,2025-12-27 13:06:16,chotot,12,Toyota Innova
+126694844,https://www.chotot.com/mua-ban-o-to/126694844.htm,Mitsubishi,Attrage,2022,325000000,60000.0,Xăng,Unknown,Bình Dương,2025-12-27 13:06:16,chotot,4,Mitsubishi Attrage
+129924636,https://www.chotot.com/mua-ban-o-to/129924636.htm,Isuzu,Mu X,2021,815000000,60000.0,Dầu,Unknown,Bình Dương,2025-12-27 13:06:16,chotot,5,Isuzu Mu X
+129649282,https://www.chotot.com/mua-ban-o-to/129649282.htm,Mitsubishi,Xpander,2020,369000000,88000.0,Xăng,Unknown,Bình Dương,2025-12-27 13:06:16,chotot,6,Mitsubishi Xpander
+129924375,https://www.chotot.com/mua-ban-o-to/129924375.htm,Toyota,Sienna,2007,450000000,75000.0,Xăng,vàng,Bình Dương,2025-12-27 13:06:16,chotot,19,Toyota Sienna
+129924362,https://www.chotot.com/mua-ban-o-to/129924362.htm,Mazda,3,2019,395000000,50000.0,Xăng,đỏ,Bình Dương,2025-12-27 13:06:16,chotot,7,Mazda 3
+128150216,https://www.chotot.com/mua-ban-o-to/128150216.htm,Mazda,3,2018,375000000,85000.0,Xăng,Unknown,Bình Dương,2025-12-27 13:06:16,chotot,8,Mazda 3
+129923849,https://www.chotot.com/mua-ban-o-to/129923849.htm,Toyota,Fortuner,2015,465000000,44000.0,Xăng,bạc,Bình Dương,2025-12-27 13:06:16,chotot,11,Toyota Fortuner
+129849963,https://www.chotot.com/mua-ban-o-to/129849963.htm,Honda,Brio,2019,295000000,83000.0,Xăng,bạc,Bình Dương,2025-12-27 13:06:16,chotot,7,Honda Brio
+129921922,https://www.chotot.com/mua-ban-o-to/129921922.htm,Nissan,Bluebird,1989,15000000,502000.0,Xăng,Unknown,Bình Dương,2025-12-27 13:06:16,chotot,37,Nissan Bluebird
+129920834,https://www.chotot.com/mua-ban-o-to/129920834.htm,Chevrolet,Aveo,2019,190000000,32000.0,Xăng,trắng,Bình Dương,2025-12-27 13:06:16,chotot,7,Chevrolet Aveo
+129936147,https://www.chotot.com/mua-ban-o-to/129936147.htm,Hyundai,Kona,2021,490000000,40000.0,Xăng,Unknown,Hải Phòng,2025-12-27 13:39:17,chotot,5,Hyundai Kona
+121765348,https://www.chotot.com/mua-ban-o-to/121765348.htm,Hyundai,Grand i10,2018,205000000,100000.0,Xăng,Unknown,Hải Phòng,2025-12-27 13:39:17,chotot,8,Hyundai Grand i10
+129936167,https://www.chotot.com/mua-ban-o-to/129936167.htm,Kia,Morning,2015,157000000,100000.0,Xăng,Unknown,Tiền Giang,2025-12-27 13:39:59,chotot,11,Kia Morning
+127971093,https://www.chotot.com/mua-ban-o-to/127971093.htm,Mazda,CX 5,2024,810000000,22000.0,Xăng,Unknown,Đắk Lắk,2025-12-27 14:19:16,chotot,2,Mazda CX 5
+129936198,https://www.chotot.com/mua-ban-o-to/129936198.htm,Toyota,Corolla,2009,175000000,147000.0,Xăng,vàng,Đắk Lắk,2025-12-27 14:19:16,chotot,17,Toyota Corolla
+129936105,https://www.chotot.com/mua-ban-o-to/129936105.htm,Hyundai,Grand i10,2021,300000000,99999.0,Xăng,Unknown,Đắk Lắk,2025-12-27 14:19:16,chotot,5,Hyundai Grand i10
+129935905,https://www.chotot.com/mua-ban-o-to/129935905.htm,Toyota,Yaris Cross,2024,625000000,28000.0,Xăng,Unknown,Đắk Lắk,2025-12-27 14:19:16,chotot,2,Toyota Yaris Cross
+129935688,https://www.chotot.com/mua-ban-o-to/129935688.htm,Ford,Ranger,2018,570000000,95.0,Dầu,vàng,Đắk Lắk,2025-12-27 14:19:16,chotot,8,Ford Ranger
+129936857,https://www.chotot.com/mua-ban-o-to/129936857.htm,Toyota,Fortuner,2015,468000000,44000.0,Xăng,bạc,Bình Dương,2025-12-27 14:20:02,chotot,11,Toyota Fortuner
+123499449,https://www.chotot.com/mua-ban-o-to/123499449.htm,Kia,Morning,2016,255000000,86000.0,Xăng,Unknown,Bình Dương,2025-12-27 14:20:02,chotot,10,Kia Morning
+129945287,https://www.chotot.com/mua-ban-o-to/129945287.htm,Ford,Ranger,2025,662000000,,Dầu,Unknown,Bến Tre,2025-12-27 23:14:42,chotot,1,Ford Ranger
+129943031,https://www.chotot.com/mua-ban-o-to/129943031.htm,Toyota,Corolla Altis,2023,720000000,38000.0,Xăng,Unknown,Cần Thơ,2025-12-27 23:14:44,chotot,3,Toyota Corolla Altis
+129942327,https://www.chotot.com/mua-ban-o-to/129942327.htm,Toyota,Vios,2022,405000000,146000.0,Xăng,trắng,Cần Thơ,2025-12-27 23:14:44,chotot,4,Toyota Vios
+129940265,https://www.chotot.com/mua-ban-o-to/129940265.htm,Toyota,Vios,2022,370000000,136000.0,Xăng,trắng,Cần Thơ,2025-12-27 23:14:44,chotot,4,Toyota Vios
+129942915,https://www.chotot.com/mua-ban-o-to/129942915.htm,Toyota,Corolla,1991,70000000,123456.0,Xăng,đen,Tiền Giang,2025-12-27 23:15:05,chotot,35,Toyota Corolla
+129182140,https://www.chotot.com/mua-ban-o-to/129182140.htm,Ford,Ranger,2023,645000000,34000.0,Dầu,Unknown,Quảng Bình,2025-12-27 23:15:13,chotot,3,Ford Ranger
+120571469,https://www.chotot.com/mua-ban-o-to/120571469.htm,Ford,Focus,2018,385000000,85000.0,Xăng,Unknown,Khánh Hòa,2025-12-27 23:15:28,chotot,8,Ford Focus
+129937578,https://www.chotot.com/mua-ban-o-to/129937578.htm,Kia,Seltos,2025,599000000,,Xăng,Unknown,Nghệ An,2025-12-27 23:15:42,chotot,1,Kia Seltos
+129937536,https://www.chotot.com/mua-ban-o-to/129937536.htm,Kia,Carens,2025,634000000,,Xăng,Unknown,Nghệ An,2025-12-27 23:15:42,chotot,1,Kia Carens
+129937492,https://www.chotot.com/mua-ban-o-to/129937492.htm,Mazda,2,2025,402000000,,Xăng,Unknown,Nghệ An,2025-12-27 23:15:42,chotot,1,Mazda 2
+129937452,https://www.chotot.com/mua-ban-o-to/129937452.htm,Mazda,CX 5,2025,700000000,,Xăng,Unknown,Nghệ An,2025-12-27 23:15:42,chotot,1,Mazda CX 5
+129937412,https://www.chotot.com/mua-ban-o-to/129937412.htm,Kia,Sonet,2025,489000000,,Xăng,Unknown,Nghệ An,2025-12-27 23:15:42,chotot,1,Kia Sonet
+129941194,https://www.chotot.com/mua-ban-o-to/129941194.htm,Chevrolet,Aveo,2018,155000000,100000.0,Xăng,Unknown,Thanh Hóa,2025-12-27 23:15:45,chotot,8,Chevrolet Aveo
+127401356,https://www.chotot.com/mua-ban-o-to/127401356.htm,Toyota,Dòng khác,2001,27000000,10000.0,Xăng,Unknown,Đắk Lắk,2025-12-27 23:15:48,chotot,25,Toyota Dòng khác
+128032263,https://www.chotot.com/mua-ban-o-to/128032263.htm,Mercedes Benz,C Class,2001,69000000,100000.0,Xăng,Unknown,Đắk Lắk,2025-12-27 23:15:48,chotot,25,Mercedes Benz C Class
+128973628,https://www.chotot.com/mua-ban-o-to/128973628.htm,Toyota,Hiace,2006,132000000,1234.0,Dầu,Unknown,Đắk Lắk,2025-12-27 23:15:48,chotot,20,Toyota Hiace
+129943164,https://www.chotot.com/mua-ban-o-to/129943164.htm,Mazda,BT 50,2017,385000000,150000.0,Dầu,xanh,Đắk Lắk,2025-12-27 23:15:48,chotot,9,Mazda BT 50
+129547081,https://www.chotot.com/mua-ban-o-to/129547081.htm,Ford,Ranger,2019,455000000,90000.0,Dầu,Unknown,Đắk Lắk,2025-12-27 23:15:48,chotot,7,Ford Ranger
+129938277,https://www.chotot.com/mua-ban-o-to/129938277.htm,Mitsubishi,Xpander,2020,435000000,60000.0,Xăng,Unknown,Gia Lai,2025-12-27 23:15:57,chotot,6,Mitsubishi Xpander
+129944470,https://www.chotot.com/mua-ban-o-to/129944470.htm,Toyota,Dòng khác,2019,295000000,79000.0,Xăng,Unknown,Lâm Đồng,2025-12-27 23:21:26,chotot,7,Toyota Dòng khác
+129943678,https://www.chotot.com/mua-ban-o-to/129943678.htm,Ford,Ranger,2021,465000000,70000.0,Dầu,đỏ,Lâm Đồng,2025-12-27 23:21:26,chotot,5,Ford Ranger
+129943079,https://www.chotot.com/mua-ban-o-to/129943079.htm,Chevrolet,Colorado,2016,439000000,123456.0,Dầu,đỏ,Lâm Đồng,2025-12-27 23:21:26,chotot,10,Chevrolet Colorado
+129939408,https://www.chotot.com/mua-ban-o-to/129939408.htm,Hyundai,Grand i10,2016,132000000,19000.0,Xăng,bạc,Phú Thọ,2025-12-27 23:21:32,chotot,10,Hyundai Grand i10
+129939111,https://www.chotot.com/mua-ban-o-to/129939111.htm,Honda,Civic,2006,135000000,18000.0,Xăng,đen,Phú Thọ,2025-12-27 23:21:32,chotot,20,Honda Civic
+129943499,https://www.chotot.com/mua-ban-o-to/129943499.htm,Toyota,Corolla Altis,2015,420000000,102000.0,Xăng,đen,Hưng Yên,2025-12-27 23:21:44,chotot,11,Toyota Corolla Altis
+129941390,https://www.chotot.com/mua-ban-o-to/129941390.htm,Chevrolet,Spark,2012,55000000,124873.0,Xăng,đỏ,Ninh Bình,2025-12-27 23:21:46,chotot,14,Chevrolet Spark
+129941355,https://www.chotot.com/mua-ban-o-to/129941355.htm,Honda,Civic,2009,210000000,12453.0,Xăng,đen,Ninh Bình,2025-12-27 23:21:46,chotot,17,Honda Civic
+129941314,https://www.chotot.com/mua-ban-o-to/129941314.htm,Daewoo,Gentra,2010,78000000,123456.0,Xăng,đen,Ninh Bình,2025-12-27 23:21:46,chotot,16,Daewoo Gentra
+129937752,https://www.chotot.com/mua-ban-o-to/129937752.htm,Kia,Morning,2015,145000000,118000.0,Xăng,đỏ,Bà Rịa - Vũng Tàu,2025-12-27 23:21:52,chotot,11,Kia Morning
+129937698,https://www.chotot.com/mua-ban-o-to/129937698.htm,Kia,Morning,2015,145000000,118000.0,Xăng,đỏ,Bà Rịa - Vũng Tàu,2025-12-27 23:21:52,chotot,11,Kia Morning
+129944608,https://www.chotot.com/mua-ban-o-to/129944608.htm,Toyota,Corolla Cross,2022,650000000,40000.0,Xăng,đỏ,Bình Dương,2025-12-27 23:21:56,chotot,4,Toyota Corolla Cross
+129944463,https://www.chotot.com/mua-ban-o-to/129944463.htm,Toyota,Camry,2009,299000000,135000.0,Xăng,cam,Bình Dương,2025-12-27 23:21:56,chotot,17,Toyota Camry
+129943748,https://www.chotot.com/mua-ban-o-to/129943748.htm,Toyota,Innova,2008,136000000,200000.0,Xăng,Unknown,Bình Dương,2025-12-27 23:21:56,chotot,18,Toyota Innova
+129942872,https://www.chotot.com/mua-ban-o-to/129942872.htm,Mitsubishi,Grandis,2009,288000000,150.0,Xăng,đen,Bình Dương,2025-12-27 23:21:56,chotot,17,Mitsubishi Grandis
+129243421,https://www.chotot.com/mua-ban-o-to/129243421.htm,Toyota,Zace,2003,115000000,850000.0,Xăng,Unknown,Bình Dương,2025-12-27 23:21:56,chotot,23,Toyota Zace
+129940490,https://www.chotot.com/mua-ban-o-to/129940490.htm,Ford,Ranger,2024,850000000,30000.0,Dầu,Unknown,Bình Dương,2025-12-27 23:21:56,chotot,2,Ford Ranger
+129940357,https://www.chotot.com/mua-ban-o-to/129940357.htm,Hyundai,Santa Fe,2022,1150000000,79000.0,Điện,Unknown,Bình Dương,2025-12-27 23:21:56,chotot,4,Hyundai Santa Fe
+129940205,https://www.chotot.com/mua-ban-o-to/129940205.htm,Toyota,Camry,1994,59000000,258522.0,Xăng,xanh cam,Bình Dương,2025-12-27 23:21:56,chotot,32,Toyota Camry
+129498699,https://www.chotot.com/mua-ban-o-to/129498699.htm,Honda,City,2018,330000000,95000.0,Xăng,Unknown,Bình Dương,2025-12-27 23:21:56,chotot,8,Honda City
+129685131,https://www.chotot.com/mua-ban-o-to/129685131.htm,Kia,Morning,2009,79000000,126000.0,Xăng,Unknown,Bình Dương,2025-12-27 23:21:56,chotot,17,Kia Morning
+129939149,https://www.chotot.com/mua-ban-o-to/129939149.htm,Toyota,Corolla Altis,2009,248000000,116000.0,Xăng,đen,Bình Dương,2025-12-27 23:21:56,chotot,17,Toyota Corolla Altis
+128302584,https://www.chotot.com/mua-ban-o-to/128302584.htm,Mazda,3,2016,335000000,96.0,Xăng,Unknown,Bình Dương,2025-12-27 23:21:56,chotot,10,Mazda 3
+129300875,https://www.chotot.com/mua-ban-o-to/129300875.htm,Skoda,Kodiaq,2023,1099000000,20000.0,Xăng,Unknown,Bình Dương,2025-12-27 23:21:56,chotot,3,Skoda Kodiaq
+128965126,https://www.chotot.com/mua-ban-o-to/128965126.htm,Honda,City,2023,510000000,16000.0,Xăng,Unknown,Bình Dương,2025-12-27 23:21:56,chotot,3,Honda City
+129938307,https://www.chotot.com/mua-ban-o-to/129938307.htm,Mercedes Benz,C Class,2016,655000000,85000.0,Xăng,Unknown,Bình Dương,2025-12-27 23:21:56,chotot,10,Mercedes Benz C Class
+129937938,https://www.chotot.com/mua-ban-o-to/129937938.htm,Toyota,Innova,2014,270000000,143000.0,Dầu,vàng,Bình Dương,2025-12-27 23:21:56,chotot,12,Toyota Innova
+129241785,https://www.chotot.com/mua-ban-o-to/129241785.htm,Toyota,Vios,2020,385000000,880000.0,Xăng,trắng,Bình Dương,2025-12-27 23:21:56,chotot,6,Toyota Vios
+129943544,https://www.chotot.com/mua-ban-o-to/129943544.htm,Hyundai,Accent,2018,298000000,68000.0,Xăng,Unknown,Đồng Nai,2025-12-27 23:22:03,chotot,8,Hyundai Accent
+129943389,https://www.chotot.com/mua-ban-o-to/129943389.htm,Toyota,Vios,2021,368000000,92000.0,Xăng,Unknown,Đồng Nai,2025-12-27 23:22:03,chotot,5,Toyota Vios
+129943330,https://www.chotot.com/mua-ban-o-to/129943330.htm,Daewoo,Lanos,2003,27000000,22223.0,Xăng,bạc,Đồng Nai,2025-12-27 23:22:03,chotot,23,Daewoo Lanos
+129942905,https://www.chotot.com/mua-ban-o-to/129942905.htm,Hyundai,Santa Fe,2020,805000000,146333.0,Dầu,Unknown,Đồng Nai,2025-12-27 23:22:03,chotot,6,Hyundai Santa Fe
+129517188,https://www.chotot.com/mua-ban-o-to/129517188.htm,Hyundai,Getz,2007,167000000,87000.0,Xăng,Unknown,Đồng Nai,2025-12-27 23:22:03,chotot,19,Hyundai Getz
+129517100,https://www.chotot.com/mua-ban-o-to/129517100.htm,Kia,Morning,2011,168000000,75000.0,Xăng,Unknown,Đồng Nai,2025-12-27 23:22:03,chotot,15,Kia Morning
+129939525,https://www.chotot.com/mua-ban-o-to/129939525.htm,Isuzu,Dmax,2021,475000000,54442.0,Dầu,Unknown,Đồng Nai,2025-12-27 23:22:03,chotot,5,Isuzu Dmax
+129939488,https://www.chotot.com/mua-ban-o-to/129939488.htm,Kia,Morning,2017,155000000,98000.0,Xăng,Unknown,Đồng Nai,2025-12-27 23:22:03,chotot,9,Kia Morning
+129739595,https://www.chotot.com/mua-ban-o-to/129739595.htm,Chevrolet,Spark,2015,78000000,123450.0,Xăng,Unknown,Đồng Nai,2025-12-27 23:22:03,chotot,11,Chevrolet Spark
+129942299,https://www.chotot.com/mua-ban-o-to/129942299.htm,Mazda,6,2020,615000000,50000.0,Xăng,Unknown,Tây Ninh,2025-12-27 23:22:06,chotot,6,Mazda 6
+129785182,https://www.chotot.com/mua-ban-o-to/129785182.htm,Mazda,3,2018,400000000,150000.0,Xăng,trắng,Đà Nẵng,2025-12-27 23:22:13,chotot,8,Mazda 3
+126689500,https://www.chotot.com/mua-ban-o-to/126689500.htm,Toyota,Land Cruiser,1996,300000000,200000.0,Xăng,Unknown,Đà Nẵng,2025-12-27 23:22:13,chotot,30,Toyota Land Cruiser
+129940395,https://www.chotot.com/mua-ban-o-to/129940395.htm,Hyundai,Sonata,2010,250000000,160000.0,Xăng,Unknown,Đà Nẵng,2025-12-27 23:22:13,chotot,16,Hyundai Sonata
+127693565,https://www.chotot.com/mua-ban-o-to/127693565.htm,Hyundai,Accent,2018,255000000,87245.0,Xăng,Unknown,Đà Nẵng,2025-12-27 23:22:13,chotot,8,Hyundai Accent
+127872622,https://www.chotot.com/mua-ban-o-to/127872622.htm,Kia,Cerato,2019,355000000,71241.0,Xăng,Unknown,Đà Nẵng,2025-12-27 23:22:13,chotot,7,Kia Cerato
+127625441,https://www.chotot.com/mua-ban-o-to/127625441.htm,Hyundai,Accent,2015,275000000,9124.0,Xăng,Unknown,Đà Nẵng,2025-12-27 23:22:13,chotot,11,Hyundai Accent
+128409517,https://www.chotot.com/mua-ban-o-to/128409517.htm,Hyundai,Elantra,2019,410000000,56000.0,Xăng,Unknown,Đà Nẵng,2025-12-27 23:22:13,chotot,7,Hyundai Elantra
+129937202,https://www.chotot.com/mua-ban-o-to/129937202.htm,Honda,City,2017,315000000,,Xăng,đen,Đà Nẵng,2025-12-27 23:22:13,chotot,9,Honda City
