@@ -74,9 +74,9 @@ def crawl_bonbanh_brute_force(target_rows=10000):
             listings = []
             
             # Thử nhiều cách tìm listings
-            listings = soup.find_all('li', class_='car-item')
+            listings = soup.find_all('li', class_='car-detail')
             if not listings:
-                listings = soup.find_all('div', class_='car-item')
+                listings = soup.find_all('div', class_='car-detail')
             if not listings:
                 listings = soup.find_all('li', class_=lambda x: x and 'car' in x.lower())
             if not listings:
@@ -252,4 +252,4 @@ def crawl_bonbanh_brute_force(target_rows=10000):
 
 if __name__ == "__main__":
     # Crawl 10,000 xe
-    crawl_bonbanh_brute_force(50)
+    crawl_bonbanh_brute_force(15000)

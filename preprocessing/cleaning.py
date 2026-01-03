@@ -371,12 +371,13 @@ def run_cleaning():
         print(f"   -> Tổng số dòng raw: {len(df):,}")
         print(f"   -> Các cột có sẵn: {list(df.columns)}")
         
-        # Chuẩn hóa tên cột (nếu cần)
+        # Chuẩn hóa tên cột
         column_mapping = {
             'gia_xe': 'price_raw',
             'tieu_de': 'title',
             'thong_tin': 'info_raw',
-            'gia': 'price_raw'
+            'gia': 'price_raw',
+            'link': 'url'
         }
         df.rename(columns=column_mapping, inplace=True)
         
@@ -459,10 +460,22 @@ def run_cleaning():
         df_clean['price'] = df_clean['price'].astype(int)
         df_clean['year'] = df_clean['year'].astype(int)
         df_clean['mileage'] = df_clean['mileage'].astype(int)
-        
+
+        # Đảm bảo cột url tồn tại
+        if 'url' not in df_clean.columns:
+            # Nếu không có cột url, thử tìm xem trong df gốc có không
+            if 'url' in df.columns:
+                df_clean['url'] = df['url']
+            else:
+                # Nếu vẫn không có, tạo cột rỗng (để không bị lỗi)
+                df_clean['url'] = ""
+
+    
         # Chọn các cột theo schema
         schema_cols = ['brand', 'model', 'year', 'price', 'mileage', 'fuel', 
-                      'location', 'color', 'source', 'crawl_date']
+                      'location', 'color', 'source', 'crawl_date', 'url']
+        available_cols = [c for c in schema_cols if c in df_clean.columns]
+        df_final = df_clean[available_cols].copy()
         
         df_final = df_clean[schema_cols].copy()
         
