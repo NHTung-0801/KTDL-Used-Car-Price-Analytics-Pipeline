@@ -1,4 +1,3 @@
-# Code cào Chotot (Team C)
 import requests
 import pandas as pd
 import time
@@ -53,7 +52,7 @@ def crawl_chotot_html():
     print(f"🚀 Bắt đầu cào Chotot HTML (Mục tiêu: {TARGET_ROWS})")
 
     os.makedirs("data/raw", exist_ok=True)
-    filename = f"data/raw/chotot_raw_{datetime.now().strftime('%Y%m%d_%H%M')}.csv"
+    filename = f"data/raw/chotot_full_{datetime.now().strftime('%Y%m%d_%H%M')}.csv"
 
     all_cars = []
     page = 1
@@ -104,13 +103,13 @@ def crawl_chotot_html():
         page += 1
         time.sleep(random.uniform(1.2, 2.5))
 
-        df = pd.DataFrame(all_cars)
-        df.to_csv(filename, index=False, encoding="utf-8-sig")
+    df = pd.DataFrame(all_cars)
+    df.to_csv(filename, index=False, encoding="utf-8-sig")
 
-        print(f"✅ HOÀN TẤT: {len(df)} xe")
-        print(f"📁 File: {filename}")
-        print("👉 File sẵn sàng cho cleaning.py")
+    print(f"✅ HOÀN TẤT: {len(df)} xe")
+    print(f"📁 File: {filename}")
+    print("👉 File sẵn sàng cho cleaning.py")
 
 
-    if __name__ == "__main__":
-        crawl_chotot_html()
+if __name__ == "__main__":
+    crawl_chotot_html()
