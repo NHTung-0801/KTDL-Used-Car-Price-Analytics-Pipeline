@@ -1,4 +1,22 @@
 __pycache__/
-*.pyc
-.ipynb_checkpoints/
 .vscode/
+# Python
+venv/
+.env/
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+.jupyter/
+.lab/
+
+# Node / JupyterLab
+node_modules/
+share/jupyter/
+labextensions/
+
+# OS
+.DS_Store
+Thumbs.db
+where 
