@@ -1,0 +1,50 @@
+2025-12-23 13:15:11,051 | INFO | REPO_ROOT=E:\Khai_thac_du_lieu\car_price_pipeline
+2025-12-23 13:15:11,052 | INFO | RAW_DIR=E:\Khai_thac_du_lieu\car_price_pipeline\data\raw
+2025-12-23 13:15:11,052 | INFO | CLEAN_DIR=E:\Khai_thac_du_lieu\car_price_pipeline\data\cleaned
+2025-12-23 13:15:11,053 | INFO | Reading raw: chotot_raw_20251223.csv
+2025-12-23 13:16:10,656 | INFO | REPO_ROOT=E:\Khai_thac_du_lieu\car_price_pipeline
+2025-12-23 13:16:10,657 | INFO | RAW_DIR=E:\Khai_thac_du_lieu\car_price_pipeline\data\raw
+2025-12-23 13:16:10,657 | INFO | CLEAN_DIR=E:\Khai_thac_du_lieu\car_price_pipeline\data\cleaned
+2025-12-23 13:16:10,659 | INFO | Reading raw: chotot_raw_20251223.csv
+2025-12-23 13:17:30,080 | INFO | REPO_ROOT=E:\Khai_thac_du_lieu\car_price_pipeline
+2025-12-23 13:17:30,080 | INFO | RAW_DIR=E:\Khai_thac_du_lieu\car_price_pipeline\data\raw
+2025-12-23 13:17:30,080 | INFO | CLEAN_DIR=E:\Khai_thac_du_lieu\car_price_pipeline\data\cleaned
+2025-12-23 13:17:30,081 | INFO | Reading raw: chotot_raw_20251223.csv
+2025-12-23 13:17:30,229 | INFO | Wrote cleaned: E:\Khai_thac_du_lieu\car_price_pipeline\data\cleaned\chotot_cleaned_20251223.csv rows_in=431 rows_out=431
+2025-12-23 13:17:30,230 | INFO | DONE total_in=431 total_out=431
+2025-12-23 13:29:07,200 | INFO | REPO_ROOT=E:\Khai_thac_du_lieu\car_price_pipeline
+2025-12-23 13:29:07,201 | INFO | RAW_DIR=E:\Khai_thac_du_lieu\car_price_pipeline\data\raw
+2025-12-23 13:29:07,201 | INFO | CLEAN_DIR=E:\Khai_thac_du_lieu\car_price_pipeline\data\cleaned
+2025-12-23 13:29:07,201 | INFO | Reading raw: chotot_raw_20251223.csv
+2025-12-23 13:29:07,321 | INFO | Wrote cleaned: E:\Khai_thac_du_lieu\car_price_pipeline\data\cleaned\chotot_cleaned_20251223.csv rows_in=431 rows_out=431
+2025-12-23 13:29:07,322 | INFO | DONE total_in=431 total_out=431
+2025-12-23 13:34:25,855 | INFO | REPO_ROOT=E:\Khai_thac_du_lieu\car_price_pipeline
+2025-12-23 13:34:25,855 | INFO | RAW_DIR=E:\Khai_thac_du_lieu\car_price_pipeline\data\raw
+2025-12-23 13:34:25,855 | INFO | CLEAN_DIR=E:\Khai_thac_du_lieu\car_price_pipeline\data\cleaned
+2025-12-23 13:34:25,856 | INFO | Reading raw: chotot_raw_20251223.csv
+2025-12-23 13:34:25,973 | INFO | Wrote cleaned: E:\Khai_thac_du_lieu\car_price_pipeline\data\cleaned\chotot_cleaned_20251223.csv rows_in=431 rows_out=431
+2025-12-23 13:34:25,974 | INFO | DONE total_in=431 total_out=431
+2025-12-23 13:41:16,376 | INFO | REPO_ROOT=E:\Khai_thac_du_lieu\car_price_pipeline
+2025-12-23 13:41:16,376 | INFO | RAW_DIR=E:\Khai_thac_du_lieu\car_price_pipeline\data\raw
+2025-12-23 13:41:16,376 | INFO | CLEAN_DIR=E:\Khai_thac_du_lieu\car_price_pipeline\data\cleaned
+2025-12-23 13:41:16,377 | INFO | Reading raw: chotot_raw_20251223.csv
+2025-12-23 13:41:16,525 | INFO | Wrote cleaned: E:\Khai_thac_du_lieu\car_price_pipeline\data\cleaned\chotot_cleaned_20251223.csv rows_in=431 rows_out=431
+2025-12-23 13:41:16,525 | INFO | DONE total_in=431 total_out=431
+2025-12-23 13:52:08,992 | INFO | REPO_ROOT=E:\Khai_thac_du_lieu\car_price_pipeline
+2025-12-23 13:52:08,992 | INFO | RAW_DIR=E:\Khai_thac_du_lieu\car_price_pipeline\data\raw
+2025-12-23 13:52:08,992 | INFO | CLEAN_DIR=E:\Khai_thac_du_lieu\car_price_pipeline\data\cleaned
+2025-12-23 13:52:08,993 | INFO | Reading raw: chotot_raw_20251223.csv
+2025-12-23 13:52:09,110 | INFO | Wrote cleaned: E:\Khai_thac_du_lieu\car_price_pipeline\data\cleaned\chotot_cleaned_20251223.csv rows_in=431 rows_out=431
+2025-12-23 13:52:09,110 | INFO | DONE total_in=431 total_out=431
+2025-12-23 14:03:45,731 | INFO | REPO_ROOT=E:\Khai_thac_du_lieu\car_price_pipeline
+2025-12-23 14:03:45,732 | INFO | RAW_DIR=E:\Khai_thac_du_lieu\car_price_pipeline\data\raw
+2025-12-23 14:03:45,732 | INFO | CLEAN_DIR=E:\Khai_thac_du_lieu\car_price_pipeline\data\cleaned
+2025-12-23 14:03:45,732 | INFO | Reading raw: chotot_raw_20251223.csv
+2025-12-23 14:03:45,849 | INFO | Wrote cleaned: E:\Khai_thac_du_lieu\car_price_pipeline\data\cleaned\chotot_cleaned_20251223.csv rows_in=431 rows_out=431
+2025-12-23 14:03:45,849 | INFO | DONE total_in=431 total_out=431
+2025-12-23 14:18:46,184 | INFO | REPO_ROOT=E:\Khai_thac_du_lieu\car_price_pipeline
+2025-12-23 14:18:46,184 | INFO | RAW_DIR=E:\Khai_thac_du_lieu\car_price_pipeline\data\raw
+2025-12-23 14:18:46,184 | INFO | CLEAN_DIR=E:\Khai_thac_du_lieu\car_price_pipeline\data\cleaned
+2025-12-23 14:18:46,185 | INFO | Reading raw: chotot_raw_20251223.csv
+2025-12-23 14:18:46,297 | INFO | Wrote cleaned: E:\Khai_thac_du_lieu\car_price_pipeline\data\cleaned\chotot_cleaned_20251223.csv rows_in=431 rows_out=431
+2025-12-23 14:18:46,298 | INFO | DONE total_in=431 total_out=431
