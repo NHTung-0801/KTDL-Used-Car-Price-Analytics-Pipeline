@@ -67,12 +67,17 @@ class SparkLikeExprListNamespace(
         return self.compliant._with_elementwise(func)
 
     def median(self) -> SparkLikeExpr:
-        def func(expr: Column) -> Column:  # pragma: no cover
-            # sqlframe issue: https://github.com/eakmanrq/sqlframe/issues/548
+        def func(expr: Column) -> Column:
             F = self.compliant._F
             sorted_expr = F.array_compact(F.sort_array(expr))
             size = F.array_size(sorted_expr)
             mid_index = (size / 2).cast("int")
+            if self.compliant._implementation.is_sqlframe():
+                # indexing is different in sqlframe
+                # https://github.com/eakmanrq/sqlframe/issues/568
+                mid_index = mid_index + 1
+            else:
+                pass  # pragma: no cover
             odd_case = sorted_expr[mid_index]
             even_case = (sorted_expr[mid_index - 1] + sorted_expr[mid_index]) / 2
             return (
@@ -80,5 +85,17 @@ class SparkLikeExprListNamespace(
                 .when(size % 2 == 1, odd_case)
                 .otherwise(even_case)
             )
+
+        return self.compliant._with_elementwise(func)
+
+    def sort(self, *, descending: bool, nulls_last: bool) -> SparkLikeExpr:
+        def func(expr: Column) -> Column:
+            F = self.compliant._F
+            if not descending and nulls_last:
+                return F.array_sort(expr)
+            if descending and not nulls_last:  # pragma: no cover
+                # https://github.com/eakmanrq/sqlframe/issues/559
+                return F.reverse(F.array_sort(expr))
+            return F.sort_array(expr, asc=not descending)
 
         return self.compliant._with_elementwise(func)

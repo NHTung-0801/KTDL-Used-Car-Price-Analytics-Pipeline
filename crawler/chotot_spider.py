@@ -7,7 +7,7 @@ import json
 from datetime import datetime
 from bs4 import BeautifulSoup
 
-TARGET_ROWS = 100
+TARGET_ROWS = 10000
 BASE_URL = "https://www.chotot.com/mua-ban-oto"
 
 HEADERS = {
@@ -52,11 +52,7 @@ def crawl_chotot_html():
     print(f"🚀 Bắt đầu cào Chotot HTML (Mục tiêu: {TARGET_ROWS})")
 
     os.makedirs("data/raw", exist_ok=True)
-<<<<<<< HEAD
-    filename = f"data/raw/chotot_raw_{datetime.now().strftime('%Y%m%d_%H%M')}.csv"
-=======
     filename = f"data/raw/chotot_full_{datetime.now().strftime('%Y%m%d_%H%M')}.csv"
->>>>>>> daca89c9e2d6901ba83017287808cf9dcda97f35
 
     all_cars = []
     page = 1

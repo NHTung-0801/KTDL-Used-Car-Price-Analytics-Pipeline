@@ -1,6 +1,7 @@
-venv/
 __pycache__/
 *.pyc
-data/
-logs/
-.env
+.ipynb_checkpoints/
+.vscode/
+venv/
+env/
+*.env

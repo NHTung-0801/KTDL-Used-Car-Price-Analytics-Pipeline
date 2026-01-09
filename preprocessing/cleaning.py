@@ -70,8 +70,6 @@ def clean_price(price_raw):
     except Exception:
         return None
 
-<<<<<<< HEAD
-=======
 BRAND_MAPPING = {
     'land rover': 'Land Rover', 'range rover': 'Land Rover',
     'mercedes-benz': 'Mercedes-Benz', 'mercedes benz': 'Mercedes-Benz', 
@@ -156,7 +154,6 @@ MULTI_WORD_MODELS = [
     'zs', 'hs', 'rx5', 'mg5', # MG
     'beijing x7', # Xe Tàu hot
 ]
->>>>>>> daca89c9e2d6901ba83017287808cf9dcda97f35
 
 def extract_year_smart(row):
     """
@@ -171,10 +168,7 @@ def extract_year_smart(row):
     year_match = re.search(r'\b(19|20)\d{2}\b', title)
     if year_match:
         year = int(year_match.group(0))
-<<<<<<< HEAD
-=======
         # Validate: năm hợp lý từ 1990 đến năm hiện tại + 1
->>>>>>> daca89c9e2d6901ba83017287808cf9dcda97f35
         current_year = datetime.now().year
         if 1990 <= year <= current_year + 1:
             return year
@@ -191,93 +185,6 @@ def extract_year_smart(row):
     return None
 
 
-<<<<<<< HEAD
-def extract_brand_model_smart(title):
-    """
-    Tách Brand và Model từ tiêu đề
-    
-    Ví dụ: "2014 - Mazda CX5 2.0 AT" -> brand="Mazda", model="CX5"
-    
-    Returns:
-        tuple: (brand, model)
-    """
-    if pd.isna(title):
-        return "Other", "Other"
-    
-    # Bỏ năm và dấu gạch ngang ở đầu: "2014 - " hoặc "2014-"
-    clean_title = re.sub(r'^(19|20)\d{2}\s*[-–]\s*', '', str(title).strip())
-    
-    # Bỏ các từ không cần thiết ở đầu
-    clean_title = re.sub(r'^(xe\s+(cũ|mới|đã|sử dụng))\s*', '', clean_title, flags=re.IGNORECASE)
-    
-    parts = clean_title.split()
-    if not parts:
-        return "Other", "Other"
-    
-    # Danh sách hãng xe phổ biến (mở rộng)
-    brands_list = [
-        'toyota', 'hyundai', 'kia', 'mazda', 'honda', 'ford', 'mercedes', 'bmw', 
-        'audi', 'vinfast', 'mitsubishi', 'nissan', 'suzuki', 'lexus', 'porsche', 
-        'land rover', 'mg', 'peugeot', 'volvo', 'subaru', 'isuzu', 'chevrolet',
-        'renault', 'vw', 'volkswagen', 'mini', 'jaguar', 'infiniti', 'acura',
-        'genesis', 'cadillac', 'lincoln', 'bentley', 'rolls-royce', 'maserati',
-        'ferrari', 'lamborghini', 'mclaren', 'tesla', 'fiat', 'opel', 'skoda',
-        'seat', 'dacia', 'geely', 'haval', 'great wall', 'chery', 'byd'
-    ]
-    
-    brand = "Other"
-    model = "Other"
-    
-    # Tìm brand (thường là từ đầu tiên hoặc từ đầu tiên + từ thứ hai)
-    found_brand = False
-    
-    # Thử 2 từ đầu (cho "Land Rover", "Great Wall")
-    if len(parts) >= 2:
-        two_words = f"{parts[0].lower()} {parts[1].lower()}"
-        for b in brands_list:
-            if b in two_words:
-                if b == 'bmw' or b == 'mg' or b == 'vw':
-                    brand = b.upper()
-                elif b == 'land rover':
-                    brand = 'Land Rover'
-                elif b == 'great wall':
-                    brand = 'Great Wall'
-                else:
-                    brand = b.title()
-                found_brand = True
-                # Model là từ thứ 3 trở đi
-                if len(parts) > 2:
-                    model = ' '.join(parts[2:4])  # Lấy 2 từ đầu của model
-                break
-    
-    # Nếu chưa tìm thấy, thử 1 từ đầu
-    if not found_brand and len(parts) > 0:
-        first_word = parts[0].lower()
-        for b in brands_list:
-            if b in first_word or first_word in b:
-                if b == 'bmw' or b == 'mg' or b == 'vw':
-                    brand = b.upper()
-                else:
-                    brand = b.title()
-                found_brand = True
-                # Model là từ thứ 2 trở đi
-                if len(parts) > 1:
-                    model = parts[1]  # Lấy từ đầu tiên của model
-                break
-    
-    # Nếu vẫn chưa tìm thấy, lấy từ đầu tiên làm brand (heuristic)
-    if not found_brand and len(parts) > 0:
-        brand = parts[0].title()
-        if len(parts) > 1:
-            model = parts[1]
-    
-    # Làm sạch model (bỏ số, ký tự đặc biệt không cần thiết)
-    if model != "Other":
-        model = re.sub(r'^\d+\.?\d*\s*', '', model)  # Bỏ số ở đầu
-        model = model.strip()
-    
-    return brand, model
-=======
 def extract_brand_model_smart(title, source='bonbanh'):
     """
     Tách Brand và Model thông minh (Hỗ trợ 3 nguồn: bonbanh, otocomvn, chotot)
@@ -370,7 +277,6 @@ def extract_brand_model_smart(title, source='bonbanh'):
         found_model = found_model.replace('CLASS', ' CLASS').replace('  ', ' ').strip()
         
     return found_brand, found_model.title()
->>>>>>> daca89c9e2d6901ba83017287808cf9dcda97f35
 
 
 def extract_mileage_smart(text):
@@ -556,21 +462,13 @@ def run_cleaning():
         print(f"   -> Tổng số dòng raw: {len(df):,}")
         print(f"   -> Các cột có sẵn: {list(df.columns)}")
         
-<<<<<<< HEAD
-        # Chuẩn hóa tên cột (nếu cần)
-=======
         # Chuẩn hóa tên cột
->>>>>>> daca89c9e2d6901ba83017287808cf9dcda97f35
         column_mapping = {
             'gia_xe': 'price_raw',
             'tieu_de': 'title',
             'thong_tin': 'info_raw',
-<<<<<<< HEAD
-            'gia': 'price_raw'
-=======
             'gia': 'price_raw',
             'link': 'url'
->>>>>>> daca89c9e2d6901ba83017287808cf9dcda97f35
         }
         df.rename(columns=column_mapping, inplace=True)
         
@@ -653,12 +551,6 @@ def run_cleaning():
         df_clean['price'] = df_clean['price'].astype(int)
         df_clean['year'] = df_clean['year'].astype(int)
         df_clean['mileage'] = df_clean['mileage'].astype(int)
-<<<<<<< HEAD
-        
-        # Chọn các cột theo schema
-        schema_cols = ['brand', 'model', 'year', 'price', 'mileage', 'fuel', 
-                      'location', 'color', 'source', 'crawl_date']
-=======
 
         # Đảm bảo cột url tồn tại
         if 'url' not in df_clean.columns:
@@ -675,7 +567,6 @@ def run_cleaning():
                       'location', 'color', 'source', 'crawl_date', 'url']
         available_cols = [c for c in schema_cols if c in df_clean.columns]
         df_final = df_clean[available_cols].copy()
->>>>>>> daca89c9e2d6901ba83017287808cf9dcda97f35
         
         df_final = df_clean[schema_cols].copy()
         

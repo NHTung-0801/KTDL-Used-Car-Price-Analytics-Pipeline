@@ -1,6 +1,8 @@
 # dashboard/app.py
 import os
 import glob
+import json
+from pathlib import Path
 from datetime import datetime
 
 import numpy as np
@@ -10,49 +12,92 @@ import plotly.express as px
 
 
 # =========================
+# Paths
+# =========================
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+DATA_DIR = PROJECT_ROOT / "data"
+CLEANED_DIR = DATA_DIR / "cleaned"
+MASTER_DIR = DATA_DIR / "master"
+ANALYSIS_OUTPUT_DIR = PROJECT_ROOT / "analysis" / "output"
+
+
+# =========================
 # Page config
 # =========================
 st.set_page_config(
-    page_title="Used Car Price Analytics Dashboard",
+    page_title="Used Car Analytics Dashboard",
     page_icon="🚗",
     layout="wide",
 )
 
-st.title("🚗 Used Car Price Analytics Dashboard")
-st.caption("Nguồn dữ liệu: master dataset (gộp từ các nguồn như bonbanh, chotot, otocomvn...)")
 
 # =========================
 # Helpers
 # =========================
-DATA_DIR_DEFAULT = "data/master"
-MASTER_GLOB = "master_dataset_all_*.csv"
+def to_numeric_safe(s):
+    """Convert to numeric safely (remove commas, dots, currency chars...)"""
+    if s is None:
+        return pd.Series([], dtype="float64")
+    ss = s.astype(str)
+    ss = ss.str.replace(r"[^\d\.]", "", regex=True)
+    ss = ss.replace({"": np.nan, "nan": np.nan, "None": np.nan})
+    return pd.to_numeric(ss, errors="coerce")
 
 
-def find_latest_master_csv(data_dir: str) -> str | None:
-    pattern = os.path.join(data_dir, MASTER_GLOB)
+def format_vnd(x: float) -> str:
+    if x is None or (isinstance(x, float) and np.isnan(x)):
+        return "N/A"
+    try:
+        x = float(x)
+    except Exception:
+        return str(x)
+    if x >= 1e9:
+        return f"{x/1e9:.2f} tỷ"
+    if x >= 1e6:
+        return f"{x/1e6:.0f} triệu"
+    return f"{x:,.0f} đ"
+
+
+def find_latest_file(pattern: str):
     files = glob.glob(pattern)
     if not files:
         return None
-    files.sort(key=os.path.getmtime, reverse=True)
+    files.sort(key=lambda p: os.path.getmtime(p), reverse=True)
     return files[0]
 
 
-def humanize_int(x):
-    try:
-        return f"{int(x):,}".replace(",", ".")
-    except Exception:
-        return str(x)
+@st.cache_data(show_spinner=False)
+def load_csv(path: str) -> pd.DataFrame:
+    return pd.read_csv(path)
 
 
-def to_numeric_safe(s):
-    # chuyển về numeric, lỗi => NaN
-    return pd.to_numeric(s, errors="coerce")
+def normalize_df(df: pd.DataFrame) -> pd.DataFrame:
+    df = df.copy()
+
+    # ensure cols exist
+    for col in ["brand", "model", "year", "price", "mileage", "fuel", "location", "color", "source", "crawl_date"]:
+        if col not in df.columns:
+            df[col] = np.nan
+
+    # normalize text
+    for col in ["brand", "model", "fuel", "location", "color", "source"]:
+        df[col] = df[col].astype(str).replace({"nan": np.nan}).fillna("Unknown")
+
+    # numeric
+    df["year"] = to_numeric_safe(df["year"]).astype("Int64")
+    df["price"] = to_numeric_safe(df["price"])
+    df["mileage"] = to_numeric_safe(df["mileage"])
+
+    # date
+    df["crawl_date"] = pd.to_datetime(df["crawl_date"], errors="coerce")
+
+    return df
 
 
-def clamp_iqr(series: pd.Series):
-    # clamp outlier theo IQR để chart đỡ bị "dính trần"
+def clamp_iqr(series: pd.Series) -> pd.Series:
+    """Clamp outliers using IQR method"""
     s = series.dropna()
-    if s.empty:
+    if len(s) < 10:
         return series
     q1 = s.quantile(0.25)
     q3 = s.quantile(0.75)
@@ -62,70 +107,26 @@ def clamp_iqr(series: pd.Series):
     return series.clip(lower=lo, upper=hi)
 
 
-@st.cache_data(show_spinner=False)
-def load_csv(path: str) -> pd.DataFrame:
-    df = pd.read_csv(path, encoding="utf-8-sig")
-    return df
-
-
-def standardize_master(df: pd.DataFrame) -> pd.DataFrame:
-    """
-    Kỳ vọng cột: brand, model, year, price, mileage, fuel, location, color, source, crawl_date
-    Nhưng vẫn cố gắng "chịu đựng" nếu thiếu cột / kiểu dữ liệu lạ.
-    """
-    df = df.copy()
-
-    # đảm bảo các cột tồn tại
-    for col in ["brand", "model", "year", "price", "mileage", "fuel", "location", "color", "source", "crawl_date"]:
-        if col not in df.columns:
-            df[col] = np.nan
-
-    # chuẩn hoá kiểu
-    df["brand"] = df["brand"].astype(str).replace({"nan": np.nan}).fillna("Unknown")
-    df["model"] = df["model"].astype(str).replace({"nan": np.nan}).fillna("Unknown")
-    df["fuel"] = df["fuel"].astype(str).replace({"nan": np.nan}).fillna("Unknown")
-    df["location"] = df["location"].astype(str).replace({"nan": np.nan}).fillna("Unknown")
-    df["color"] = df["color"].astype(str).replace({"nan": np.nan}).fillna("Unknown")
-    df["source"] = df["source"].astype(str).replace({"nan": np.nan}).fillna("Unknown")
-
-    df["year"] = to_numeric_safe(df["year"]).astype("Int64")
-    df["price"] = to_numeric_safe(df["price"])
-    df["mileage"] = to_numeric_safe(df["mileage"])
-
-    # crawl_date -> datetime (coerce)
-    df["crawl_date"] = pd.to_datetime(df["crawl_date"], errors="coerce")
-
-    # loại row cực bẩn
-    df = df.dropna(subset=["price", "year"], how="any")
-<<<<<<< HEAD
-
-    # price/mileage âm -> NaN
-=======
-# price/mileage âm -> NaN
->>>>>>> daca89c9e2d6901ba83017287808cf9dcda97f35
-    df.loc[df["price"] < 0, "price"] = np.nan
-    df.loc[df["mileage"] < 0, "mileage"] = np.nan
-
-    df = df.dropna(subset=["price", "year"], how="any")
-
-    return df
-
-
 def apply_filters(df: pd.DataFrame, f: dict) -> pd.DataFrame:
     out = df.copy()
 
+    # sources
     if f["sources"]:
         out = out[out["source"].isin(f["sources"])]
 
+    # brand
     if f["brands"]:
         out = out[out["brand"].isin(f["brands"])]
 
+    # fuel
     if f["fuels"]:
         out = out[out["fuel"].isin(f["fuels"])]
 
+    # location
     if f["locations"]:
         out = out[out["location"].isin(f["locations"])]
 
+    # colors
     if f["colors"]:
         out = out[out["color"].isin(f["colors"])]
 
@@ -133,14 +134,13 @@ def apply_filters(df: pd.DataFrame, f: dict) -> pd.DataFrame:
     y_min, y_max = f["year_range"]
     out = out[(out["year"].fillna(0) >= y_min) & (out["year"].fillna(0) <= y_max)]
 
-    # price range (VNĐ)
+    # price range
     p_min, p_max = f["price_range"]
     out = out[(out["price"] >= p_min) & (out["price"] <= p_max)]
 
     # mileage range
     m_min, m_max = f["mileage_range"]
-    if "mileage" in out.columns:
-        out = out[(out["mileage"].fillna(0) >= m_min) & (out["mileage"].fillna(0) <= m_max)]
+    out = out[(out["mileage"].fillna(0) >= m_min) & (out["mileage"].fillna(0) <= m_max)]
 
     # text search
     q = (f["search_text"] or "").strip().lower()
@@ -154,238 +154,109 @@ def apply_filters(df: pd.DataFrame, f: dict) -> pd.DataFrame:
     return out
 
 
+def load_analysis_artifacts():
+    """Return list of images + json files in analysis/output"""
+    if not ANALYSIS_OUTPUT_DIR.exists():
+        return [], []
+    imgs = []
+    jsons = []
+    for p in sorted(ANALYSIS_OUTPUT_DIR.glob("*")):
+        if p.suffix.lower() in [".png", ".jpg", ".jpeg", ".webp"]:
+            imgs.append(p)
+        elif p.suffix.lower() == ".json":
+            jsons.append(p)
+    return imgs, jsons
+
+
 # =========================
 # Sidebar - Data source
 # =========================
-with st.sidebar:
-    st.header("⚙️ Cấu hình")
+st.sidebar.title("⚙️ Settings")
 
-    st.subheader("📁 Dataset")
-    data_dir = st.text_input("Thư mục master dataset", value=DATA_DIR_DEFAULT)
-    latest = find_latest_master_csv(data_dir)
+use_master = st.sidebar.radio(
+    "Chọn nguồn dữ liệu",
+    ["Master dataset (khuyên dùng)", "Chọn file cleaned (theo nguồn)"],
+    index=0
+)
 
-    uploaded = st.file_uploader("Hoặc upload CSV (master_dataset...)", type=["csv"])
+if use_master.startswith("Master"):
+    latest_master = find_latest_file(str(MASTER_DIR / "master_dataset_final_*.csv"))
+    if latest_master is None:
+        st.error("Không tìm thấy master_dataset_final_*.csv trong data/master/")
+        st.stop()
 
-    if uploaded is None:
-        if latest:
-            st.success(f"Auto chọn file mới nhất:\n{latest}")
-        else:
-            st.warning(f"Không tìm thấy file {MASTER_GLOB} trong {data_dir}")
+    st.sidebar.success(f"📂 Master: {Path(latest_master).name}")
+    df = load_csv(latest_master)
 
-    st.divider()
-    st.subheader("🎛️ Lọc dữ liệu")
-    # Filter UI sẽ render sau khi load df
+else:
+    cleaned_files = sorted(CLEANED_DIR.glob("*_cleaned_*.csv"))
+    if not cleaned_files:
+        st.error("Không có file cleaned trong data/cleaned/")
+        st.stop()
+    choice = st.sidebar.selectbox("Chọn file cleaned", cleaned_files, format_func=lambda p: p.name)
+    st.sidebar.success(f"📂 Cleaned: {choice.name}")
+    df = load_csv(str(choice))
+
+df = normalize_df(df)
+
+st.sidebar.divider()
+
+
+# =========================
+# Tabs
+# =========================
+tab1, tab2 = st.tabs(["📈 Dashboard", "📊 Analysis (Pair A/B/C)"])
 
 
 # =========================
-# Load data
+# TAB 1: Dashboard
 # =========================
-df_raw = None
-data_label = ""
+with tab1:
+    st.title("🚗 Used Car Price Analytics Dashboard")
+    st.caption("Lọc dữ liệu + visualization nhanh (Plotly). Nguồn: master/cleaned CSV.")
 
-try:
-    if uploaded is not None:
-        df_raw = pd.read_csv(uploaded)
-        data_label = f"Uploaded: {uploaded.name}"
-    else:
-        if latest is None:
-            st.error("Không có dataset để load. Hãy kiểm tra thư mục hoặc upload file CSV.")
-            st.stop()
-        df_raw = load_csv(latest)
-        data_label = f"File: {os.path.basename(latest)}"
-except Exception as e:
-    st.error(f"Lỗi load dataset: {e}")
-    st.stop()
+    # dataset stats
+    c0, c1, c2, c3 = st.columns(4)
+    c0.metric("Rows", f"{len(df):,}")
+    c1.metric("Sources", df["source"].nunique())
+    c2.metric("Brands", df["brand"].nunique())
+    c3.metric("Locations", df["location"].nunique())
 
-df = standardize_master(df_raw)
+    # -------------------------
+    # Filters
+    # -------------------------
+    sources = sorted(df["source"].dropna().unique().tolist())
+    brands = sorted(df["brand"].dropna().unique().tolist())
+    fuels = sorted(df["fuel"].dropna().unique().tolist())
+    locations = sorted(df["location"].dropna().unique().tolist())
+    colors = sorted(df["color"].dropna().unique().tolist())
 
-st.caption(f"✅ Đã load: **{data_label}** | Rows sau chuẩn hoá: **{len(df):,}**".replace(",", "."))
+    year_min = int(np.nanmin(df["year"].astype("float64"))) if df["year"].notna().any() else 2000
+    year_max = int(np.nanmax(df["year"].astype("float64"))) if df["year"].notna().any() else 2026
 
-# =========================
-# Sidebar filters (need df)
-# =========================
-with st.sidebar:
-    # Prepare options
-    sources_all = sorted(df["source"].dropna().unique().tolist())
-    brands_all = sorted(df["brand"].dropna().unique().tolist())
-    fuels_all = sorted(df["fuel"].dropna().unique().tolist())
-    locations_all = sorted(df["location"].dropna().unique().tolist())
-    colors_all = sorted(df["color"].dropna().unique().tolist())
+    price_min = float(np.nanmin(df["price"])) if df["price"].notna().any() else 0.0
+    price_max = float(np.nanmax(df["price"])) if df["price"].notna().any() else 1.0
 
-    # ranges
-    year_min = int(df["year"].min()) if df["year"].notna().any() else 2000
-    year_max = int(df["year"].max()) if df["year"].notna().any() else 2026
+    mileage_min = float(np.nanmin(df["mileage"])) if df["mileage"].notna().any() else 0.0
+    mileage_max = float(np.nanmax(df["mileage"])) if df["mileage"].notna().any() else 1.0
 
-    price_min = float(df["price"].min()) if df["price"].notna().any() else 0
-    price_max = float(df["price"].max()) if df["price"].notna().any() else 1_000_000_000
+    st.sidebar.subheader("🔎 Filters")
 
-    mileage_min = float(df["mileage"].min()) if df["mileage"].notna().any() else 0
-    mileage_max = float(df["mileage"].max()) if df["mileage"].notna().any() else 300_000
+    selected_sources = st.sidebar.multiselect("Source", sources, default=sources)
+    selected_brands = st.sidebar.multiselect("Brand", brands, default=[])
+    selected_fuels = st.sidebar.multiselect("Fuel", fuels, default=[])
+    selected_locations = st.sidebar.multiselect("Location", locations, default=[])
+    selected_colors = st.sidebar.multiselect("Color", colors, default=[])
 
-    # widgets
-    selected_sources = st.multiselect("Source", sources_all, default=sources_all)
-    selected_brands = st.multiselect("Brand", brands_all, default=[])
-    selected_fuels = st.multiselect("Fuel", fuels_all, default=[])
-    selected_locations = st.multiselect("Location", locations_all, default=[])
-    selected_colors = st.multiselect("Color", colors_all, default=[])
+    year_range = st.sidebar.slider("Year range", year_min, year_max, (year_min, year_max))
+    price_range = st.sidebar.slider("Price range (VND)", float(price_min), float(price_max), (float(price_min), float(price_max)))
+    mileage_range = st.sidebar.slider("Mileage range (km)", float(mileage_min), float(mileage_max), (float(mileage_min), float(mileage_max)))
 
-    year_range = st.slider("Year range", min_value=year_min, max_value=year_max, value=(year_min, year_max))
-    price_range = st.slider(
-        "Price range (VNĐ)",
-        min_value=float(price_min),
-        max_value=float(price_max),
-        value=(float(price_min), float(price_max)),
-        step=max(1.0, float((price_max - price_min) / 200) if price_max > price_min else 1.0),
-        format="%.0f",
-    )
-    mileage_range = st.slider(
-        "Mileage range (km)",
-        min_value=float(mileage_min),
-        max_value=float(mileage_max),
-        value=(float(mileage_min), float(mileage_max)),
-        step=max(1.0, float((mileage_max - mileage_min) / 200) if mileage_max > mileage_min else 1.0),
-        format="%.0f",
-    )
+    search_text = st.sidebar.text_input("Search (brand/model/location)", value="")
 
-    search_text = st.text_input("Search (brand/model/location)", value="")
+    clamp_outliers = st.sidebar.checkbox("Clamp outliers (IQR) cho chart giá/km", value=True)
+    top_n = st.sidebar.slider("Top N (brand/model/location)", 5, 30, 10)
 
-    clamp_outliers = st.checkbox("Clamp outliers (IQR) cho chart giá/km", value=True)
-    top_n = st.slider("Top N (brand/model/location)", 5, 30, 10)
-
-<<<<<<< HEAD
-filters = {
-    "sources": selected_sources,
-    "brands": selected_brands,
-    "fuels": selected_fuels,
-    "locations": selected_locations,
-    "colors": selected_colors,
-    "year_range": year_range,
-    "price_range": price_range,
-    "mileage_range": mileage_range,
-    "search_text": search_text,
-}
-
-df_f = apply_filters(df, filters)
-
-# =========================
-# KPIs
-# =========================
-left, mid, right, r2 = st.columns(4)
-with left:
-    st.metric("Số tin", f"{len(df_f):,}".replace(",", "."))
-with mid:
-    st.metric("Số hãng", f"{df_f['brand'].nunique():,}".replace(",", "."))
-with right:
-    st.metric("Giá trung vị", f"{humanize_int(df_f['price'].median())} VNĐ")
-with r2:
-    st.metric("Giá trung bình", f"{humanize_int(df_f['price'].mean())} VNĐ")
-
-st.divider()
-
-# Optionally clamp outliers for visualization only
-price_vis = df_f["price"].copy()
-mileage_vis = df_f["mileage"].copy()
-if clamp_outliers:
-    price_vis = clamp_iqr(price_vis)
-    mileage_vis = clamp_iqr(mileage_vis)
-
-df_vis = df_f.copy()
-df_vis["price_vis"] = price_vis
-df_vis["mileage_vis"] = mileage_vis
-
-# =========================
-# Charts row 1
-# =========================
-c1, c2 = st.columns(2)
-
-with c1:
-    st.subheader("📈 Phân phối giá (VNĐ)")
-    fig = px.histogram(
-        df_vis,
-        x="price_vis",
-        nbins=60,
-        title="Price Distribution (clamped)" if clamp_outliers else "Price Distribution",
-    )
-    fig.update_layout(margin=dict(l=10, r=10, t=50, b=10))
-    st.plotly_chart(fig, use_container_width=True)
-
-with c2:
-    st.subheader("📅 Số tin theo năm sản xuất")
-    year_counts = (
-        df_f.dropna(subset=["year"])
-        .groupby("year", dropna=True)
-        .size()
-        .reset_index(name="count")
-        .sort_values("year")
-    )
-    fig = px.bar(year_counts, x="year", y="count", title="Listings by Year")
-    fig.update_layout(margin=dict(l=10, r=10, t=50, b=10))
-    st.plotly_chart(fig, use_container_width=True)
-
-# =========================
-# Charts row 2
-# =========================
-c3, c4 = st.columns(2)
-
-with c3:
-    st.subheader("🏷️ Top hãng xe")
-    top_brand = (
-        df_f.groupby("brand")
-        .size()
-        .sort_values(ascending=False)
-        .head(top_n)
-        .reset_index(name="count")
-    )
-    fig = px.bar(top_brand, x="brand", y="count", title=f"Top {top_n} Brands")
-    fig.update_layout(margin=dict(l=10, r=10, t=50, b=10))
-    st.plotly_chart(fig, use_container_width=True)
-
-with c4:
-    st.subheader("🌍 Top khu vực")
-    top_loc = (
-        df_f.groupby("location")
-        .size()
-        .sort_values(ascending=False)
-        .head(top_n)
-        .reset_index(name="count")
-    )
-    fig = px.bar(top_loc, x="location", y="count", title=f"Top {top_n} Locations")
-    fig.update_layout(margin=dict(l=10, r=10, t=50, b=10))
-    st.plotly_chart(fig, use_container_width=True)
-
-# =========================
-# Charts row 3
-# =========================
-c5, c6 = st.columns(2)
-
-with c5:
-    st.subheader("⛽ Fuel breakdown")
-    fuel_counts = (
-        df_f.groupby("fuel")
-        .size()
-        .sort_values(ascending=False)
-        .reset_index(name="count")
-    )
-    fig = px.pie(fuel_counts, names="fuel", values="count", title="Fuel Type Share")
-    fig.update_layout(margin=dict(l=10, r=10, t=50, b=10))
-    st.plotly_chart(fig, use_container_width=True)
-
-with c6:
-    st.subheader("🔗 Giá vs Số km")
-    # scatter có thể nặng, sample nếu quá lớn
-    plot_df = df_vis.copy()
-    if len(plot_df) > 15000:
-        plot_df = plot_df.sample(15000, random_state=42)
-
-    fig = px.scatter(
-        plot_df,
-        x="mileage_vis",
-        y="price_vis",
-        color="source",
-        hover_data=["brand", "model", "year", "location"],
-        title="Price vs Mileage (sampled if large)",
-        opacity=0.6,
-=======
     filters = {
         "sources": selected_sources,
         "brands": selected_brands,
@@ -400,30 +271,23 @@ with c6:
 
     df_f = apply_filters(df, filters)
 
-    # =========================
-    # KPIs
-    # =========================
-    left, mid, right, r2 = st.columns(4)
-    with left:
-        st.metric("Số tin", f"{len(df_f):,}".replace(",", "."))
-    with mid:
-        st.metric("Số hãng", f"{df_f['brand'].nunique():,}".replace(",", "."))
-    with right:
-        st.metric("Giá trung vị", f"{humanize_int(df_f['price'].median())} VNĐ")
-    with r2:
-        st.metric("Giá trung bình", f"{humanize_int(df_f['price'].mean())} VNĐ")
     st.divider()
 
-    # Optionally clamp outliers for visualization only
-    price_vis = df_f["price"].copy()
-    mileage_vis = df_f["mileage"].copy()
-    if clamp_outliers:
-        price_vis = clamp_iqr(price_vis)
-        mileage_vis = clamp_iqr(mileage_vis)
+    # KPI after filter
+    k0, k1, k2, k3 = st.columns(4)
+    k0.metric("Filtered rows", f"{len(df_f):,}")
+    k1.metric("Median price", format_vnd(df_f["price"].median() if len(df_f) else np.nan))
+    k2.metric("Median year", int(df_f["year"].median()) if df_f["year"].notna().any() else 0)
+    k3.metric("Median mileage", f"{df_f['mileage'].median():,.0f} km" if df_f["mileage"].notna().any() else "N/A")
 
+    # prepare visualization df
     df_vis = df_f.copy()
-    df_vis["price_vis"] = price_vis
-    df_vis["mileage_vis"] = mileage_vis
+    if clamp_outliers and len(df_vis):
+        df_vis["price_vis"] = clamp_iqr(df_vis["price"])
+        df_vis["mileage_vis"] = clamp_iqr(df_vis["mileage"])
+    else:
+        df_vis["price_vis"] = df_vis["price"]
+        df_vis["mileage_vis"] = df_vis["mileage"]
 
     # =========================
     # Charts row 1
@@ -431,26 +295,18 @@ with c6:
     c1, c2 = st.columns(2)
 
     with c1:
-        st.subheader("📈 Phân phối giá (VNĐ)")
-        fig = px.histogram(
-            df_vis,
-            x="price_vis",
-            nbins=60,
-            title="Price Distribution (clamped)" if clamp_outliers else "Price Distribution",
-        )
+        st.subheader("🏷️ Top Brands (Count)")
+        top_brand = df_f["brand"].value_counts().head(top_n).reset_index()
+        top_brand.columns = ["brand", "count"]
+        fig = px.bar(top_brand, x="brand", y="count", title="Top Brands")
         fig.update_layout(margin=dict(l=10, r=10, t=50, b=10))
         st.plotly_chart(fig, use_container_width=True)
 
     with c2:
-        st.subheader("📅 Số tin theo năm sản xuất")
-        year_counts = (
-            df_f.dropna(subset=["year"])
-            .groupby("year", dropna=True)
-            .size()
-            .reset_index(name="count")
-            .sort_values("year")
-        )
-        fig = px.bar(year_counts, x="year", y="count", title="Listings by Year")
+        st.subheader("📍 Top Locations (Count)")
+        top_loc = df_f["location"].value_counts().head(top_n).reset_index()
+        top_loc.columns = ["location", "count"]
+        fig = px.bar(top_loc, x="location", y="count", title="Top Locations")
         fig.update_layout(margin=dict(l=10, r=10, t=50, b=10))
         st.plotly_chart(fig, use_container_width=True)
 
@@ -460,28 +316,19 @@ with c6:
     c3, c4 = st.columns(2)
 
     with c3:
-        st.subheader("🏷️ Top hãng xe")
-        top_brand = (
-            df_f.groupby("brand")
-            .size()
-            .sort_values(ascending=False)
-            .head(top_n)
-            .reset_index(name="count")
-        )
-        fig = px.bar(top_brand, x="brand", y="count", title=f"Top {top_n} Brands")
+        st.subheader("💰 Price Distribution (Histogram)")
+        plot_df = df_vis.copy()
+        if len(plot_df) > 50000:
+            plot_df = plot_df.sample(50000, random_state=42)
+        fig = px.histogram(plot_df, x="price_vis", nbins=60, title="Price Distribution")
         fig.update_layout(margin=dict(l=10, r=10, t=50, b=10))
         st.plotly_chart(fig, use_container_width=True)
 
     with c4:
-        st.subheader("🌍 Top khu vực")
-        top_loc = (
-            df_f.groupby("location")
-            .size()
-            .sort_values(ascending=False)
-            .head(top_n)
-            .reset_index(name="count")
-        )
-        fig = px.bar(top_loc, x="location", y="count", title=f"Top {top_n} Locations")
+        st.subheader("📅 Year Distribution")
+        year_counts = df_f["year"].dropna().astype(int).value_counts().sort_index().reset_index()
+        year_counts.columns = ["year", "count"]
+        fig = px.line(year_counts, x="year", y="count", markers=True, title="Cars by Year")
         fig.update_layout(margin=dict(l=10, r=10, t=50, b=10))
         st.plotly_chart(fig, use_container_width=True)
 
@@ -491,133 +338,46 @@ with c6:
     c5, c6 = st.columns(2)
 
     with c5:
-        st.subheader("⛽ Fuel breakdown")
-        fuel_counts = (
-            df_f.groupby("fuel")
-            .size()
-            .sort_values(ascending=False)
-            .reset_index(name="count")
-        )
+        st.subheader("⛽ Fuel Type Share")
+        fuel_counts = df_f["fuel"].value_counts().reset_index()
+        fuel_counts.columns = ["fuel", "count"]
         fig = px.pie(fuel_counts, names="fuel", values="count", title="Fuel Type Share")
         fig.update_layout(margin=dict(l=10, r=10, t=50, b=10))
         st.plotly_chart(fig, use_container_width=True)
 
     with c6:
-        st.subheader("🔗 Giá vs Số km")
-        # scatter có thể nặng, sample nếu quá lớn
+        st.subheader("🔗 Price vs Mileage")
         plot_df = df_vis.copy()
         if len(plot_df) > 15000:
             plot_df = plot_df.sample(15000, random_state=42)
-
         fig = px.scatter(
             plot_df,
             x="mileage_vis",
             y="price_vis",
             color="source",
             hover_data=["brand", "model", "year", "location"],
-    title="Price vs Mileage (sampled if large)",
+            title="Price vs Mileage (sampled if large)",
             opacity=0.6,
         )
         fig.update_layout(margin=dict(l=10, r=10, t=50, b=10))
         st.plotly_chart(fig, use_container_width=True)
 
     # =========================
-    # Charts row 4 - Brand price boxplot
+    # Charts row 4 - Box by brand
     # =========================
-    st.subheader("📦 Phân phối giá theo hãng (Top)")
-    top_brand_names = top_brand["brand"].tolist()
-    box_df = df_vis[df_vis["brand"].isin(top_brand_names)].copy()
-    if len(box_df) > 20000:
-        box_df = box_df.sample(20000, random_state=42)
-
-    fig = px.box(
-        box_df,
-        x="brand",
-        y="price_vis",
-        points="outliers",
-        title="Price by Brand (Top brands)",
->>>>>>> daca89c9e2d6901ba83017287808cf9dcda97f35
-    )
+    st.subheader("📦 Price by Brand (Top)")
+    top_brands = df_f["brand"].value_counts().head(top_n).index.tolist()
+    df_box = df_vis[df_vis["brand"].isin(top_brands)].copy()
+    if len(df_box) > 25000:
+        df_box = df_box.sample(25000, random_state=42)
+    fig = px.box(df_box, x="brand", y="price_vis", points=False, title="Price distribution by Brand (Top)")
     fig.update_layout(margin=dict(l=10, r=10, t=50, b=10))
     st.plotly_chart(fig, use_container_width=True)
 
-<<<<<<< HEAD
-# =========================
-# Charts row 4 - Brand price boxplot
-# =========================
-st.subheader("📦 Phân phối giá theo hãng (Top)")
-top_brand_names = top_brand["brand"].tolist()
-box_df = df_vis[df_vis["brand"].isin(top_brand_names)].copy()
-if len(box_df) > 20000:
-    box_df = box_df.sample(20000, random_state=42)
-
-fig = px.box(
-    box_df,
-    x="brand",
-    y="price_vis",
-    points="outliers",
-    title="Price by Brand (Top brands)",
-)
-fig.update_layout(margin=dict(l=10, r=10, t=50, b=10))
-st.plotly_chart(fig, use_container_width=True)
-
-# =========================
-# Crawl timeline (if crawl_date exists)
-# =========================
-st.subheader("🗓️ Số tin theo ngày crawl")
-if df_f["crawl_date"].notna().any():
-    daily = (
-        df_f.dropna(subset=["crawl_date"])
-        .assign(day=lambda d: d["crawl_date"].dt.date)
-        .groupby(["day", "source"])
-        .size()
-        .reset_index(name="count")
-        .sort_values("day")
-    )
-    fig = px.line(daily, x="day", y="count", color="source", markers=True, title="Crawled listings per day")
-    fig.update_layout(margin=dict(l=10, r=10, t=50, b=10))
-    st.plotly_chart(fig, use_container_width=True)
-else:
-    st.info("Dataset không có crawl_date hợp lệ để vẽ timeline.")
-
-# =========================
-# Data preview
-# =========================
-st.subheader("🔍 Xem dữ liệu (preview)")
-show_cols = ["brand", "model", "year", "price", "mileage", "fuel", "location", "color", "source", "crawl_date"]
-show_cols = [c for c in show_cols if c in df_f.columns]
-
-st.dataframe(
-    df_f[show_cols].sort_values(by=["year", "price"], ascending=[False, False]).head(200),
-    use_container_width=True,
-    height=420,
-)
-
-st.caption("Tip: Nếu chart bị chậm, hãy lọc bớt Brand/Location hoặc bật clamp outliers, và giảm Top N.")
-=======
     # =========================
-    # Crawl timeline (if crawl_date exists)
+    # Preview + download
     # =========================
-    st.subheader("🗓️ Số tin theo ngày crawl")
-    if df_f["crawl_date"].notna().any():
-        daily = (
-            df_f.dropna(subset=["crawl_date"])
-            .assign(day=lambda d: d["crawl_date"].dt.date)
-            .groupby(["day", "source"])
-            .size()
-            .reset_index(name="count")
-            .sort_values("day")
-        )
-        fig = px.line(daily, x="day", y="count", color="source", markers=True, title="Crawled listings per day")
-        fig.update_layout(margin=dict(l=10, r=10, t=50, b=10))
-        st.plotly_chart(fig, use_container_width=True)
-    else:
-        st.info("Dataset không có crawl_date hợp lệ để vẽ timeline.")
-
-    # =========================
-    # Data preview
-    # =========================
-    st.subheader("🔍 Xem dữ liệu (preview)")
+    st.subheader("🔍 Data preview (Top 200)")
     show_cols = ["brand", "model", "year", "price", "mileage", "fuel", "location", "color", "source", "crawl_date"]
     show_cols = [c for c in show_cols if c in df_f.columns]
 
@@ -627,5 +387,75 @@ st.caption("Tip: Nếu chart bị chậm, hãy lọc bớt Brand/Location hoặc
         height=420,
     )
 
-    st.caption("Tip: Nếu chart bị chậm, hãy lọc bớt Brand/Location hoặc bật clamp outliers, và giảm Top N.")
->>>>>>> daca89c9e2d6901ba83017287808cf9dcda97f35
+    csv_bytes = df_f.to_csv(index=False).encode("utf-8-sig")
+    st.download_button("⬇️ Download filtered CSV", data=csv_bytes, file_name="filtered_dataset.csv", mime="text/csv")
+
+    st.caption("Tip: Nếu chart bị chậm → lọc bớt Brand/Location hoặc bật clamp outliers và giảm Top N.")
+
+
+# =========================
+# TAB 2: Analysis outputs (Pair A/B/C)
+# =========================
+with tab2:
+    st.title("📊 Analysis Outputs (Pair A / B / C)")
+    st.caption("Hiển thị các file đã generate từ `python -m analysis.run_all` trong `analysis/output/`.")
+
+    imgs, jsons = load_analysis_artifacts()
+
+    if not imgs and not jsons:
+        st.warning("Chưa thấy file trong analysis/output/. Hãy chạy: `python -m analysis.run_all`")
+    else:
+        # Show images first
+        if imgs:
+            st.subheader("🖼️ Images")
+            # ưu tiên theo thứ tự quen thuộc
+            priority = [
+                "pair_a_example.png",
+                "pair_a_bar_region.png",
+                "pair_b_bar_region.png",
+                "pair_c_correlation.png",
+                "pair_c_price_distribution.png",
+            ]
+            imgs_sorted = sorted(imgs, key=lambda p: (priority.index(p.name) if p.name in priority else 999, p.name))
+
+            for p in imgs_sorted:
+                st.markdown(f"**{p.name}**")
+                st.image(str(p), use_container_width=True)
+                st.download_button(
+                    f"⬇️ Download {p.name}",
+                    data=p.read_bytes(),
+                    file_name=p.name,
+                    mime="image/png" if p.suffix.lower() == ".png" else "application/octet-stream",
+                )
+                st.divider()
+
+        # Render JSON treemap if exists
+        if jsons:
+            st.subheader("🧩 JSON Artifacts (Treemap, etc.)")
+            for p in jsons:
+                st.markdown(f"**{p.name}**")
+
+                try:
+                    obj = json.loads(p.read_text(encoding="utf-8"))
+                except Exception as e:
+                    st.error(f"Không đọc được JSON: {e}")
+                    continue
+
+                # Nếu JSON là dạng Plotly figure dict -> render trực tiếp
+                if isinstance(obj, dict) and ("data" in obj and "layout" in obj):
+                    try:
+                        import plotly.graph_objects as go
+                        fig = go.Figure(obj)
+                        st.plotly_chart(fig, use_container_width=True)
+                    except Exception:
+                        st.json(obj)
+                else:
+                    st.json(obj)
+
+                st.download_button(
+                    f"⬇️ Download {p.name}",
+                    data=p.read_bytes(),
+                    file_name=p.name,
+                    mime="application/json",
+                )
+                st.divider()

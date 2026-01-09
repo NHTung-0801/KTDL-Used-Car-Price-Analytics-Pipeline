@@ -24,19 +24,12 @@ def crawl_bonbanh_brute_force(target_rows=10000):
     # Bonbanh URL format: https://bonbanh.com/oto/page,2
     base_url = "https://bonbanh.com/oto"
     all_cars = []
-<<<<<<< HEAD
-    
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M")
-    filename = f"data/raw/bonbanh_full_{timestamp}.csv"
-    os.makedirs("data/raw", exist_ok=True)
-=======
 
     output_dir = os.path.join(root_dir, 'data', 'raw')
     os.makedirs(output_dir, exist_ok=True)
 
     timestamp = datetime.now().strftime("%Y%m%d_%H%M")
     filename = os.path.join(output_dir, f"bonbanh_full_{timestamp}.csv")
->>>>>>> daca89c9e2d6901ba83017287808cf9dcda97f35
     
     print(f"🚀 [BONBANH] Bắt đầu cào dữ liệu thô (Target: {target_rows:,} xe)...")
     print(f"   (Lưu ý: Bonbanh chặn bot rất gắt, code sẽ chạy chậm để an toàn)")
@@ -81,15 +74,9 @@ def crawl_bonbanh_brute_force(target_rows=10000):
             listings = []
             
             # Thử nhiều cách tìm listings
-<<<<<<< HEAD
-            listings = soup.find_all('li', class_='car-item')
-            if not listings:
-                listings = soup.find_all('div', class_='car-item')
-=======
             listings = soup.find_all('li', class_='car-detail')
             if not listings:
                 listings = soup.find_all('div', class_='car-detail')
->>>>>>> daca89c9e2d6901ba83017287808cf9dcda97f35
             if not listings:
                 listings = soup.find_all('li', class_=lambda x: x and 'car' in x.lower())
             if not listings:
@@ -265,8 +252,4 @@ def crawl_bonbanh_brute_force(target_rows=10000):
 
 if __name__ == "__main__":
     # Crawl 10,000 xe
-<<<<<<< HEAD
-    crawl_bonbanh_brute_force(10000)
-=======
     crawl_bonbanh_brute_force(100)
->>>>>>> daca89c9e2d6901ba83017287808cf9dcda97f35
