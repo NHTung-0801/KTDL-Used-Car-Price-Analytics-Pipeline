@@ -70,6 +70,93 @@ def clean_price(price_raw):
     except Exception:
         return None
 
+<<<<<<< HEAD
+=======
+BRAND_MAPPING = {
+    'land rover': 'Land Rover', 'range rover': 'Land Rover',
+    'mercedes-benz': 'Mercedes-Benz', 'mercedes benz': 'Mercedes-Benz', 
+    'mercedes': 'Mercedes-Benz', 'merc': 'Mercedes-Benz', 'mec': 'Mercedes-Benz',
+    'bmw': 'BMW', 'audi': 'Audi', 'lexus': 'Lexus', 'porsche': 'Porsche',
+    'vinfast': 'VinFast', 'vin fast': 'VinFast',
+    'toyota': 'Toyota', 'honda': 'Honda', 'hyundai': 'Hyundai', 'kia': 'Kia',
+    'mazda': 'Mazda', 'ford': 'Ford', 'mitsubishi': 'Mitsubishi', 'nissan': 'Nissan',
+    'suzuki': 'Suzuki', 'chevrolet': 'Chevrolet', 'peugeot': 'Peugeot',
+    'volkswagen': 'Volkswagen', 'vw': 'Volkswagen', 'subaru': 'Subaru',
+    'isuzu': 'Isuzu', 'volvo': 'Volvo', 'mini': 'Mini', 'jeep': 'Jeep',
+    'mg': 'MG', 'jaguar': 'Jaguar', 'bentley': 'Bentley', 'rolls royce': 'Rolls-Royce',
+    'ferrari': 'Ferrari', 'lamborghini': 'Lamborghini', 'maserati': 'Maserati',
+    'tesla': 'Tesla', 'byd': 'BYD', 'wuling': 'Wuling'
+}
+
+# Các Model xe có tên ghép 2 từ 
+MULTI_WORD_MODELS = [
+    # --- 1. TOYOTA (Huyền thoại giữ giá) ---
+    'corolla altis', 'corolla cross', 'land cruiser', 'land cruiser prado', 
+    'fj cruiser', 'urban cruiser', 'yaris cross', 'hilux', 'innova', 
+    'fortuner', 'alphard', 'veloz', 'avanza', 'wigo', 'rush', 'raize',
+    'hiace', 'previa', 'zace', # Zace là trùm xe cũ
+
+    # --- 2. HYUNDAI (Xe Hàn quốc dân) ---
+    'grand i10', 'i10', 'i20', 'i30', 'santa fe', 'tucson', 'accent', 
+    'elantra', 'sonata', 'creta', 'venue', 'custin', 'palisade', 'stargazer', 
+    'kona', 'getz', 'click', 'starex', 'terracan', 'galloper', 'genesis', 'veloster',
+
+    # --- 3. KIA (Phổ biến) ---
+    'morning', 'new morning', 'soluto', 'seltos', 'sonet', 'sorento', 
+    'carnival', 'sedona', 'cerato', 'k3', 'k5', 'optima', 'rondo', 'carens', 
+    'sportage', 'rio', 'spectra', 'cd5', 'pride', # Xe tập lái huyền thoại
+
+    # --- 4. MAZDA (Dòng CX và BT) ---
+    'cx 3', 'cx 30', 'cx 5', 'cx 8', 'cx 9', 'bt 50', 'bt-50', 
+    'mazda 2', 'mazda 3', 'mazda 6', 'premacy', # Premacy đời cũ
+
+    # --- 5. FORD (Vua bán tải & SUV) ---
+    'ranger', 'ranger raptor', 'everest', 'explorer', 'territory', 'ecosport', 
+    'transit', 'tourneo', 'focus', 'fiesta', 'mondeo', 'escape', 'laser', # Laser chạy rất bền
+
+    # --- 6. HONDA ---
+    'cr v', 'hr v', 'br v', 'wr v', 'zr v', 'city', 'civic', 'accord', 
+    'brio', 'jazz', 'odyssey', 'stream',
+
+    # --- 7. MITSUBISHI ---
+    'pajero', 'pajero sport', 'xpander', 'xpander cross', 'outlander', 'outlander sport',
+    'triton', 'attrage', 'mirage', 'grandis', 'jolie', 'zinger', 'lancer', 'lancer gala',
+
+    # --- 8. CHEVROLET & DAEWOO (Thị trường xe cỏ giá rẻ) ---
+    'cruze', 'aveo', 'spark', 'spark van', 'captiva', 'orlando', 'colorado', 'trailblazer',
+    'lacetti', 'lacetti cdx', 'lacetti se', 'gentra', 'gentra x', 
+    'matiz', 'lanos', 'nubira', 'magnus', 'leganza', # Daewoo cũ
+
+    # --- 9. SUZUKI ---
+    'xl7', 'ertiga', 'swift', 'ciaz', 'jimny', 'vitara', 'grand vitara', 
+    'blind van', 'carry', 'wagon',
+
+    # --- 10. NISSAN ---
+    'navara', 'terra', 'x trail', 'x-trail', 'almera', 'sunny', 'teana', 'kicks', 
+    'tiida', 'grand livina', 'livina', 'bluebird',
+
+    # --- 11. VINFAST ---
+    'vf 3', 'vf 5', 'vf 6', 'vf 7', 'vf 8', 'vf 9', 'vf e34', 
+    'lux a', 'lux a2.0', 'lux sa', 'lux sa2.0', 'fadil', 'president',
+
+    # --- 12. MERCEDES-BENZ (Dòng Class & G) ---
+    'c class', 'e class', 's class', 'a class', 'glc', 'gle', 'gla', 'glb', 'gls', 'glk', 
+    'maybach', 'v class', 'g class', 'amg', 'sprinter', # Sprinter xe 16 chỗ
+
+    # --- 13. BMW ---
+    '3 series', '5 series', '7 series', 'x1', 'x3', 'x4', 'x5', 'x6', 'x7', 
+    '320i', '325i', '520i', '523i', '528i', # Các dòng số phổ biến
+
+    # --- 14. ISUZU ---
+    'd max', 'mu x', 'hilander', 'trooper',
+
+    # --- 15. KHÁC (Subaru, Peugeot, MG...) ---
+    'forester', 'outback', # Subaru
+    '3008', '5008', '2008', '408', 'traveller', # Peugeot
+    'zs', 'hs', 'rx5', 'mg5', # MG
+    'beijing x7', # Xe Tàu hot
+]
+>>>>>>> daca89c9e2d6901ba83017287808cf9dcda97f35
 
 def extract_year_smart(row):
     """
@@ -84,6 +171,10 @@ def extract_year_smart(row):
     year_match = re.search(r'\b(19|20)\d{2}\b', title)
     if year_match:
         year = int(year_match.group(0))
+<<<<<<< HEAD
+=======
+        # Validate: năm hợp lý từ 1990 đến năm hiện tại + 1
+>>>>>>> daca89c9e2d6901ba83017287808cf9dcda97f35
         current_year = datetime.now().year
         if 1990 <= year <= current_year + 1:
             return year
@@ -100,6 +191,7 @@ def extract_year_smart(row):
     return None
 
 
+<<<<<<< HEAD
 def extract_brand_model_smart(title):
     """
     Tách Brand và Model từ tiêu đề
@@ -185,6 +277,100 @@ def extract_brand_model_smart(title):
         model = model.strip()
     
     return brand, model
+=======
+def extract_brand_model_smart(title, source='bonbanh'):
+    """
+    Tách Brand và Model thông minh (Hỗ trợ 3 nguồn: bonbanh, otocomvn, chotot)
+    """
+    # 1. Kiểm tra dữ liệu rỗng
+    if pd.isna(title) or str(title).strip() == "":
+        return "Other", "Other"
+    
+    # 2. Tiền xử lý chung (Xóa năm, đưa về chữ thường)
+    raw_title = str(title).lower().strip()
+    clean_text = re.sub(r'\b(19|20)\d{2}\b', ' ', raw_title) # Xóa năm 19xx-20xx
+
+    # 3. Xử lý riêng cho từng nguồn (Source-specific logic)
+    if source == 'bonbanh':
+        # Bonbanh: Thường có "Xe cũ", "Xe mới", và giá sau dấu "-"
+        clean_text = clean_text.replace('xe cũ', '').replace('xe mới', '')
+        
+        # Xóa dấu gạch ngang đầu câu (do xóa năm để lại)
+        clean_text = clean_text.strip()
+        if clean_text.startswith('-') or clean_text.startswith('–'):
+            clean_text = clean_text[1:].strip()
+            
+        # Cắt bỏ phần giá/địa điểm sau dấu gạch ngang (nếu có)
+        if ' - ' in clean_text:
+            parts = clean_text.split(' - ')
+            # Logic: Nếu phần đầu dài (chứa tên xe) thì lấy, nếu ngắn quá (mã tin) thì lấy phần sau
+            if len(parts[0].strip()) > 3: 
+                clean_text = parts[0]
+            elif len(parts) > 1:
+                clean_text = parts[1]
+
+    elif source == 'chotot':
+        # Chotot: Nhiều từ rác cảm thán
+        stopwords = ['cần bán', 'bán gấp', 'thanh lý', 'giá rẻ', 'xe nhà', 'chính chủ', 'gia đình', 'bán xe']
+        for word in stopwords:
+            clean_text = clean_text.replace(word, '')
+            
+    elif source == 'otocomvn':
+        # Oto.com.vn: Khá sạch, chỉ cần bỏ chữ "bán xe"
+        clean_text = clean_text.replace('bán xe', '')
+
+    # 4. Làm sạch ký tự đặc biệt
+    clean_text = re.sub(r'[^\w\s]', ' ', clean_text)
+    clean_text = " ".join(clean_text.split())
+
+    # 5. Tìm Hãng xe (Brand)
+    found_brand = "Other"
+    found_brand_key = ""
+    
+    for key in BRAND_MAPPING:
+        # Dùng regex \b để khớp đúng từ (vd: tránh khớp "mazda" trong "amazda")
+        if re.search(r'\b' + re.escape(key) + r'\b', clean_text):
+            found_brand = BRAND_MAPPING[key]
+            found_brand_key = key
+            break 
+    
+    if found_brand == "Other":
+        return "Other", "Other"
+
+    # 6. Tìm Dòng xe (Model)
+    # Xóa tên hãng đã tìm được khỏi chuỗi để tìm model trong phần còn lại
+    model_part = re.sub(r'\b' + re.escape(found_brand_key) + r'\b', '', clean_text).strip()
+    found_model = "Other"
+    model_tokens = model_part.split()
+    
+    if model_tokens:
+        # Ưu tiên tìm model ghép 2 từ (VD: Land Cruiser, CX 5)
+        if len(model_tokens) >= 2:
+            two_words = model_tokens[0] + " " + model_tokens[1]
+            two_words_norm = two_words.replace('-', ' ') # Chuẩn hóa gạch ngang
+            
+            if two_words_norm in MULTI_WORD_MODELS:
+                found_model = two_words_norm
+            # Logic đặc biệt cho Mercedes S Class, C Class...
+            elif found_brand == 'Mercedes-Benz' and model_tokens[1] == 'class':
+                found_model = model_tokens[0] + " Class"
+            else:
+                found_model = model_tokens[0] # Lấy từ đầu tiên
+        else:
+            found_model = model_tokens[0] # Lấy từ duy nhất còn lại
+
+    # 7. Chuẩn hóa tên Model lần cuối (Post-processing)
+    found_model = found_model.upper()
+    
+    if found_model.startswith('VF'): # VF3 -> VF 3
+        found_model = found_model.replace('VF', 'VF ').replace('  ', ' ').strip()
+    if found_model.startswith('CX'): # CX5 -> CX 5
+        found_model = found_model.replace('CX', 'CX ').replace('  ', ' ').strip()
+    if 'CLASS' in found_model: # SCLASS -> S CLASS
+        found_model = found_model.replace('CLASS', ' CLASS').replace('  ', ' ').strip()
+        
+    return found_brand, found_model.title()
+>>>>>>> daca89c9e2d6901ba83017287808cf9dcda97f35
 
 
 def extract_mileage_smart(text):
@@ -370,12 +556,21 @@ def run_cleaning():
         print(f"   -> Tổng số dòng raw: {len(df):,}")
         print(f"   -> Các cột có sẵn: {list(df.columns)}")
         
+<<<<<<< HEAD
         # Chuẩn hóa tên cột (nếu cần)
+=======
+        # Chuẩn hóa tên cột
+>>>>>>> daca89c9e2d6901ba83017287808cf9dcda97f35
         column_mapping = {
             'gia_xe': 'price_raw',
             'tieu_de': 'title',
             'thong_tin': 'info_raw',
+<<<<<<< HEAD
             'gia': 'price_raw'
+=======
+            'gia': 'price_raw',
+            'link': 'url'
+>>>>>>> daca89c9e2d6901ba83017287808cf9dcda97f35
         }
         df.rename(columns=column_mapping, inplace=True)
         
@@ -458,10 +653,29 @@ def run_cleaning():
         df_clean['price'] = df_clean['price'].astype(int)
         df_clean['year'] = df_clean['year'].astype(int)
         df_clean['mileage'] = df_clean['mileage'].astype(int)
+<<<<<<< HEAD
         
         # Chọn các cột theo schema
         schema_cols = ['brand', 'model', 'year', 'price', 'mileage', 'fuel', 
                       'location', 'color', 'source', 'crawl_date']
+=======
+
+        # Đảm bảo cột url tồn tại
+        if 'url' not in df_clean.columns:
+            # Nếu không có cột url, thử tìm xem trong df gốc có không
+            if 'url' in df.columns:
+                df_clean['url'] = df['url']
+            else:
+                # Nếu vẫn không có, tạo cột rỗng (để không bị lỗi)
+                df_clean['url'] = ""
+
+    
+        # Chọn các cột theo schema
+        schema_cols = ['brand', 'model', 'year', 'price', 'mileage', 'fuel', 
+                      'location', 'color', 'source', 'crawl_date', 'url']
+        available_cols = [c for c in schema_cols if c in df_clean.columns]
+        df_final = df_clean[available_cols].copy()
+>>>>>>> daca89c9e2d6901ba83017287808cf9dcda97f35
         
         df_final = df_clean[schema_cols].copy()
         
