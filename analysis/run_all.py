@@ -2,8 +2,7 @@ import sys
 import os
 
 # --- HACK ĐƯỜNG DẪN ---
-# Giúp Python tìm thấy folder 'analysis' khi chạy file này trực tiếp
-# Logic: Lấy thư mục cha của thư mục chứa file này (tức là thư mục gốc dự án)
+
 current_dir = os.path.dirname(os.path.abspath(__file__))
 project_root = os.path.dirname(current_dir)
 if project_root not in sys.path:
@@ -11,10 +10,8 @@ if project_root not in sys.path:
 
 # Import module nội bộ
 from analysis import utils
-# Giả sử bạn đã tạo các file charts/pair_a.py, pair_b.py...
-# Nếu chưa có file nào thì comment dòng import đó lại để không bị lỗi
 try:
-    from analysis.charts import pair_a, pair_b, pair_c
+    from analysis.charts import pair_a, pair_b, pair_c, pair_d
 except ImportError as e:
     print(f"⚠️ Cảnh báo Import: {e}")
     print("-> Hãy chắc chắn bạn đã tạo file pair_a.py, pair_b.py trong folder analysis/charts")
@@ -34,9 +31,6 @@ def main():
 
     print("="*40)
 
-    # 3. Chạy lần lượt từng cặp phân tích
-    # Dùng try-except cho từng cặp để lỗi 1 cái không làm chết cả chương trình
-    
     # --- CẶP A ---
     try:
         if 'pair_a' in globals():
@@ -66,6 +60,15 @@ def main():
             print("\n⚠️ [SKIP] Cặp C chưa được import.")
     except Exception as e:
         print(f"❌ Lỗi Cặp C: {e}")
+
+    try:
+        if 'pair_d' in globals():
+            pair_d.run_analysis(df)
+        else:
+            print("\n⚠️ [SKIP] Cặp D chưa được import.")
+    except Exception as e:
+        print(f"❌ Lỗi khi chạy Cặp D: {e}")
+
     
     print("\n" + "="*40)
     print("✅ HOÀN TẤT TOÀN BỘ QUÁ TRÌNH!")

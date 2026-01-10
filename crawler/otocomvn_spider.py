@@ -116,4 +116,4 @@ def crawl_otocomvn_brute_force(target_rows=5000):
     print("👉 File này chắc chắn cột info_raw sẽ đầy ắp chữ. Bạn hãy chạy lại Cleaning để lọc sau.")
 
 if __name__ == "__main__":
-    crawl_otocomvn_brute_force(100)
+    crawl_otocomvn_brute_force(10000)

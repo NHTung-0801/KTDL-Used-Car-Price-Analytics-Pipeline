@@ -7,7 +7,7 @@ import json
 from datetime import datetime
 from bs4 import BeautifulSoup
 
-TARGET_ROWS = 100
+TARGET_ROWS = 10000
 BASE_URL = "https://www.chotot.com/mua-ban-oto"
 
 HEADERS = {

@@ -252,4 +252,4 @@ def crawl_bonbanh_brute_force(target_rows=10000):
 
 if __name__ == "__main__":
     # Crawl 10,000 xe
-    crawl_bonbanh_brute_force(100)
+    crawl_bonbanh_brute_force(10000)
